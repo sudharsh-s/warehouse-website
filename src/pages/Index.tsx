@@ -91,7 +91,7 @@ const Index = () => {
   return (
     <div>
       {/* Hero Section with Background Video */}
-      <section className="relative h-[30vh] md:h-[50vh] lg:h-[75vh]  flex items-center justify-center overflow-hidden">
+      <section className="relative h-[30vh] md:h-[50vh] lg:h-[80vh]  flex items-center justify-center overflow-hidden">
 
         {/* Slides */}
         {slides.map((slide, index) => (
@@ -210,7 +210,7 @@ const Index = () => {
 
       <StickyProcessSection />
 
-      <WhyChooseSection />
+      {/* <WhyChooseSection /> */}
 
       <BrandSlider />
 

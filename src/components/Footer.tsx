@@ -3,15 +3,15 @@ import {
   Phone,
   Mail,
   MapPin,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
 } from "lucide-react";
 
 import plane from "@/assets/footer-plane.png";
 import worldMap from "@/assets/about/about-map.png";
 import containers from "@/assets/footer-container.png";
+
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from '@mui/icons-material/X';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -91,7 +91,7 @@ export default function Footer() {
                 </div>
 
                 <div className="text-secondary font-semibold">
-                  +880 123 456 789
+                  +1-734-496-3761
                 </div>
 
               </div>
@@ -113,11 +113,11 @@ export default function Footer() {
 
               <li><Link to="/">→ Home</Link></li>
 
-              <li><Link to="/about">→ About Us</Link></li>
+              <li><Link to="/about">→ About</Link></li>
 
-              <li><Link to="/services">→ Service</Link></li>
+              <li><Link to="/services/warehouse-storage">→ Service</Link></li>
 
-              <li><Link to="/contact">→ Contact Us</Link></li>
+              <li><Link to="/contact">→ Contact</Link></li>
 
             </ul>
 
@@ -136,17 +136,17 @@ export default function Footer() {
 
               <div className="flex gap-3">
                 <MapPin className="text-secondary"/>
-                3060 Commercial Street Road Fratton, Australia
+                Nejoum Express, 6320 Madden Ln, Houston, TX 77048
               </div>
 
               <div className="flex gap-3">
                 <Mail className="text-secondary"/>
-                support@logistra.com
+                cs@nejoumexpress.com
               </div>
 
               <div className="flex gap-3">
                 <Phone className="text-secondary"/>
-                +880 123 456 789
+                +1-734-496-3761
               </div>
 
             </div>
@@ -196,21 +196,32 @@ export default function Footer() {
           {/* SOCIAL */}
           <div className="flex gap-3 mt-4 md:mt-0">
 
-            <div className="bg-white/10 p-2 rounded hover:bg-orange-500 cursor-pointer">
-              <Facebook size={18}/>
-            </div>
+            <a 
+              href="https://www.facebook.com/nejoumexpress" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
+            >
+              <FacebookIcon fontSize="small" />
+            </a>
 
-            <div className="bg-white/10 p-2 rounded hover:bg-orange-500 cursor-pointer">
-              <Instagram size={18}/>
-            </div>
+            <a 
+              href="https://www.instagram.com/nejoum.express/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
+            >
+              <InstagramIcon fontSize="small" />
+            </a>
 
-            <div className="bg-white/10 p-2 rounded hover:bg-orange-500 cursor-pointer">
-              <Twitter size={18}/>
-            </div>
-
-            <div className="bg-white/10 p-2 rounded hover:bg-orange-500 cursor-pointer">
-              <Linkedin size={18}/>
-            </div>
+            <a 
+              href="https://x.com/Nejoumexpress" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
+            >
+              <XIcon fontSize="small" />
+            </a>
 
           </div>
 

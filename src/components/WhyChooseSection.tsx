@@ -56,7 +56,7 @@ const features = [
 
 export default function WhyChooseCircularSection() {
   return (
-    <section className="pt-20 pb-28 bg-white overflow-hidden">
+    <section className="pt-10 pb-28 bg-white overflow-hidden">
         <div className="text-center mb-14">
           <h2 className="title">
             Why <span>Choose US</span>

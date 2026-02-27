@@ -5,14 +5,11 @@ import warehouseImg1 from "@/assets/services/warehouse-stroage-1.webp";
 import warehouseImg2 from "@/assets/services/warehouse-stroage-2.webp";
 import warehouseImg3 from "@/assets/services/warehouse-stroage-3.webp";
 import warehouseImg4 from "@/assets/services/warehouse-stroage-4.jpg";
-import warehouseImg5 from "@/assets/services/warehouse-stroage-5.jpeg";
 
 import transport from "@/assets/services/transport.webp";
-import transport1 from "@/assets/services/transport-1.webp";
 import transport2 from "@/assets/services/transport-2.webp";
 import transport3 from "@/assets/services/transport-3.webp";
-import transport4 from "@/assets/services/transport-4.webp";
-import transport5 from "@/assets/services/transport-5.webp";
+import transport5 from "@/assets/services/transport-5.jpg";
 import transport6 from "@/assets/services/transport-6.webp";
 import transport7 from "@/assets/services/transport-7.webp";
 
@@ -21,100 +18,115 @@ import shipping1 from "@/assets/services/shipping-1.jpeg";
 import shipping2 from "@/assets/services/shipping-2.jpeg";
 import shipping3 from "@/assets/services/shipping-3.jpeg";
 import shipping4 from "@/assets/services/shipping-4.jpeg";
-import shipping5 from "@/assets/services/shipping-5.jpeg";
 import shipping6 from "@/assets/services/shipping-6.jpeg";
 import shipping7 from "@/assets/services/shipping-7.jpeg";
-import { s } from "node_modules/vite/dist/node/types.d-aGj9QkWt";
+
+import air1 from "@/assets/services/air-1.webp";
+import air2 from "@/assets/services/air-2.jpg";
+import air3 from "@/assets/services/air-3.webp";
+import air4 from "@/assets/services/air-4.webp";
+import air5 from "@/assets/services/air-5.webp";
+
+import car1 from "@/assets/services/car-1.webp";
+import car2 from "@/assets/services/car-2.jpeg";
+import car3 from "@/assets/services/car-3.jpg";
+import car4 from "@/assets/services/car-4.webp";
+import car5 from "@/assets/services/car-5.png";
+
+import customs1 from "@/assets/services/customs-1.webp";
+import customs2 from "@/assets/services/customs-2.jpg";
+import customs3 from "@/assets/services/customs-3.jpg";
+import customs4 from "@/assets/services/customs-4.webp";
+import customs5 from "@/assets/services/customs-5.png";
 
 
 export const servicesData = [
   {
     slug: "warehouse-storage",
 
-    title: "Warehousing & Open Yard Storage Solutions",
+    title: "Integrated Warehousing & Open Yard Storage",
 
     heroImage: warehouseImg,
 
     gallery: [
       yardImg,
-      containerImg,
       warehouseImg1,
       warehouseImg2,
       warehouseImg3,
       warehouseImg4,
-      warehouseImg5,
     ],
 
-    introTitle: "Warehouse & Storage Services",
+    introTitle: "Smart, Secure & Scalable Storage Solutions",
 
     introText:
-      "We offer secure, reliable, and fully managed warehousing and yard storage solutions tailored for exporters, importers, and logistics companies.",
+      "We deliver end-to-end warehousing and open yard storage solutions designed for exporters, importers, auction companies, and global logistics partners. Our facilities are built to ensure security, efficiency, and seamless cargo movement.",
 
     features: [
       {
-        title: "Flexible Storage Options",
+        title: "Customizable Storage Plans",
         description:
-          "Short-term cargo storage, long-term vehicle storage, and staging for international shipments.",
+          "Flexible short-term and long-term storage options for vehicles, machinery, containers, and general cargo tailored to your operational needs.",
       },
       {
-        title: "Maximum Security ",
+        title: "Advanced Security Infrastructure",
         description:
-          "24/7 surveillance, gated access, and professional staff to ensure your assets are safe.",
+          "24/7 CCTV monitoring, controlled gated access, perimeter protection, and trained personnel to safeguard your assets at every stage.",
       },
       {
-        title: "Versatile Capacity",
+        title: "High-Capacity Handling",
         description:
-          "We handle cars, boats, heavy equipment, industrial goods, and general cargo with ease.",
+          "Spacious indoor warehouses and expansive open yards capable of accommodating cars, trucks, boats, heavy equipment, and industrial freight.",
       },
       {
-        title: "Strategic Location",
+        title: "Prime Logistics Location",
         description:
-          "Our proximity to major ports and airports ensures faster and more cost-effective logistics.",
+          "Strategically positioned near major seaports, airports, and highways to reduce transit time and optimize shipping efficiency.",
       },
     ],
 
     highlights: [
-      "Minutes from seaport and airport",
-      "Easy access to highways",
-      "Domestic and international staging",
+      "Rapid access to seaport and airport terminals",
+      "Direct connectivity to major highways",
+      "Efficient staging for domestic & international shipments",
     ],
 
     enclosed: [
-      "Covered storage for dry goods",
-      "Ideal for non-vehicle cargo",
-      "Secure and weather-protected",
+      "Fully covered storage for dry and sensitive goods",
+      "Ideal for palletized, boxed, and non-vehicle cargo",
+      "Weather-protected and monitored facility",
     ],
+
     accordion: [
       {
-        title: "Storage Solutions",
+        title: "Comprehensive Storage Services",
         content: [
-          "Short-term and long-term storage",
-          "Open yard and covered storage",
-          "Vehicle and equipment storage",
+          "Short-term & long-term warehousing",
+          "Open yard & enclosed storage options",
+          "Vehicle, machinery & equipment storage",
         ],
       },
       {
-        title: "Security Features",
+        title: "Facility Security & Compliance",
         content: [
-          "24/7 surveillance cameras",
-          "Secure gated facility",
-          "Professional monitoring",
+          "24/7 surveillance system",
+          "Controlled gated entry & exit",
+          "On-site operational supervision",
         ],
       },
       {
-        title: "Location Benefits",
+        title: "Strategic Location Advantage",
         content: [
-          "Near major seaport",
-          "Easy highway access",
-          "Strategic logistics location",
+          "Close proximity to major port terminals",
+          "Easy highway connectivity for faster dispatch",
+          "Optimized logistics positioning",
         ],
       },
       {
-        title: "Additional Services",
+        title: "Value-Added Services",
         content: [
-          "Inventory management",
-          "Container loading/unloading",
-          "Vehicle inspection and staging",
+          "Inventory tracking & management",
+          "Container loading & unloading support",
+          "Vehicle inspection, documentation & staging",
         ],
       }
     ],
@@ -123,85 +135,91 @@ export const servicesData = [
   {
     slug: "road-freight",
 
-    title: "Reliable Nationwide Vehicle Transport Services",
+    title: "Nationwide Road Freight & Vehicle Transport",
 
     heroImage: transport,
 
     gallery: [
-      transport1,
       transport2,
       transport3,
-      transport4,
       transport5,
       transport6,
       transport7,
     ],
 
-    introTitle: "Vehicle Transport Services",
+    introTitle: "Reliable Ground Transportation Solutions",
 
     introText:
-      "We offer secure, reliable, and fully managed warehousing and yard storage solutions tailored for exporters, importers, and logistics companies.",
+      "We provide secure, efficient, and fully managed road freight services across the nation. From individual vehicle transport to oversized heavy equipment hauling, our logistics network ensures timely and damage-free delivery.",
 
     features: [
       {
-        title: "Comprehensive Heavy Haul Solutions",
+        title: "Specialized Heavy Haul Transport",
         description:
-          "We specialize in the transportation of construction equipment, industrial machinery, boats, storage tanks, prefabricated structures, and other oversized loads. ",
+          "Expert handling of construction machinery, industrial equipment, boats, containers, prefabricated units, and oversized cargo with proper permits and route planning.",
       },
       {
-        title: "Expert Planning & Safe Transport",
+        title: "Professional Vehicle Transportation",
         description:
-          "With decades of experience in heavy haul trucking and oversized load transport, our team understands the unique challenges associated with large-scale freight. ",
+          "Safe and secure movement of cars, SUVs, trucks, and fleet vehicles using modern carriers and experienced drivers.",
       },
       {
-        title: "Comprehensive Port Drayage Solutions",
+        title: "Port & Intermodal Drayage",
         description:
-          "We understand the critical role that drayage plays in international shipping and intermodal transportation.",
+          "Efficient container pickup and delivery from ports, rail yards, and terminals to warehouses or final destinations.",
+      },
+      {
+        title: "Time-Critical Deliveries",
+        description:
+          "Dedicated trucks and optimized routing to meet urgent delivery schedules with real-time coordination.",
       },
     ],
 
     highlights: [
-      "Minutes from seaport and airport",
-      "Easy access to highways",
-      "Domestic and international staging",
+      "Nationwide coverage with strategic routing",
+      "Experienced licensed drivers",
+      "Modern fleet with GPS tracking",
+      "Permit handling for oversized loads",
     ],
 
     enclosed: [
-      "Covered storage for dry goods",
-      "Ideal for non-vehicle cargo",
-      "Secure and weather-protected",
+      "Open carrier transport",
+      "Enclosed vehicle transport options",
+      "Flatbed & lowboy trailers",
+      "Container chassis transport",
     ],
+
     accordion: [
       {
-        title: "Storage Solutions",
+        title: "Vehicle Transport Services",
         content: [
-          "Short-term and long-term storage",
-          "Open yard and covered storage",
-          "Vehicle and equipment storage",
+          "Dealer & auction vehicle transport",
+          "Fleet relocation services",
+          "Door-to-door vehicle delivery",
         ],
       },
       {
-        title: "Security Features",
+        title: "Heavy Equipment Hauling",
         content: [
-          "24/7 surveillance cameras",
-          "Secure gated facility",
-          "Professional monitoring",
+          "Oversized and overweight load transport",
+          "Route survey & permit coordination",
+          "Escort vehicle arrangements",
         ],
       },
       {
-        title: "Location Benefits",
+        title: "Port & Container Drayage",
         content: [
-          "Near major seaport",
-          "Easy highway access",
-          "Strategic logistics location",
+          "Container pickup & return",
+          "Intermodal rail coordination",
+          "Warehouse & yard delivery",
         ],
       },
       {
-        title: "Additional Services",
+        title: "Safety & Compliance",
         content: [
-          "Inventory management",
-          "Container loading/unloading",
-          "Vehicle inspection and staging",
+          "Licensed and insured operations",
+          "Cargo protection measures",
+          "Regulatory compliance management",
         ],
       }
     ],
@@ -210,7 +228,7 @@ export const servicesData = [
   {
     slug: "ocean-freight",
 
-    title: "Efficient Shipping Line & Containerization Services",
+    title: "Global Ocean Freight & Container Shipping Solutions",
 
     heroImage: shipping,
 
@@ -219,76 +237,83 @@ export const servicesData = [
       shipping2,
       shipping3,
       shipping4,
-      shipping5,
       shipping6,
       shipping7,
     ],
 
-    introTitle: "Shipping Line Services",
+    introTitle: "Reliable International Sea Freight Services",
 
     introText:
-      "We offer secure, reliable, and fully managed warehousing and yard storage solutions tailored for exporters, importers, and logistics companies.",
+      "We provide end-to-end ocean freight and container shipping solutions connecting global markets with efficiency and reliability. From full container loads to specialized cargo, our team ensures seamless coordination from port to destination.",
 
     features: [
       {
-        title: "Comprehensive Heavy Haul Solutions",
+        title: "Full Container Load (FCL) & LCL Services",
         description:
-          "We specialize in the transportation of construction equipment, industrial machinery, boats, storage tanks, prefabricated structures, and other oversized loads. ",
+          "Flexible shipping options including dedicated full containers and cost-effective less-than-container-load solutions tailored to your cargo volume.",
       },
       {
-        title: "Expert Planning & Safe Transport",
+        title: "Specialized & Project Cargo",
         description:
-          "With decades of experience in heavy haul trucking and oversized load transport, our team understands the unique challenges associated with large-scale freight. ",
+          "Secure transportation of vehicles, heavy machinery, oversized equipment, and breakbulk cargo with expert handling and documentation.",
       },
       {
-        title: "Comprehensive Port Drayage Solutions",
+        title: "Global Shipping Network",
         description:
-          "We understand the critical role that drayage plays in international shipping and intermodal transportation.",
+          "Strong partnerships with leading international carriers enabling reliable sailings, competitive transit times, and worldwide coverage.",
+      },
+      {
+        title: "End-to-End Documentation & Compliance",
+        description:
+          "Complete management of customs clearance, export documentation, bills of lading, and regulatory compliance for smooth international trade.",
       },
     ],
 
     highlights: [
-      "Minutes from seaport and airport",
-      "Easy access to highways",
-      "Domestic and international staging",
+      "Worldwide port-to-port coverage",
+      "Competitive freight rates",
+      "Container tracking & shipment visibility",
+      "Customs clearance coordination",
     ],
 
     enclosed: [
-      "Covered storage for dry goods",
-      "Ideal for non-vehicle cargo",
-      "Secure and weather-protected",
+      "FCL (Full Container Load)",
+      "LCL (Less Than Container Load)",
+      "RORO (Roll-on/Roll-off) shipping",
+      "Breakbulk & project cargo handling",
     ],
+
     accordion: [
       {
-        title: "Storage Solutions",
+        title: "Container Shipping Services",
         content: [
-          "Short-term and long-term storage",
-          "Open yard and covered storage",
-          "Vehicle and equipment storage",
+          "Standard & high-cube containers",
+          "Refrigerated (reefer) containers",
+          "Vehicle & machinery containerization",
         ],
       },
       {
-        title: "Security Features",
+        title: "Vehicle Export & RORO",
         content: [
-          "24/7 surveillance cameras",
-          "Secure gated facility",
-          "Professional monitoring",
+          "Roll-on/Roll-off vehicle shipping",
+          "Auction vehicle export handling",
+          "Pre-shipment inspection & documentation",
         ],
       },
       {
-        title: "Location Benefits",
+        title: "Customs & Documentation",
         content: [
-          "Near major seaport",
-          "Easy highway access",
-          "Strategic logistics location",
+          "Export declarations & compliance",
+          "Bill of lading processing",
+          "International trade documentation support",
         ],
       },
       {
-        title: "Additional Services",
+        title: "End-to-End Logistics Support",
         content: [
-          "Inventory management",
-          "Container loading/unloading",
-          "Vehicle inspection and staging",
+          "Port coordination & terminal handling",
+          "Container stuffing & securing",
+          "Integrated road & warehouse support",
         ],
       }
     ],
@@ -297,90 +322,91 @@ export const servicesData = [
   {
     slug: "air-freight",
 
-    title: "Domestic Trucking & Transportation Services",
+    title: "Fast & Reliable Air Freight Solutions",
 
-    heroImage: warehouseImg,
+    heroImage: warehouseImg, 
 
     gallery: [
-      yardImg,
-      containerImg,
-      warehouseImg1,
-      warehouseImg2,
-      warehouseImg3,
-      warehouseImg4,
-      warehouseImg5,
+      air1, 
+      air2,
+      air3,
+      air4,
+      air5,
     ],
 
-    introTitle: "Domestic Trucking & Transportation Services",
+    introTitle: "Global Air Cargo & Express Logistics",
 
     introText:
-      "We offer secure, reliable, and fully managed warehousing and yard storage solutions tailored for exporters, importers, and logistics companies.",
+      "We provide fast, secure, and time-critical air freight services connecting global markets with speed and precision. From urgent shipments to high-value cargo, our air logistics solutions ensure rapid transit and reliable delivery.",
 
     features: [
       {
-        title: "Flexible Storage Options",
+        title: "Express & Priority Shipping",
         description:
-          "Short-term cargo storage, long-term vehicle storage, and staging for international shipments.",
+          "Time-sensitive cargo solutions with priority handling and optimized flight schedules for urgent international and domestic shipments.",
       },
       {
-        title: "Maximum Security ",
+        title: "International Air Cargo Network",
         description:
-          "24/7 surveillance, gated access, and professional staff to ensure your assets are safe.",
+          "Strategic partnerships with leading airlines and global carriers ensuring worldwide airport-to-airport and door-to-door coverage.",
       },
       {
-        title: "Versatile Capacity",
+        title: "High-Value & Sensitive Cargo Handling",
         description:
-          "We handle cars, boats, heavy equipment, industrial goods, and general cargo with ease.",
+          "Secure transportation for electronics, automotive parts, pharmaceuticals, and fragile goods with strict compliance standards.",
       },
       {
-        title: "Strategic Location",
+        title: "Customs Clearance & Documentation",
         description:
-          "Our proximity to major ports and airports ensures faster and more cost-effective logistics.",
+          "Complete management of export/import documentation, customs clearance, and regulatory compliance for seamless cross-border trade.",
       },
     ],
 
     highlights: [
-      "Minutes from seaport and airport",
-      "Easy access to highways",
-      "Domestic and international staging",
+      "Fastest international transit times",
+      "Global airport network coverage",
+      "Real-time shipment tracking",
+      "Secure & compliant cargo handling",
     ],
 
     enclosed: [
-      "Covered storage for dry goods",
-      "Ideal for non-vehicle cargo",
-      "Secure and weather-protected",
+      "Airport-to-airport delivery",
+      "Door-to-door express service",
+      "Temperature-controlled cargo",
+      "Charter flight arrangements",
     ],
+
     accordion: [
       {
-        title: "Storage Solutions",
+        title: "Air Freight Services",
         content: [
-          "Short-term and long-term storage",
-          "Open yard and covered storage",
-          "Vehicle and equipment storage",
+          "Express & priority air cargo",
+          "Consolidated air shipments",
+          "Charter aircraft solutions",
         ],
       },
       {
-        title: "Security Features",
+        title: "Specialized Cargo Handling",
         content: [
-          "24/7 surveillance cameras",
-          "Secure gated facility",
-          "Professional monitoring",
+          "Pharmaceutical & medical cargo",
+          "Automotive & industrial parts",
+          "High-value & fragile goods",
         ],
       },
       {
-        title: "Location Benefits",
+        title: "Customs & Compliance",
         content: [
-          "Near major seaport",
-          "Easy highway access",
-          "Strategic logistics location",
+          "Export & import documentation",
+          "Customs brokerage coordination",
+          "Regulatory compliance support",
         ],
       },
       {
-        title: "Additional Services",
+        title: "Integrated Logistics Support",
         content: [
-          "Inventory management",
-          "Container loading/unloading",
-          "Vehicle inspection and staging",
+          "First-mile pickup",
+          "Last-mile delivery",
+          "Warehouse & distribution integration",
         ],
       }
     ],
@@ -389,85 +415,91 @@ export const servicesData = [
   {
     slug: "car-wrapping",
 
-    title: "Reliable International Shipping & Logistics Services",
+    title: "Premium Car Wrapping & Vehicle Customization",
 
-    heroImage: transport,
+    heroImage: warehouseImg, 
 
     gallery: [
-      transport1,
-      transport2,
-      transport3,
-      transport4,
-      transport5,
-      transport6,
-      transport7,
+      car1,
+      car2, 
+      car3,
+      car4,
+      car5,
     ],
 
-    introTitle: "International Shipping & Logistics Services",
+    introTitle: "Professional Vehicle Wrap Solutions",
 
     introText:
-      "We offer secure, reliable, and fully managed warehousing and yard storage solutions tailored for exporters, importers, and logistics companies.",
+      "We provide high-quality car wrapping services designed to transform your vehicle with precision, creativity, and durability. From full body color changes to commercial branding wraps, we deliver flawless finishes using premium vinyl materials.",
 
     features: [
       {
-        title: "Comprehensive Heavy Haul Solutions",
+        title: "Full & Partial Wraps",
         description:
-          "We specialize in the transportation of construction equipment, industrial machinery, boats, storage tanks, prefabricated structures, and other oversized loads. ",
+          "Complete color change wraps, partial accents, roof wraps, bonnet wraps, and custom detailing tailored to your style.",
       },
       {
-        title: "Expert Planning & Safe Transport",
+        title: "Commercial & Fleet Branding",
         description:
-          "With decades of experience in heavy haul trucking and oversized load transport, our team understands the unique challenges associated with large-scale freight. ",
+          "Professional vehicle branding solutions for businesses, including fleet graphics, logo placement, and promotional wraps.",
       },
       {
-        title: "Comprehensive Port Drayage Solutions",
+        title: "Premium Vinyl Materials",
         description:
-          "We understand the critical role that drayage plays in international shipping and intermodal transportation.",
+          "We use high-performance vinyl from trusted brands ensuring durability, UV resistance, and long-lasting finish.",
+      },
+      {
+        title: "Precision Installation",
+        description:
+          "Expert installers ensure bubble-free application, seamless edges, and clean detailing for a factory-quality look.",
       },
     ],
 
     highlights: [
-      "Minutes from seaport and airport",
-      "Easy access to highways",
-      "Domestic and international staging",
+      "Gloss, matte, satin & chrome finishes",
+      "Custom graphic design support",
+      "Paint protection options available",
+      "Removable & paint-safe solutions",
     ],
 
     enclosed: [
-      "Covered storage for dry goods",
-      "Ideal for non-vehicle cargo",
-      "Secure and weather-protected",
+      "Full vehicle color change wraps",
+      "Corporate branding & advertising wraps",
+      "Paint protection film (PPF)",
+      "Headlight & taillight tinting",
     ],
+
     accordion: [
       {
-        title: "Storage Solutions",
+        title: "Wrap Services",
         content: [
-          "Short-term and long-term storage",
-          "Open yard and covered storage",
-          "Vehicle and equipment storage",
+          "Full body wraps",
+          "Partial & accent wraps",
+          "Custom graphic wraps",
         ],
       },
       {
-        title: "Security Features",
+        title: "Commercial Branding",
         content: [
-          "24/7 surveillance cameras",
-          "Secure gated facility",
-          "Professional monitoring",
+          "Fleet vehicle branding",
+          "Business logo & marketing graphics",
+          "Promotional campaign wraps",
         ],
       },
       {
-        title: "Location Benefits",
+        title: "Protection Solutions",
         content: [
-          "Near major seaport",
-          "Easy highway access",
-          "Strategic logistics location",
+          "Paint protection film (PPF)",
+          "Scratch & UV protection",
+          "Ceramic coating add-ons",
         ],
       },
       {
-        title: "Additional Services",
+        title: "Why Choose Us",
         content: [
-          "Inventory management",
-          "Container loading/unloading",
-          "Vehicle inspection and staging",
+          "Premium quality materials",
+          "Experienced professional installers",
+          "Clean indoor installation facility",
         ],
       }
     ],
@@ -476,87 +508,94 @@ export const servicesData = [
   {
     slug: "inspection-customs",
 
-    title: "Efficient Customs Clearance & Vehicle Inspection Services",
+    title: "Customs Clearance & Vehicle Inspection Services",
 
-    heroImage: shipping,
+    heroImage: shipping, 
 
     gallery: [
-      shipping1,
-      shipping2,
-      shipping3,
-      shipping4,
-      shipping5,
-      shipping6,
-      shipping7,
+      customs1,
+      customs2,
+      customs3,
+      customs4,
+      customs5,
     ],
 
-    introTitle: "Clearance & Inspection Services",
+    introTitle: "Fast, Compliant & Hassle-Free Clearance Solutions",
 
     introText:
-      "We offer secure, reliable, and fully managed warehousing and yard storage solutions tailored for exporters, importers, and logistics companies.",
+      "We provide professional customs clearance and vehicle inspection services to ensure smooth international trade operations. Our experienced team manages documentation, compliance, and inspection processes efficiently to minimize delays and ensure regulatory adherence.",
 
     features: [
       {
-        title: "Comprehensive Heavy Haul Solutions",
+        title: "Customs Clearance Management",
         description:
-          "We specialize in the transportation of construction equipment, industrial machinery, boats, storage tanks, prefabricated structures, and other oversized loads. ",
+          "Complete handling of import and export documentation, duty calculations, tariff classifications, and regulatory approvals for seamless cargo release.",
       },
       {
-        title: "Expert Planning & Safe Transport",
+        title: "Vehicle Inspection Services",
         description:
-          "With decades of experience in heavy haul trucking and oversized load transport, our team understands the unique challenges associated with large-scale freight. ",
+          "Thorough vehicle condition reports, VIN verification, damage assessment, and compliance checks for export and auction shipments.",
       },
       {
-        title: "Comprehensive Port Drayage Solutions",
+        title: "Export Documentation Support",
         description:
-          "We understand the critical role that drayage plays in international shipping and intermodal transportation.",
+          "Preparation and processing of bills of lading, commercial invoices, export declarations, and required trade certificates.",
+      },
+      {
+        title: "Regulatory Compliance Expertise",
+        description:
+          "Up-to-date knowledge of international trade regulations, customs laws, and port authority requirements to avoid penalties and delays.",
       },
     ],
 
     highlights: [
-      "Minutes from seaport and airport",
-      "Easy access to highways",
-      "Domestic and international staging",
+      "Faster customs processing",
+      "Accurate documentation handling",
+      "Vehicle export compliance support",
+      "Coordination with port & airport authorities",
     ],
 
     enclosed: [
-      "Covered storage for dry goods",
-      "Ideal for non-vehicle cargo",
-      "Secure and weather-protected",
+      "Pre-export vehicle inspection",
+      "Import & export clearance",
+      "Duty & tax calculation assistance",
+      "Regulatory documentation processing",
     ],
+
     accordion: [
       {
-        title: "Storage Solutions",
+        title: "Customs Clearance Services",
         content: [
-          "Short-term and long-term storage",
-          "Open yard and covered storage",
-          "Vehicle and equipment storage",
+          "Import & export declarations",
+          "Tariff classification & duty calculation",
+          "Port & terminal coordination",
         ],
       },
       {
-        title: "Security Features",
+        title: "Vehicle Inspection",
         content: [
-          "24/7 surveillance cameras",
-          "Secure gated facility",
-          "Professional monitoring",
+          "VIN & chassis verification",
+          "Condition & damage reporting",
+          "Pre-shipment inspection certificates",
         ],
       },
       {
-        title: "Location Benefits",
+        title: "Documentation & Compliance",
         content: [
-          "Near major seaport",
-          "Easy highway access",
-          "Strategic logistics location",
+          "Bill of lading processing",
+          "Commercial invoice verification",
+          "Regulatory compliance management",
         ],
       },
       {
-        title: "Additional Services",
+        title: "End-to-End Support",
         content: [
-          "Inventory management",
-          "Container loading/unloading",
-          "Vehicle inspection and staging",
+          "Customs brokerage coordination",
+          "Government authority liaison",
+          "Integrated logistics documentation support",
         ],
       }
     ],
   },
+
 ];

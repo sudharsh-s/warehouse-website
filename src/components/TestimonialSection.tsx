@@ -71,7 +71,7 @@ export default function TestimonialSection() {
 
             </div>
 
-            <h2 className="text-5xl font-bold text-[#0b2c3d] leading-tight">
+            <h2 className="text-[50px] font-bold text-black leading-tight">
 
               What Our Customers
               <br />

@@ -20,23 +20,23 @@ export default function ServiceDetail() {
       <ServicePageHeader />
 
       {/* SERVICE DETAIL CONTENT */}
-      <section className="pt-14 pb-20 bg-white">
+      <section className="pt-20 pb-20 bg-white">
 
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-8">
 
           {/* LEFT MAIN */}
           <div className="lg:col-span-2">
 
-            {/* HERO IMAGE */}
-            <img
-              src={service.heroImage}
-              className="w-full h-[450px] object-cover rounded-xl mb-6"
-            />
-
             {/* TITLE */}
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-4xl leading-10 font-bold mb-5">
               {service.title}
             </h2>
+
+            {/* HERO IMAGE */}
+            {/* <img
+              src={service.heroImage}
+              className="w-full h-[450px] object-cover rounded-xl mb-6"
+            /> */}
 
             {/* TEXT */}
             <p className="text-gray-600 mb-6 leading-relaxed">

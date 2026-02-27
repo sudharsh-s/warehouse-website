@@ -118,12 +118,12 @@ export default function TransportHero() {
   ];
 
   const truckImages = {
-    "warehouse-storage": { src: warehouse, className: "w-[43%] bottom-0 -left-3" },
+    "warehouse-storage": { src: warehouse, className: "w-[35%] bottom-8 -left-3" },
     "road-freight": { src: truckRoad, className: "w-[35%] bottom-0 -left-3" },
-    "ocean-freight": { src: ocean, className: "w-[55%] bottom-0 -left-36" },
-    "air-freight": { src: air, className: "w-[50%] bottom-0 -left-32" },
-    "car-wrapping": { src: car, className: "w-[45%] bottom-0 -left-20" },
-    "inspection-customs": { src: inspection, className: "w-[60%] bottom-0 -left-36" },
+    "ocean-freight": { src: ocean, className: "w-[45%] bottom-0 -left-36" },
+    "air-freight": { src: air, className: "w-[45%] bottom-0 -left-32" },
+    "car-wrapping": { src: car, className: "w-[40%] bottom-0 -left-20" },
+    "inspection-customs": { src: inspection, className: "w-[50%] bottom-0 -left-36" },
   };
 
   const currentTruck = truckImages[slug] || { src: truckRoad, className: "bottom-0 -left-3 w-[35%]" };

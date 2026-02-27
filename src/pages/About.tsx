@@ -15,6 +15,8 @@ import aboutShape from "@/assets/about/about-v1-shape3.png";
 import BrandSlider from "@/components/BrandSlider";
 import WarehouseNetwork from "@/components/WarehouseNetwork"; 
 import TestimonialSection from "@/components/TestimonialSection"; 
+import WhyChooseSection from "@/components/WhyChooseSection";
+import DSVNumbersSection from "@/components/DSVNumbersSection";
 import { useEffect, useState } from 'react';
 
 const slides = [
@@ -145,7 +147,7 @@ const About = () => {
 
         <section className="pt-16 pb-24 bg-white overflow-hidden relative">
 
-          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-28 items-center">
+          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-26 items-center">
 
             {/* LEFT CONTENT */}
             <div>
@@ -163,7 +165,7 @@ const About = () => {
 
 
               {/* Heading */}
-              <h2 className="text-5xl font-bold text-[#0b2c3d] leading-tight mb-6">
+              <h2 className="text-[50px] font-bold text-black leading-tight mb-6">
 
                 Our Expertise Stands in
 
@@ -220,9 +222,9 @@ const About = () => {
               {/* Buttons Row */}
               <div className="flex items-center gap-8">
 
-                <button className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
-                  More About Us →
-                </button>
+                <a href='/services/warehouse-storage' className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
+                  Expolre Our Services →
+                </a>
 
 
                 {/* Phone */}
@@ -239,7 +241,7 @@ const About = () => {
                     </div>
 
                     <div className="font-bold text-[#0b2c3d]">
-                      +880 123 456 789
+                      +1-734-496-3761
                     </div>
 
                   </div>
@@ -365,13 +367,17 @@ const About = () => {
         
       </div>
 
+      <WhyChooseSection />
+
+      <DSVNumbersSection />
+
       <TestimonialSection />
 
       <div className='pt-12 bg-white'>
         <BrandSlider />
       </div>
 
-      <WarehouseNetwork />
+      {/* <WarehouseNetwork /> */}
 
     </>
   );
