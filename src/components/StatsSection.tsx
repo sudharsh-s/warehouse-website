@@ -11,9 +11,9 @@ import LocalShipping from "@mui/icons-material/LocalShipping";
 const stats = [
   {
     icon: Language,
-    value: 9,
-    suffix: "",
-    label: "Warehouses around the world",
+    value: 300,
+    suffix: "k+",
+    label: "Global Shipping & Auction Partners",
   },
   {
     icon: WorkspacePremiumIcon,
@@ -23,9 +23,9 @@ const stats = [
   },
   {
     icon: LocalShipping,
-    value: 25000,
-    suffix: "k",
-    label: "Containers loaded Annually",
+    value: 1500,
+    suffix: "k+",
+    label: "Vehicles Processed Annually",
   },
 ];
 

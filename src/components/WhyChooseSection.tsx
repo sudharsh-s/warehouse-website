@@ -56,7 +56,7 @@ const features = [
 
 export default function WhyChooseCircularSection() {
   return (
-    <section className="pt-10 pb-28 bg-white overflow-hidden">
+    <section className="pt-16 pb-32 bg-white overflow-hidden">
         <div className="text-center mb-14">
           <h2 className="title">
             Why <span>Choose US</span>
@@ -68,10 +68,10 @@ export default function WhyChooseCircularSection() {
           </p>
         </div>
 
-      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-center gap-16">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-center gap-16 mt-16">
 
         {/* LEFT SIDE */}
-        <div className="relative w-[600px] h-[600px] flex items-center justify-center">
+        <div className="relative w-[600px] h-[500px] flex items-center justify-center">
 
           {/* Background Circle */}
           <motion.img
@@ -85,7 +85,7 @@ export default function WhyChooseCircularSection() {
               ease: "easeInOut",
               repeat: Infinity,
             }}
-            className="absolute w-[600px] h-[600px] rounded-full object-cover"
+            className="absolute w-[500px] h-[500px] rounded-full object-cover"
           />
 
           {/* Main Circle */}
@@ -116,7 +116,7 @@ export default function WhyChooseCircularSection() {
                 ease: "easeInOut",
               },
             }}
-            className="absolute -left-20 bottom-5 w-[230px] h-[230px] rounded-full gradient-primary flex items-center justify-center text-white text-center font-bold text-3xl shadow-xl"
+            className="absolute -left-10 bottom-5 w-[190px] h-[190px] rounded-full gradient-primary flex items-center justify-center text-white text-center font-bold text-3xl shadow-xl"
           />
 
           <motion.img

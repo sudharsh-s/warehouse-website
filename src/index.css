@@ -56,7 +56,7 @@
 
 @layer base {
   .title {
-    @apply text-[50px] font-extrabold tracking-tight;  
+    @apply text-[45px] font-extrabold tracking-tight;  
   }
   .title span {
     background: linear-gradient(135deg, hsl(217.64deg 71.45% 56.3%) 0%, hsl(222.64deg 66.85% 35.49%) 100%);
@@ -136,11 +136,11 @@
 
 
 
-.marquee {
+.marquee, .marquee_about {
   display: flex;
 }
 
-.marquee-track {
+.marquee-track, .marquee_about-track {
   display: flex;
   animation: marquee 15s linear infinite;
 }
@@ -149,13 +149,26 @@
   font-size: 40px;
   font-weight: 700;
   margin-right: 60px;
-  color: transparent;
-  -webkit-text-stroke: 1px #fff;
+  color: #fff;
   transition: all 0.3s ease;
 }
 
 .marquee-item:hover {
-  color: #fff;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  transform: scale(1.05);
+}
+.marquee_about-item {
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 0px;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.marquee_about-item:hover {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
   transform: scale(1.05);
 }
 

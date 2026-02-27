@@ -26,37 +26,48 @@ export default function DSVNumbersSection() {
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         <p className="text-lg mb-12 text-gray-200">DSV in numbers</p>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-4 gap-12">
           {/* Item 1 */}
           <div>
             <h2 className="text-5xl md:text-6xl font-bold">
-              {inView && <CountUp end={3000} duration={2} separator="," />}+
+              {inView && <CountUp end={1500} duration={2} separator="," />}k+
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              Offices and logistics facilities
+              Vehicle Transported
             </p>
           </div>
 
           {/* Item 2 */}
           <div>
             <h2 className="text-5xl md:text-6xl font-bold">
-              {inView && <CountUp end={90} duration={2} />}+
+              {inView && <CountUp end={57} duration={2} />}+
             </h2>
             <p className="mt-4 text-lg text-gray-300">
-              Countries worldwide
+              Countries 
             </p>
           </div>
 
           {/* Item 3 */}
           <div>
             <h2 className="text-5xl md:text-6xl font-bold">
-              ~
               {inView && (
-                <CountUp end={150000} duration={2} separator="," />
-              )}
+                <CountUp end={150} duration={2} separator="," />
+              )}k+
             </h2>
             <p className="mt-4 text-lg text-gray-300">
               Employees
+            </p>
+          </div>
+
+          {/* Item 4 */}
+          <div>
+            <h2 className="text-5xl md:text-6xl font-bold">
+              {inView && (
+                <CountUp end={23} duration={2} separator="," />
+              )}+
+            </h2>
+            <p className="mt-4 text-lg text-gray-300">
+              Years of Experience
             </p>
           </div>
         </div>

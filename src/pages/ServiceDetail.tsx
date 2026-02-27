@@ -28,7 +28,7 @@ export default function ServiceDetail() {
           <div className="lg:col-span-2">
 
             {/* TITLE */}
-            <h2 className="text-4xl leading-10 font-bold mb-5">
+            <h2 className="text-[40px] leading-10 font-bold mb-5">
               {service.title}
             </h2>
 
@@ -44,7 +44,7 @@ export default function ServiceDetail() {
             </p>
 
             {/* FEATURES */}
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl text-gray-600 font-bold mb-4">
               We Offer:
             </h3>
 
@@ -57,7 +57,7 @@ export default function ServiceDetail() {
                     <span>{item}</span>
                   ) : (
                     <span>
-                      <span className="font-bold">{item.title}</span> – {item.description}
+                      <span className="font-bold text-gray-600">{item.title}</span> – {item.description}
                     </span>
                   )}
                 </li>
@@ -65,7 +65,7 @@ export default function ServiceDetail() {
             </ul>
 
             {/* HIGHLIGHTS */}
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-bold text-gray-600 mb-4">
               Facility Highlights
             </h3>
 
@@ -79,8 +79,8 @@ export default function ServiceDetail() {
             </ul>
 
             {/* Enclosed */}
-            <h3 className="text-2xl font-bold mb-4">
-              Enclosed Warehouse for Dry Goods
+            <h3 className="text-2xl text-gray-600 font-bold mb-4">
+              What’s Included in This Service
             </h3>
 
             <ul className="space-y-3">

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
-import warehouseImg from "@/assets/about/about-right.jpg";
+import warehouseImg from "@/assets/about/about-page-slider.jpeg";
 
 import user1 from "@/assets/user/user-1.png";
 import user2 from "@/assets/user/user-2.png";
@@ -39,6 +41,16 @@ export default function TestimonialSection() {
 
   const [index, setIndex] = useState(0);
 
+  const handleNext = () => {
+    setIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const handlePrev = () => {
+    setIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
+
   useEffect(() => {
 
     const interval = setInterval(() => {
@@ -53,30 +65,30 @@ export default function TestimonialSection() {
 
   return (
 
-    <section className="py-24 bg-[#f4f5f9] relative overflow-hidden">
+    <section className="py-24 bg-[#011533] relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT SIDE */}
-        <div>
+        <div className="relative">
 
           {/* Heading */}
-          <div className="mb-10">
+          <div className="mb-10 relative">
 
-            <div className="flex items-center gap-3 text-sm text-gray-500 mb-4">
+            <div className="flex items-center gap-3 text-sm text-white mb-4">
 
-              <div className="w-6 h-[2px] bg-primary"/>
+              <div className="w-6 h-[2px] bg-white"/>
 
               CLIENT TESTIMONIAL ✈
 
             </div>
 
-            <h2 className="text-[50px] font-bold text-black leading-tight">
+            <h2 className="text-[40px] font-bold text-white leading-tight">
 
               What Our Customers
               <br />
 
-              Say <span className="text-primary underline">ABOUT US</span>
+              Say <span className="text-secondary underline">ABOUT US</span>
 
             </h2>
 
@@ -87,11 +99,11 @@ export default function TestimonialSection() {
           <div className="relative bg-white shadow-md p-10 pl-14">
 
             {/* Left Orange Line */}
-            <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-primary"/>
+            <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-secondary"/>
 
 
             {/* Quote badge */}
-            <div className="absolute top-0 right-0 bg-primary text-white px-6 py-3 rounded-bl-xl text-lg">
+            <div className="absolute top-0 right-0 bg-secondary text-white px-6 py-3 rounded-bl-xl text-lg">
               <FormatQuoteIcon />
             </div>
 
@@ -148,34 +160,53 @@ export default function TestimonialSection() {
 
 
           {/* Bottom avatars */}
-          <div className="flex items-center gap-4 mt-8">
+          <div className="flex justify-between items-center mt-8">
+            <div className="flex items-center gap-4">
 
-            <div className="flex -space-x-3">
+              <div className="flex -space-x-3">
 
-              {[user1, user2, user3].map((img, i) => (
+                {[user1, user2, user3].map((img, i) => (
 
-                <img
-                  key={i}
-                  src={img}
-                  className="w-10 h-10 rounded-full border-2 border-white"
-                />
+                  <img
+                    key={i}
+                    src={img}
+                    className="w-10 h-10 rounded-full border-2 border-white"
+                  />
 
-              ))}
+                ))}
+
+              </div>
+
+              <div>
+
+                <div className="font-semibold text-white">
+                  Customer Satisfied
+                </div>
+
+                <div className="text-white text-sm">
+                  4.8 (15k Reviews)
+                </div>
+
+              </div>
 
             </div>
 
-            <div>
+            {/* Arrows OUTSIDE AnimatePresence */}
+            <div className="flex gap-3">
+              <button
+                onClick={handlePrev}
+                className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-secondary hover:text-white transition rounded-full shadow"
+              >
+                <ChevronLeftIcon />
+              </button>
 
-              <div className="font-semibold">
-                Customer Satisfied
-              </div>
-
-              <div className="text-gray-500 text-sm">
-                4.8 (15k Reviews)
-              </div>
-
+              <button
+                onClick={handleNext}
+                className="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-secondary hover:text-white transition rounded-full shadow"
+              >
+                <ChevronRightIcon />
+              </button>
             </div>
-
           </div>
 
         </div>
@@ -186,10 +217,9 @@ export default function TestimonialSection() {
 
           <motion.img
             src={warehouseImg}
-            initial={{ opacity: 0, scale: 1.05 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
-            className="w-full h-[500px] object-cover shadow-lg"
+
+            className="w-[65%] h-full object-cover shadow-lg absolute top-0"
+            style={{clipPath: "polygon(7% 0%, 100% 0%, 75% 100%, 0% 100%)"}}
           />
 
         </div>

@@ -5,11 +5,11 @@ import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-import aboutContainer1 from "@/assets/global-shipping.jpg";
+import aboutContainer1 from "@/assets/services/shipping-3.jpeg";
 import aboutContainer2 from "@/assets/container-loading.jpg";
 
-import aboutImg1 from "@/assets/about/about-page-slider-1.jpg";
-import aboutImg2 from "@/assets/about/about-page-slider-3.jpg";
+import aboutImg1 from "@/assets/services/warehouse-page-header.png";
+import aboutImgMap from "@/assets/about/about-map.png";
 import aboutShape from "@/assets/about/about-v1-shape3.png";
 
 import BrandSlider from "@/components/BrandSlider";
@@ -17,135 +17,98 @@ import WarehouseNetwork from "@/components/WarehouseNetwork";
 import TestimonialSection from "@/components/TestimonialSection"; 
 import WhyChooseSection from "@/components/WhyChooseSection";
 import DSVNumbersSection from "@/components/DSVNumbersSection";
-import { useEffect, useState } from 'react';
+import AboutRunning from "@/components/AboutRunning";
+import SouthIcon from '@mui/icons-material/South';
 
-const slides = [
-  aboutImg1,
-  aboutImg2,
-];
 
 const About = () => {
 
-  const [index, setIndex] = useState(0);
-
-  // Auto slide change
-  useEffect(() => {
-
-    const interval = setInterval(() => {
-
-      setIndex((prev) => (prev + 1) % slides.length);
-
-    }, 3000);
-
-    return () => clearInterval(interval);
-
-  }, []);
-
   return (
     <>
-      <section className="relative h-[500px] overflow-hidden">
+      
+      <section className="relative w-full overflow-hidden bg-[#011533]">
+      
+        {/* Main Container */}
+        <div className="grid md:grid-cols-2 pt-28 pb-20 relative">
 
-        {/* Background Image Slider */}
-        <AnimatePresence mode="wait">
+          {/* World Map Background */}
+          <div className="absolute inset-0 opacity-10 bg-[url('/src/assets/about/about-map.png')] bg-cover bg-center" />
+          
+          {/* LEFT RED PANEL */}
+          <div className="relative flex items-end px-10 md:px-20">
 
-          <motion.div
-            key={index}
+            <div className="relative z-10 text-white mb-14">
 
-            transition={{
-              opacity: { duration: 0.8 },
-              scale: { duration: 4, ease: "linear" },
-            }}
-            className="absolute inset-0"
-          >
-
-            <img
-              src={slides[index]}
-              className="w-full h-full object-cover"
-            />
-
-          </motion.div>
-
-        </AnimatePresence>
-
-        {/* Left Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r
-        from-[#000]/85
-        via-[#000]/70
-        to-transparent"/>
-
-        {/* Optional world map overlay */}
-        <div className="
-          absolute inset-0 opacity-10
-          bg-[url('/src/assets/world-map-dotted.webp')]
-          bg-left bg-no-repeat
-        "/>
-
-
-        {/* Content */}
-        <div className="relative z-10 h-full flex items-center">
-
-          <div className="max-w-7xl mx-auto px-6 w-full">
-
-            <div className="pl-12 relative">
-
-            {/* Vertical Line */}
-            <motion.div
-              initial={{ height: 0 }}
-              animate={{ height: 80 }}
-              transition={{ duration: 1 }}
-              className="absolute left-6 top-1/2 -translate-y-1/2
-                        w-[4px] bg-primary"
-            />
-
-              {/* Title */}
+              {/* Main Title */}
               <motion.h1
-                key={index + "-title"}
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.6 }}
-                className="text-white text-6xl font-bold mb-4"
+                transition={{ duration: 0.8 }}
+                className="text-4xl md:text-7xl font-extrabold leading-tight"
               >
-                About Company
+                Warehouse & Logistics
               </motion.h1>
 
-
-              {/* Breadcrumb */}
-              <motion.div
-                key={index + "-breadcrumb"}
+              {/* Small Heading */}
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-lg"
+                transition={{ duration: 0.6 }}
+                className="uppercase tracking-widest text-sm mt-6"
               >
+                Building innovative solutions that simplify everyday life.
+              </motion.p>
 
-                <a href="/">
-                  <span className="text-white underline font-semibold">
-                    Home
-                  </span>
-                </a>
+              {/* Scroll Down */}
+              {/* <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                className="flex items-center gap-3 mt-16 cursor-pointer"
+              >
+                <span className="text-lg">Scroll Down</span>
 
-                <span className="text-white mx-2">
-                  →
-                </span>
-
-                <span className="text-white">
-                  About Company
-                </span>
-
-              </motion.div>
+                <motion.div
+                  animate={{ 
+                    y: [0, 10, 0],   
+                    opacity: [0.5, 1, 0.5]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="-mt-3"
+                >
+                  <SouthIcon fontSize="small" />
+                </motion.div>
+              </motion.div> */}
 
             </div>
-
           </div>
 
-        </div>
+          {/* RIGHT IMAGE PANEL */}
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="relative flex items-end"
+          >
+            <img
+              src={aboutImg1}
+              alt="Logistics"
+              className="w-full h-[350px] pr-20 object-cover"
+            />
+          </motion.div>
 
+        </div>
       </section>
+
+      <AboutRunning />
 
       <div>
 
-        <section className="pt-16 pb-24 bg-white overflow-hidden relative">
+        <section className="pt-16 pb-32 bg-white overflow-hidden relative">
 
           <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-26 items-center">
 
@@ -153,7 +116,7 @@ const About = () => {
             <div>
 
               {/* Badge */}
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mt-4 mb-4">
 
                 <div className="w-8 h-[2px] bg-primary"></div>
 
@@ -165,7 +128,7 @@ const About = () => {
 
 
               {/* Heading */}
-              <h2 className="text-[50px] font-bold text-black leading-tight mb-6">
+              <h2 className="text-[40px] font-bold text-black leading-tight mb-6">
 
                 Our Expertise Stands in
 
@@ -323,10 +286,10 @@ const About = () => {
                     fill="white"
                     fontSize="14"
                     fontWeight="bold"
-                    letterSpacing="2"
+                    letterSpacing="6"
                   >
                     <textPath href="#circlePath" startOffset="50%" textAnchor="middle">
-                      • WELCOME TO NEJOUM EXPRESS •
+                      • WELCOME TO NEJOUM EXPRESS
                     </textPath>
                   </text>
 
@@ -367,9 +330,9 @@ const About = () => {
         
       </div>
 
-      <WhyChooseSection />
-
       <DSVNumbersSection />
+
+      <WhyChooseSection />
 
       <TestimonialSection />
 

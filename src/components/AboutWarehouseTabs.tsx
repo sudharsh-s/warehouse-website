@@ -70,18 +70,18 @@ export default function AboutWarehouseTabs() {
       <div className="max-w-7xl mx-auto px-6 z-[1] relative">
 
         {/* Header */}
-        <div className="grid grid-cols-2 mb-10">
+        <div className="grid grid-cols-2 mb-7">
 
           <div>
             <div className="flex items-center gap-3 text-primary mb-6">
 
               <div className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-l-primary border-t-transparent border-b-transparent"/>
-              <span className="font-semibold text-base">ABOUT US</span>
+              <span className="font-semibold text-base">WHO WE ARE </span>
 
             </div>
           </div>
 
-          <div className="flex gap-4 items-start">
+          <div className="flex gap-4 items-start -ml-10">
 
             <motion.div
               animate={{ x: [0, 6, 0] }}
@@ -95,11 +95,12 @@ export default function AboutWarehouseTabs() {
                         border-t-transparent border-b-transparent mt-2"
             />
 
-            <p className="text-2xl font-semibold leading-8">
-              At Apexus, we operate one of the largest global warehouse network
-              with over 12,300 facilities worldwide. By combining scalable space
-              with advanced logistics solutions,
-            </p>
+            <div>
+              <h5 className="text-2xl font-semibold leading-8 mb-2">Strategic U.S. Vehicle Yards for Global Export</h5>
+              <p className="">
+                Our nationwide yard network across the USA supports auction purchases, bulk inventory management, consolidation, and international shipping. Designed for efficiency and scale, our facilities streamline towing, warehousing, loading, and export clearance — ensuring your vehicles move faster from auction floor to global destination.
+              </p>
+            </div>
 
           </div>
 

@@ -18,7 +18,6 @@ import shipping1 from "@/assets/services/shipping-1.jpeg";
 import shipping2 from "@/assets/services/shipping-2.jpeg";
 import shipping3 from "@/assets/services/shipping-3.jpeg";
 import shipping4 from "@/assets/services/shipping-4.jpeg";
-import shipping6 from "@/assets/services/shipping-6.jpeg";
 import shipping7 from "@/assets/services/shipping-7.jpeg";
 
 import air1 from "@/assets/services/air-1.webp";
@@ -44,7 +43,7 @@ export const servicesData = [
   {
     slug: "warehouse-storage",
 
-    title: "Integrated Warehousing & Open Yard Storage",
+    title: "Warehousing & Open Yard Storage",
 
     heroImage: warehouseImg,
 
@@ -135,7 +134,7 @@ export const servicesData = [
   {
     slug: "road-freight",
 
-    title: "Nationwide Road Freight & Vehicle Transport",
+    title: "Loading & Road Freight Support ",
 
     heroImage: transport,
 
@@ -237,7 +236,6 @@ export const servicesData = [
       shipping2,
       shipping3,
       shipping4,
-      shipping6,
       shipping7,
     ],
 

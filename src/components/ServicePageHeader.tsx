@@ -119,7 +119,7 @@ export default function TransportHero() {
 
   const truckImages = {
     "warehouse-storage": { src: warehouse, className: "w-[35%] bottom-8 -left-3" },
-    "road-freight": { src: truckRoad, className: "w-[35%] bottom-0 -left-3" },
+    "road-freight": { src: truckRoad, className: "w-[30%] bottom-8 -left-3" },
     "ocean-freight": { src: ocean, className: "w-[45%] bottom-0 -left-36" },
     "air-freight": { src: air, className: "w-[45%] bottom-0 -left-32" },
     "car-wrapping": { src: car, className: "w-[40%] bottom-0 -left-20" },
@@ -282,10 +282,10 @@ export default function TransportHero() {
             {/* 1 */}
             <div>
               <h2 className="text-5xl font-bold text-primary">
-                <Counter to={541} />+
+                <Counter to={1500} />k+
               </h2>
               <p className="mt-2 text-lg font-semibold text-gray-700">
-                Distribution Center
+                Vehicle Transported
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
             </div>
@@ -293,7 +293,7 @@ export default function TransportHero() {
             {/* 2 */}
             <div>
               <h2 className="text-5xl font-bold text-primary">
-                <Counter to={54} />+
+                <Counter to={23} />+
               </h2>
               <p className="mt-2 text-lg font-semibold text-gray-700">
                 Years Of Experience
@@ -304,10 +304,10 @@ export default function TransportHero() {
             {/* 3 */}
             <div>
               <h2 className="text-5xl font-bold text-primary">
-                <Counter to={50} />+
+                <Counter to={57} />+
               </h2>
               <p className="mt-2 text-lg font-semibold text-gray-700">
-                Countries & Regions
+                Countries
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
             </div>
