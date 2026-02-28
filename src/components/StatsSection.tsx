@@ -128,7 +128,7 @@ export default function StatsSection() {
                     </div>
 
                     {/* Label */}
-                    <div className="text-black/80 text-sm mt-1">
+                    <div className="text-black/80 text-md mt-1">
                       {stat.label}
                     </div>
 

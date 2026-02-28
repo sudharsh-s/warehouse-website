@@ -24,7 +24,7 @@ export default function DSVNumbersSection() {
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-6 text-center">
-        <p className="text-lg mb-12 text-gray-200">DSV in numbers</p>
+        <p className="text-xl mb-12 text-gray-200 font-semibold">DSV in numbers</p>
 
         <div className="grid md:grid-cols-4 gap-12">
           {/* Item 1 */}

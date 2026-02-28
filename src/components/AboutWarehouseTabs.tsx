@@ -76,7 +76,7 @@ export default function AboutWarehouseTabs() {
             <div className="flex items-center gap-3 text-primary mb-6">
 
               <div className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-l-primary border-t-transparent border-b-transparent"/>
-              <span className="font-semibold text-base">WHO WE ARE </span>
+              <span className="text-2xl font-semibold leading-8">WHO WE ARE </span>
 
             </div>
           </div>
@@ -96,8 +96,8 @@ export default function AboutWarehouseTabs() {
             />
 
             <div>
-              <h5 className="text-2xl font-semibold leading-8 mb-2">Strategic U.S. Vehicle Yards for Global Export</h5>
-              <p className="">
+              <h5 className="text-[35px] font-semibold leading-10 mb-2">Strategic U.S. Vehicle Yards for Global Export</h5>
+              <p className="text-gray-500 text-base leading-[22px]">
                 Our nationwide yard network across the USA supports auction purchases, bulk inventory management, consolidation, and international shipping. Designed for efficiency and scale, our facilities streamline towing, warehousing, loading, and export clearance — ensuring your vehicles move faster from auction floor to global destination.
               </p>
             </div>
@@ -202,13 +202,13 @@ export default function AboutWarehouseTabs() {
 
                           <div>
 
-                            <div className={`font-semibold ${
+                            <div className={`font-semibold text-md ${
                               isActive ? "text-primary" : "text-gray-700"
                             }`}>
                               {tab.title}
                             </div>
 
-                            <div className={`text-sm ${isActive ? "text-primary" : "text-gray-700"} mt-1`}>
+                            <div className={`text-sm font-medium ${isActive ? "text-primary" : "text-gray-700"} mt-1`}>
                               {tab.location}
                             </div>
 
@@ -267,7 +267,7 @@ function Feature({ icon: Icon, title, desc }) {
         {title}
       </div>
 
-      <div className="text-gray-500 text-sm">
+      <div className="text-gray-500 text-base leading-[22px]">
         {desc}
       </div>
     </motion.div>

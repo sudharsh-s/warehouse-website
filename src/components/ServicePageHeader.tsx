@@ -204,7 +204,7 @@ export default function TransportHero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -60 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl lg:text-6xl font-bold leading-tight whitespace-pre-line"
+              className="text-4xl lg:text-5xl font-bold !leading-[1.1] whitespace-pre-line"
             >
               {activeTabData.title}
             </motion.h1>
@@ -216,7 +216,7 @@ export default function TransportHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.25 }}
               transition={{ duration: 0.8 }}
-              className="absolute text-[90px] font-bold top-24 left-0 text-transparent select-none pointer-events-none"
+              className="absolute text-[70px] font-bold top-24 left-0 text-transparent select-none pointer-events-none"
               style={{
                 WebkitTextStroke: "1px white",
               }}

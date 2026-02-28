@@ -44,7 +44,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-7xl font-extrabold leading-tight"
+                className="text-4xl md:text-6xl font-extrabold leading-tight"
               >
                 Warehouse & Logistics
               </motion.h1>
@@ -128,7 +128,7 @@ const About = () => {
 
 
               {/* Heading */}
-              <h2 className="text-[40px] font-bold text-black leading-tight mb-6">
+              <h2 className="text-[35px] font-bold text-black leading-tight mb-6">
 
                 Our Expertise Stands in
 
@@ -140,7 +140,7 @@ const About = () => {
 
 
               {/* Description */}
-              <p className="text-gray-500 text-lg mb-10 max-w-xl">
+              <p className="text-gray-500 text-base leading-5 mb-10 max-w-xl">
                 Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.
               </p>
 
@@ -157,7 +157,7 @@ const About = () => {
                     Worldwide Service
                   </h4>
 
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-500 text-base leading-5">
                     Logistic service provider company plays a pivotal role in the global
                   </p>
 
@@ -173,7 +173,7 @@ const About = () => {
                     24/7 Online Support
                   </h4>
 
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-500 text-base leading-5">
                     Logistic service provider company plays a pivotal role in the global
                   </p>
 

@@ -8,7 +8,7 @@ export default function RunningText() {
   ];
 
   return (
-    <div className="w-full overflow-hidden bg-[#013188] py-6">
+    <div className="w-full overflow-hidden bg-[#013188] py-4">
 
       <div className="marquee group flex whitespace-nowrap">
 

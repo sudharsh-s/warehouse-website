@@ -148,7 +148,7 @@ export default function ContactSection() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-7xl font-extrabold leading-tight"
+                className="text-4xl md:text-6xl font-extrabold leading-tight"
               >
                 Start a Conversation
               </motion.h1>

@@ -12,7 +12,6 @@ const steps = [
   {
     number: "01",
     title: "Discovery & Booking",
-    subtitle: "Plan the Movement. Secure the Space. Define the Process.",
     description:
       "Share your shipment details — vehicles, containers, bulk cargo, origin and destination. We assess handling requirements, compliance needs, and transport mode.",
     image: img1,
@@ -20,7 +19,6 @@ const steps = [
   {
     number: "02",
     title: "Receive & Store",
-    subtitle: "Controlled Entry. Secure Storage. Full Visibility.",
     description:
       "Cargo arrives via port transfer or truck. Our team unloads, inspects, documents, and registers everything into the system.",
     image: img2,
@@ -28,7 +26,6 @@ const steps = [
   {
     number: "03",
     title: "Manage & Add Services",
-    subtitle: "More Than Storage. Operational Support.",
     description:
       "We provide value-added services to optimize your supply chain and prepare cargo for export or dispatch.",
     image: img3,
@@ -36,7 +33,6 @@ const steps = [
   {
     number: "04",
     title: "Clear & Load",
-    subtitle: "Compliance Secured. Cargo Ready for Transit.",
     description:
       "Our team coordinates clearance processes and prepares goods for outbound movement.",
     image: img4,
@@ -44,7 +40,6 @@ const steps = [
   {
     number: "05",
     title: "Ship & Deliver",
-    subtitle: "From UAE to Global Markets.",
     description:
       "We manage ocean freight and final transport through trusted carrier networks.",
     image: img5,
@@ -125,7 +120,7 @@ export default function StickyProcessSection() {
                         x: isActive ? 0 : -20,
                       }}
                       transition={{ duration: 0.4 }}
-                      style={{marginBottom: "1rem"}}
+                      style={{marginBottom: "2.5rem"}}
                     >
 
                       <div className="flex gap-2 items-start">
@@ -141,8 +136,6 @@ export default function StickyProcessSection() {
                             {step.title}
 
                           </h2>
-
-                          <h5 className="text-white font-semibold mb-2">{step.subtitle}</h5>
 
                           <p className="text-gray-400">
                             {step.description}

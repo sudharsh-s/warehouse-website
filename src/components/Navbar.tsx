@@ -71,8 +71,8 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <div className='flex items-center'>
-            <img src="/logo-icon.png" alt="Nejoum Shipping" className={`h-10 md:h-12 w-auto object-contain ${scrolled ? 'filter-none' : 'invert brightness-0'}`}  />
-            <img src="/logo-name.png" alt="Nejoum Shipping" className={`h-10 md:h-12 w-auto object-contain ${scrolled ? 'filter-none' : 'invert brightness-0'}`} />
+            <img src="/logo-icon.png" alt="Nejoum Shipping" className={`h-10 w-auto object-contain ${scrolled ? 'filter-none' : 'invert brightness-0'}`}  />
+            <img src="/logo-name.png" alt="Nejoum Shipping" className={`h-10 w-auto object-contain ${scrolled ? 'filter-none' : 'invert brightness-0'}`} />
           </div>
         </Link>
 

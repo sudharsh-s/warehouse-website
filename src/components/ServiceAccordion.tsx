@@ -67,7 +67,7 @@ export default function ServiceAccordion({ items }: Props) {
                     {item.content.map((text, i) => (
                       <div key={i} className="flex gap-2">
                         <span className="text-primary">✔</span>
-                        <span>{text}</span>
+                        <span className="text-gray-500 text-base leading-6">{text}</span>
                       </div>
                     ))}
 

@@ -83,7 +83,7 @@ export default function TestimonialSection() {
 
             </div>
 
-            <h2 className="text-[40px] font-bold text-white leading-tight">
+            <h2 className="text-[35px] font-bold text-white leading-tight">
 
               What Our Customers
               <br />
@@ -148,7 +148,7 @@ export default function TestimonialSection() {
 
 
                 {/* Text */}
-                <p className="text-gray-500 leading-relaxed">
+                <p className="text-gray-500 text-base leading-6">
                   {testimonial.text}
                 </p>
 

@@ -28,7 +28,7 @@ export default function ServiceDetail() {
           <div className="lg:col-span-2">
 
             {/* TITLE */}
-            <h2 className="text-[40px] leading-10 font-bold mb-5">
+            <h2 className="text-[35px] leading-10 font-bold mb-5">
               {service.title}
             </h2>
 
@@ -39,12 +39,12 @@ export default function ServiceDetail() {
             /> */}
 
             {/* TEXT */}
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-500 text-base leading-6 mb-6">
               {service.introText}
             </p>
 
             {/* FEATURES */}
-            <h3 className="text-2xl text-gray-600 font-bold mb-4">
+            <h3 className="text-xl text-gray-600 font-bold mb-4">
               We Offer:
             </h3>
 
@@ -57,7 +57,7 @@ export default function ServiceDetail() {
                     <span>{item}</span>
                   ) : (
                     <span>
-                      <span className="font-bold text-gray-600">{item.title}</span> – {item.description}
+                      <span className="font-bold text-gray-600">{item.title}</span> – <span className="text-gray-500 text-base leading-6">{item.description}</span>
                     </span>
                   )}
                 </li>
@@ -65,7 +65,7 @@ export default function ServiceDetail() {
             </ul>
 
             {/* HIGHLIGHTS */}
-            <h3 className="text-2xl font-bold text-gray-600 mb-4">
+            <h3 className="text-xl font-bold text-gray-600 mb-4">
               Facility Highlights
             </h3>
 
@@ -73,13 +73,13 @@ export default function ServiceDetail() {
               {service.highlights.map((item, i) => (
                 <li key={i} className="flex gap-3 items-start">
                   <ArrowRight className="w-5 h-5 text-primary" />
-                  <span>{item}</span>
+                  <span className="text-gray-500 text-base leading-6">{item}</span>
                 </li>
               ))}
             </ul>
 
             {/* Enclosed */}
-            <h3 className="text-2xl text-gray-600 font-bold mb-4">
+            <h3 className="text-xl text-gray-600 font-bold mb-4">
               What’s Included in This Service
             </h3>
 
@@ -87,7 +87,7 @@ export default function ServiceDetail() {
               {service.enclosed.map((item, i) => (
                 <li key={i} className="flex gap-3 items-start">
                   <Check className="w-5 h-5 text-primary" />
-                  <span>{item}</span>
+                  <span className="text-gray-500 text-base leading-6">{item}</span>
                 </li>
               ))}
             </ul>

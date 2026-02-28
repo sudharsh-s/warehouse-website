@@ -140,7 +140,7 @@ const Index = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-5xl md:text-[65px] font-black text-white mb-6">
+            <h1 className="text-5xl md:text-[60px] font-black text-white mb-6">
               {slides[current].title}
               <span className="block text-secondary">
                 {slides[current].highlight}
