@@ -42,7 +42,7 @@ const clients = [
 
 export default function WhoWeServeModern() {
   return (
-    <section className="pt-16 bg-white">
+    <section className="pt-12 md:pt-16 bg-white">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -51,7 +51,7 @@ export default function WhoWeServeModern() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-6 md:mb-16"
         >
           <h2 className="title">
             Who We <span>Serve</span>

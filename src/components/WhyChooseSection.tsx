@@ -56,7 +56,7 @@ const features = [
 
 export default function WhyChooseCircularSection() {
   return (
-    <section className="pt-16 pb-32 bg-white overflow-hidden">
+    <section className="pt-16 pb-20 md:pb-32 bg-white overflow-hidden">
         <div className="text-center mb-14">
           <h2 className="title">
             Why <span>Choose US</span>
@@ -71,7 +71,7 @@ export default function WhyChooseCircularSection() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-center gap-16 mt-16">
 
         {/* LEFT SIDE */}
-        <div className="relative w-[600px] h-[500px] flex items-center justify-center">
+        <div className="relative w-[300px] h-[330px] md:w-[600px] md:h-[500px] flex items-center justify-center">
 
           {/* Background Circle */}
           <motion.img
@@ -85,7 +85,7 @@ export default function WhyChooseCircularSection() {
               ease: "easeInOut",
               repeat: Infinity,
             }}
-            className="absolute w-[500px] h-[500px] rounded-full object-cover"
+            className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full object-cover"
           />
 
           {/* Main Circle */}
@@ -116,7 +116,7 @@ export default function WhyChooseCircularSection() {
                 ease: "easeInOut",
               },
             }}
-            className="absolute -left-10 bottom-5 w-[190px] h-[190px] rounded-full gradient-primary flex items-center justify-center text-white text-center font-bold text-3xl shadow-xl"
+            className="absolute -left-10 bottom-5 w-[130px] md:w-[190px] h-[130px] md:h-[190px] rounded-full gradient-primary flex items-center justify-center text-white text-center font-bold text-3xl shadow-xl"
           />
 
           <motion.img
@@ -146,13 +146,64 @@ export default function WhyChooseCircularSection() {
                 ease: "easeInOut",
               },
             }}
-            className="absolute right-6 top-5 w-[120px] h-[120px] object-cover rounded-full gradient-primary flex items-center justify-center text-white text-center font-bold text-3xl shadow-xl"
+            className="absolute right-6 top-5 w-[60px] md:w-[120px] h-[60px] md:h-[120px] object-cover rounded-full gradient-primary flex items-center justify-center text-white text-center font-bold text-3xl shadow-xl"
           />
 
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="flex flex-col gap-10 h-[500px] relative">
+        <div className="flex flex-col gap-10 h-full md:h-[500px] relative">
+
+          <div className="flex lg:hidden flex-col gap-5">
+
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 60 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.2 }}
+                  className="flex items-center gap-6 relative"
+                >
+                  {/* Floating Icon */}
+                  <motion.div
+                    animate={{ y: [0, -12, 0] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      delay: index * 0.3,
+                    }}
+                    className={`
+                      w-16 h-16
+                      rounded-[32px]
+                      bg-gradient-to-br ${feature.color}
+                      flex items-center justify-center
+                      text-white shadow-lg
+                      shrink-0
+                    `}
+                  >
+                    <Icon fontSize="small" />
+                  </motion.div>
+
+                  {/* Line */}
+                  <div className="w-12 h-[2px] bg-gray-300" />
+
+                  {/* Text */}
+                  <div>
+                    <div className="text-xl font-semibold text-gray-800">
+                      {feature.title}
+                    </div>
+                    <div className="text-gray-500">
+                      {feature.description}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+
+          </div>
 
           {/* Floating Icons */}
           {features.map((feature, index) => {
@@ -170,13 +221,14 @@ export default function WhyChooseCircularSection() {
                   repeat: Infinity,
                   delay: index * 0.3,
                 }}
-                className={`absolute -left-4 w-16 h-16 rounded-full bg-gradient-to-br ${feature.color} flex items-center justify-center text-white shadow-lg`}
+                className={`relative md:absolute -left-4 w-16 h-16 rounded-full bg-gradient-to-br ${feature.color} hidden md:flex items-center justify-center text-white shadow-lg`}
                 style={{ top: `calc(50% + ${feature.y}px)` }}
               >
                 <Icon />
               </motion.div>
             );
           })}
+
 
           {features.map((feature, index) => {
 
@@ -188,7 +240,7 @@ export default function WhyChooseCircularSection() {
                 initial={{ opacity: 0, x: 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="flex items-center gap-6 ml-16"
+                className="hidden md:flex items-center gap-6 ml-16"
               >
 
                 {/* Line */}

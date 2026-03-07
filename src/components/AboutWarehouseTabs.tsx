@@ -13,48 +13,50 @@ import warehouse6 from "@/assets/about/aboutwarehouse-6.jpg";
 import warehouse7 from "@/assets/about/aboutwarehouse-7.jpg";
 import worldMap from "@/assets/about/about-world-map.webp";
 
+import side from "@/assets/about/about-page-slider.jpg";
+
 const tabs = [
   {
     id: 1,
     title: "New Jersey",
     location: "6 Linden Ave. East Jersey City, NJ 07305",
-    image: warehouse2,
+    image: side,
   },
   {
     id: 2,
     title: "Georgia",
     location: "46 Artley Road Savannah, GA 31408",
-    image: warehouse4,
+    image: side,
   },
   {
     id: 3,
     title: "Texas",
     location: "6320 Madden Ln, Houston, TX 77048",
-    image: warehouse1,
+    image: side,
   },
   {
     id: 4,
     title: "California",
     location: "131 E. Gardena Blvd. Gardena, CA 90248",
-    image: warehouse3,
+    image: side,
   },
   {
     id: 5,
     title: "California",
     location: "14611 S. Broadway. Gardena CA 90248",
-    image: warehouse5,
+    image: side,
   },
   {
     id: 6,
     title: "Tacoma",
     location: "1001 E 26th st, Tacoma 98421 WA",
-    image: warehouse6,
+    image: side,
   },
   {
     id: 7,
     title: "Korea",
     location: "Incheon, Republic of Korea",
-    image: warehouse7,
+    image: side,
   },
 ];
 
@@ -65,23 +67,23 @@ export default function AboutWarehouseTabs() {
   const active = tabs[activeTab];
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative py-14 md:py-24 bg-white overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-6 z-[1] relative">
 
         {/* Header */}
-        <div className="grid grid-cols-2 mb-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 mb-7">
 
           <div>
-            <div className="flex items-center gap-3 text-primary mb-6">
+            <div className="flex items-center gap-3 text-primary mb-3 md:mb-6">
 
               <div className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-l-primary border-t-transparent border-b-transparent"/>
-              <span className="text-2xl font-semibold leading-8">WHO WE ARE </span>
+              <span className="text-base md:text-2xl font-semibold leading-8">WHO WE ARE </span>
 
             </div>
           </div>
 
-          <div className="flex gap-4 items-start -ml-10">
+          <div className="flex gap-4 items-start ml-0 md:-ml-10">
 
             <motion.div
               animate={{ x: [0, 6, 0] }}
@@ -92,11 +94,11 @@ export default function AboutWarehouseTabs() {
               }}
               className="w-0 h-0 border-t-[10px] border-b-[10px] 
                         border-l-[14px] border-l-primary 
-                        border-t-transparent border-b-transparent mt-2"
+                        border-t-transparent border-b-transparent mt-2 hidden md:block"
             />
 
             <div>
-              <h5 className="text-[35px] font-semibold leading-10 mb-2">Strategic U.S. Vehicle Yards for Global Export</h5>
+              <h5 className="text-2xl md:text-[35px] font-semibold leading-7 md:leading-10 mb-2">Strategic U.S. Vehicle Yards for Global Export</h5>
               <p className="text-gray-500 text-base leading-[22px]">
                 Our nationwide yard network across the USA supports auction purchases, bulk inventory management, consolidation, and international shipping. Designed for efficiency and scale, our facilities streamline towing, warehousing, loading, and export clearance — ensuring your vehicles move faster from auction floor to global destination.
               </p>
@@ -110,12 +112,12 @@ export default function AboutWarehouseTabs() {
 
         <div className="relative">
           {/* Background Map */}
-          <img src={worldMap} className="absolute right-0 top-0 w-full h-full z-[0] pointer-events-none" />
+          <img src={worldMap} className="absolute right-0 top-0 w-full h-full z-[0] pointer-events-none hidden md:block" />
 
             <div className="max-w-7xl mx-auto px-6 z-[1] relative">
 
               {/* Main Grid */}
-              <div className="grid grid-cols-2 gap-16 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-16 items-center mt-12 md:mt-0">
 
                 {/* LEFT IMAGE */}
                 <div className="relative">
@@ -130,7 +132,7 @@ export default function AboutWarehouseTabs() {
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}
                       transition={{ duration: 0.5 }}
-                      className="rounded-lg shadow-lg w-full h-[450px] object-cover"
+                      className="rounded-lg shadow-lg w-full h-[300px] md:h-[450px] object-cover"
                     />
 
                   </AnimatePresence>
@@ -139,7 +141,7 @@ export default function AboutWarehouseTabs() {
                   {/* Floating + Button */}
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="absolute -top-6 -left-7 w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white text-2xl shadow-lg cursor-pointer"
+                    className="absolute -top-6 -left-4 md:-left-7 w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white text-2xl shadow-lg cursor-pointer"
                   >
                     +
                   </motion.div>
@@ -179,7 +181,7 @@ export default function AboutWarehouseTabs() {
                         key={tab.id}
                         onClick={() => setActiveTab(index)}
                         whileHover={{ x: 5 }}
-                        className="cursor-pointer py-5 border-b last:border-b-0 border-gray-200"
+                        className="cursor-pointer py-3 md:py-5 border-b last:border-b-0 border-gray-200"
                       >
 
                         <div className="flex items-start gap-3">
@@ -227,7 +229,7 @@ export default function AboutWarehouseTabs() {
               </div>
 
               {/* Bottom Feature Cards */}
-              <div className="grid grid-cols-3 gap-5 mt-10 border-t border-l border-r divide-x divide-grey/10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-5 mt-5 md:mt-10 border-t border-l border-r divide-y md:divide-y-0 md:divide-x divide-grey/10">
 
                 <Feature
                   icon={VerifiedUser}

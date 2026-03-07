@@ -20,7 +20,7 @@ export default function ServiceDetail() {
       <ServicePageHeader />
 
       {/* SERVICE DETAIL CONTENT */}
-      <section className="pt-20 pb-20 bg-white">
+      <section className="pt-14 md:pt-20 pb-20 bg-white">
 
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-8">
 
@@ -28,7 +28,7 @@ export default function ServiceDetail() {
           <div className="lg:col-span-2">
 
             {/* TITLE */}
-            <h2 className="text-[35px] leading-10 font-bold mb-5">
+            <h2 className="text-[30px] md:text-[35px] leading-8 md:leading-10 font-bold mb-5">
               {service.title}
             </h2>
 

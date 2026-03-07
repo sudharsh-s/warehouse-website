@@ -3,11 +3,19 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "howItWorks": "How It Works",
-    "warehouse": "Warehouse",
     "contact": "Contact",
-    "getQuote": "Enquiry"
+    "getQuote": "Enquiry",
+    
+    "serviceSubmenu": {
+      "warehouse": "Warehouse & Storage",
+      "road": "Road Freight",
+      "ocean": "Ocean Freight",
+      "air": "Air Freight",
+      "wrapping": "Car Wrapping",
+      "inspection": "Inspection & Customs Clearance"
+    }
   },
+
   "hero": {
     "title": "Trusted Vehicle Auction Warehouse and Export Hub",
     "subtitle": "Secure vehicle storage, inspection, container loading, and international shipping for auction vehicles.",
@@ -114,10 +122,32 @@
     }
   },
   "footer": {
-    "description": "Global leader in auction vehicle storage and export logistics.",
-    "quickLinks": "Quick Links",
-    "ourServices": "Our Services",
-    "contactInfo": "Contact Info",
-    "rights": "All rights reserved."
+    "ctaTitle": "Efficient, Safe, & Swift Logistics Solution!",
+    "ctaButton": "Contact With Us →",
+
+    "companyDescription": "A logistics service provider company plays a pivotal role in the global supply chain and transportation industry.",
+
+    "makeCall": "Make a Call",
+    "phone": "+1-734-496-3761",
+
+    "quickLinks": "Quick Links ✈",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "service": "Services",
+      "contact": "Contact"
+    },
+
+    "getInTouch": "Get In Touch ✈",
+    "address": "Nejoum Express, 6320 Madden Ln, Houston, TX 77048",
+    "email": "cs@nejoumexpress.com",
+
+    "subscribeTitle": "Subscribe Us ✈",
+    "subscribeDescription": "Sign up for alerts, our latest blogs, thoughts, and insights.",
+    "emailPlaceholder": "Your E-mail",
+    "subscribeButton": "Subscribe →",
+
+    "copyright": "© All Rights Reserved. Nejoum Express"
   }
+
 }

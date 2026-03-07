@@ -25,9 +25,9 @@ const logos = [
 
 export default function BrandSlider() {
   return (
-    <section className="bg-white pt-5 pb-16">
+    <section className="bg-white pt-3 md:pt-5 pb-7 md:pb-16">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <div className="text-center mb-10">
+        <div className="text-center mb-3 md:mb-10">
           <h2 className="title">Our <span>Partners</span></h2>
           <p className="text-gray-500 max-w-2xl mx-auto">Connecting businesses globally through strong and reliable partnerships.</p>
         </div>

@@ -65,7 +65,7 @@ export default function TestimonialSection() {
 
   return (
 
-    <section className="py-24 bg-[#011533] relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-[#011533] relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
@@ -83,7 +83,7 @@ export default function TestimonialSection() {
 
             </div>
 
-            <h2 className="text-[35px] font-bold text-white leading-tight">
+            <h2 className="text-3xl md:text-[35px] font-bold text-white leading-tight">
 
               What Our Customers
               <br />
@@ -96,7 +96,7 @@ export default function TestimonialSection() {
 
 
           {/* Testimonial Card */}
-          <div className="relative bg-white shadow-md p-10 pl-14">
+          <div className="relative bg-white shadow-md p-10 pl-5 md:pl-14">
 
             {/* Left Orange Line */}
             <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-secondary"/>
@@ -213,7 +213,7 @@ export default function TestimonialSection() {
 
 
         {/* RIGHT IMAGE */}
-        <div>
+        <div className="hidden lg:block">
 
           <motion.img
             src={warehouseImg}

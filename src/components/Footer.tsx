@@ -5,6 +5,8 @@ import {
   MapPin,
 } from "lucide-react";
 
+import { useTranslation } from 'react-i18next';
+
 import plane from "@/assets/footer-plane.png";
 import worldMap from "@/assets/about/about-map.png";
 import containers from "@/assets/footer-container.png";
@@ -14,6 +16,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 
 export default function Footer() {
+  const { t } = useTranslation();
   const year = new Date().getFullYear();
 
   return (
@@ -29,16 +32,16 @@ export default function Footer() {
       <div className="relative bg-secondary/95">
 
         {/* angled shape */}
-        <div className="absolute right-0 top-1 w-[27%] h-full bg-[#011533] clip-diagonal"></div>
+        <div className="absolute right-0 top-1 w-[27%] h-full bg-[#011533] clip-diagonal hidden lg:block"></div>
 
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center gap-10 relative z-10">
 
           {/* LEFT */}
           <div className="flex items-center gap-4 text-3xl font-bold ml-14">
 
-            <img src={plane} className="w-40 absolute left-0 top-[30%]"/>
+            <img src={plane} className="w-40 absolute left-4 lg:left-0 top-[40%] lg:top-[30%]"/>
 
-            Efficient, Safe, & Swift Logistics Solution!
+            {t("footer.ctaTitle")}
 
           </div>
 
@@ -46,7 +49,7 @@ export default function Footer() {
           {/* BUTTON */}
           <a href="/contact" className="gradient-primary hover:bg-black transition px-6 py-3 rounded-md font-semibold">
 
-            Contact With Us →
+            {t("footer.ctaButton")}
 
           </a>
 
@@ -57,9 +60,9 @@ export default function Footer() {
 
 
       {/* ================= MAIN FOOTER ================= */}
-      <div className="max-w-7xl mx-auto px-6 pt-20 pb-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 pt-12 md:pt-20 pb-12 relative z-10">
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
 
           {/* LOGO */}
           <div>
@@ -71,8 +74,7 @@ export default function Footer() {
 
 
             <p className="text-white/70 mb-6">
-              Logistic service provider company plays a pivotal role in the
-              global supply chain logistics service provider.
+              {t("footer.companyDescription")}
             </p>
 
             {/* PHONE */}
@@ -87,7 +89,7 @@ export default function Footer() {
               <div>
 
                 <div className="text-sm text-white/60">
-                  Make a Call
+                  {t("footer.makeCall")}
                 </div>
 
                 <div className="text-secondary font-semibold">
@@ -106,18 +108,15 @@ export default function Footer() {
           <div>
 
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              Quick Links ✈
+              {t("footer.quickLinks")}
             </h3>
 
             <ul className="space-y-3 text-white/70">
 
-              <li><Link to="/">→ Home</Link></li>
-
-              <li><Link to="/about">→ About</Link></li>
-
-              <li><Link to="/services/warehouse-storage">→ Service</Link></li>
-
-              <li><Link to="/contact">→ Contact</Link></li>
+              <li><Link to="/">→ {t("footer.links.home")}</Link></li>
+              <li><Link to="/about">→ {t("footer.links.about")}</Link></li>
+              <li><Link to="/services/warehouse-storage">→ {t("footer.links.service")}</Link></li>
+              <li><Link to="/contact">→ {t("footer.links.contact")}</Link></li>
 
             </ul>
 
@@ -129,14 +128,14 @@ export default function Footer() {
           <div>
 
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              Get In Touch ✈
+              {t("footer.getInTouch")}
             </h3>
 
             <div className="space-y-4 text-white/70">
 
               <div className="flex gap-3">
                 <MapPin className="text-secondary"/>
-                Nejoum Express, 6320 Madden Ln, Houston, TX 77048
+                {t("footer.address")}
               </div>
 
               <div className="flex gap-3">
@@ -159,21 +158,21 @@ export default function Footer() {
           <div>
 
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              Subscribe Us ✈
+              {t("footer.subscribeTitle")}
             </h3>
 
             <p className="text-white/70 mb-4">
-              Sign up for alerts, our latest blogs, thoughts, and insights
+              {t("footer.subscribeDescription")}
             </p>
 
             <input
-              placeholder="Your E-mail"
+              placeholder={t("footer.emailPlaceholder")}
               className="w-full p-3 rounded bg-white text-black mb-3"
             />
 
             <button className="bg-secondary hover:bg-yellow-600 px-6 py-3 rounded font-semibold w-full">
 
-              Subscribe →
+              {t("footer.subscribeButton")}
 
             </button>
 
@@ -186,9 +185,9 @@ export default function Footer() {
         {/* BOTTOM */}
         <div className="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
 
-          <div className="text-white/60 text-sm">
+          <div className="text-white/60 text-sm text-center md:text-left">
 
-            © Copyright {year} Nejoum Express. All Rights Reserved
+            {t("footer.copyright")} {year}
 
           </div>
 
@@ -234,7 +233,7 @@ export default function Footer() {
       {/* CONTAINERS IMAGE */}
       <img
         src={containers}
-        className="absolute right-0 top-0 w-60 hidden lg:block"
+        className="absolute right-0 top-0 w-60 hidden xl:block"
       />
 
     </footer>

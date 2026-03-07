@@ -12,6 +12,8 @@ import smallImg from "@/assets/services/service-header-img1.jpg";
 import shape1 from "@/assets/services/service-shape1.png";
 import shape2 from "@/assets/services/service-shape2.png";
 
+import warehouseImg7 from "@/assets/services/warehouse-stroage-7.jpg";
+
 
 export default function TransportHero() {
 
@@ -118,12 +120,12 @@ export default function TransportHero() {
   ];
 
   const truckImages = {
-    "warehouse-storage": { src: warehouse, className: "w-[35%] bottom-8 -left-3" },
-    "road-freight": { src: truckRoad, className: "w-[30%] bottom-8 -left-3" },
-    "ocean-freight": { src: ocean, className: "w-[45%] bottom-0 -left-36" },
-    "air-freight": { src: air, className: "w-[45%] bottom-0 -left-32" },
-    "car-wrapping": { src: car, className: "w-[40%] bottom-0 -left-20" },
-    "inspection-customs": { src: inspection, className: "w-[50%] bottom-0 -left-36" },
+    "warehouse-storage": { src: warehouseImg7, className: "w-[65%] md:w-[35%] bottom-8 -left-3" },
+    "road-freight": { src: truckRoad, className: "w-[65%] md:w-[30%] bottom-8 -left-3" },
+    "ocean-freight": { src: ocean, className: "w-[95%] md:w-[45%] bottom-10 md:bottom-0 -left-20 md:-left-36" },
+    "air-freight": { src: air, className: "w-full md:w-[45%] bottom-0 -left-32" },
+    "car-wrapping": { src: car, className: "w-[85%] md:w-[40%] bottom-0 -left-20" },
+    "inspection-customs": { src: inspection, className: "w-full md:w-[50%] bottom-0 -left-14 md:-left-36" },
   };
 
   const currentTruck = truckImages[slug] || { src: truckRoad, className: "bottom-0 -left-3 w-[35%]" };
@@ -187,15 +189,15 @@ export default function TransportHero() {
             repeatType: "reverse",
             ease: "easeInOut"
           }}
-          className={`absolute hidden lg:block z-[1] ${currentTruck.className}`}
+          className={`absolute block z-[1] ${currentTruck.className}`}
         />
 
         {/* CONTENT */}
-        <div className="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 items-center">
+        <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 items-center -mt-24 md:-mt-0">
 
           <img src={shape2} alt="Shape 2" className="absolute opacity-25 z-0" />
 
-          <div className="text-white absolute top-32 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="text-white absolute top-32 left-4 md:left-1/2 transform md:-translate-x-1/2 z-10">
 
             {/* Main Heading */}
             <motion.h1
@@ -204,7 +206,7 @@ export default function TransportHero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -60 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl lg:text-5xl font-bold !leading-[1.1] whitespace-pre-line"
+              className="text-[30px] lg:text-5xl font-bold !leading-[1.1] whitespace-pre-line"
             >
               {activeTabData.title}
             </motion.h1>
@@ -216,7 +218,7 @@ export default function TransportHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.25 }}
               transition={{ duration: 0.8 }}
-              className="absolute text-[70px] font-bold top-24 left-0 text-transparent select-none pointer-events-none"
+              className="absolute text-[45px] md:text-[70px] font-bold top-16 md:top-24 left-0 text-transparent select-none pointer-events-none"
               style={{
                 WebkitTextStroke: "1px white",
               }}
@@ -234,7 +236,7 @@ export default function TransportHero() {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="text-white mt-10 -ml-20"
+            className="text-white mt-10 ml-0 md:-ml-20"
           >
 
             <p className="text-white/80 mb-6 max-w-md">
@@ -243,7 +245,7 @@ export default function TransportHero() {
             </p>
 
             {/* Tabs */}
-            <div className="flex w-fit rounded overflow-hidden shadow-md relative z-10">
+            <div className="block bg-gray-200 md:bg-none md:flex w-fit rounded overflow-hidden shadow-md relative z-10">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -276,7 +278,7 @@ export default function TransportHero() {
 
         </div>
 
-        <section className="absolute right-0 w-[55%] bottom-0 overflow-hidden">
+        <section className="absolute right-0 hidden md:block w-[55%] bottom-0 overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
 
             {/* 1 */}
@@ -316,6 +318,45 @@ export default function TransportHero() {
         </section>
 
       </section>
+
+      <section className="block bg-white pt-3 md:hidden">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+
+            {/* 1 */}
+            <div>
+              <h2 className="text-5xl font-bold text-primary">
+                <Counter to={1500} />k+
+              </h2>
+              <p className="mt-2 text-lg font-semibold text-gray-700">
+                Vehicle Transported
+              </p>
+              <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
+            </div>
+
+            {/* 2 */}
+            <div>
+              <h2 className="text-5xl font-bold text-primary">
+                <Counter to={23} />+
+              </h2>
+              <p className="mt-2 text-lg font-semibold text-gray-700">
+                Years Of Experience
+              </p>
+              <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
+            </div>
+
+            {/* 3 */}
+            <div>
+              <h2 className="text-5xl font-bold text-primary">
+                <Counter to={57} />+
+              </h2>
+              <p className="mt-2 text-lg font-semibold text-gray-700">
+                Countries
+              </p>
+              <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
+            </div>
+
+          </div>
+        </section>
 
     </>
 

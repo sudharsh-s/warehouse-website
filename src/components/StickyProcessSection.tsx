@@ -85,18 +85,18 @@ export default function StickyProcessSection() {
         style={{ height: `${steps.length * 100}vh` }}
       >
         <div className="absolute top-0 left-0 w-full h-full" style={{background: "#00000078", zIndex: "1"}}></div>
-        <img src={container} alt="continer" className="absolute top-0 left-0 w-full h-full" />
+        <img src={container} alt="continer" className="absolute top-0 left-0 w-full h-full sticky-container" />
 
         {/* Sticky container */}
-        <div className="h-screen flex items-center" style={{ position: "sticky", top: "60px", padding: "60px 0px", zIndex: "2" }}>
+        <div className="h-[25%] lg:h-screen flex items-center" style={{ position: "sticky", top: "60px", padding: "60px 0px", zIndex: "2" }}>
 
-          <div className="max-w-7xl mx-auto px-6 flex items-center w-full">
+          <div className="max-w-7xl mx-auto px-6 flex-wrap md:flex-none flex items-center w-full flex-col-reverse md:flex-row">
 
             {/* LEFT SIDE */}
-            <div className="relative w-[55%]" style={{paddingLeft: "30px"}}>
+            <div className="relative w-full md:w-[60%] lg:w-[55%] sticky-left">
 
               {/* Progress line */}
-              <div className="absolute top-0 h-full" style={{ width: "4px", backgroundColor: "#E5E7EB", left: "30px" }}>
+              <div className="hidden md:block absolute top-0 h-full" style={{ width: "4px", backgroundColor: "#E5E7EB", left: "30px" }}>
 
                 <motion.div
                   style={{ height: progressHeight }}
@@ -106,7 +106,7 @@ export default function StickyProcessSection() {
               </div>
 
               {/* Steps */}
-              <div className="" style={{marginLeft: "3rem" }}>
+              <div className="sticky-steps">
 
                 {steps.map((step, index) => {
 
@@ -129,7 +129,7 @@ export default function StickyProcessSection() {
                         </div>
 
                         <div>
-                          <h2 className="text-3xl text-white font-bold mb-2 flex items-center gap-2">
+                          <h2 className="text-2xl lg:text-3xl text-white font-bold mb-2 flex items-center gap-2">
 
                           <span className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-t-transparent border-b-transparent border-l-primary stickyarrow" />
 
@@ -150,7 +150,7 @@ export default function StickyProcessSection() {
             </div>
 
             {/* RIGHT SIDE IMAGE */}
-            <div className="flex items-center justify-end w-[45%]">
+            <div className="hidden md:flex items-center justify-end w-full md:w-[40%] lg:w-[45%]">
 
               <motion.img
                 key={activeStep}
@@ -158,7 +158,7 @@ export default function StickyProcessSection() {
                 initial={{ opacity: 0, y: 80, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6 }}
-                className="w-[470px] h-[650px] object-cover rounded-2xl shadow-2xl"
+                className="w-[470px] h-60 md:h-[300px] lg:h-[650px] object-cover rounded-2xl shadow-2xl"
               />
 
             </div>

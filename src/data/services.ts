@@ -5,6 +5,9 @@ import warehouseImg1 from "@/assets/services/warehouse-stroage-1.webp";
 import warehouseImg2 from "@/assets/services/warehouse-stroage-2.webp";
 import warehouseImg3 from "@/assets/services/warehouse-stroage-3.webp";
 import warehouseImg4 from "@/assets/services/warehouse-stroage-4.jpg";
+import warehouseImg5 from "@/assets/services/warehouse-stroage-5.jpg";
+import warehouseImg6 from "@/assets/services/warehouse-stroage-6.jpg";
+import warehouseImg7 from "@/assets/services/warehouse-stroage-7.jpg";
 
 import transport from "@/assets/services/transport.webp";
 import transport2 from "@/assets/services/transport-2.webp";
@@ -12,6 +15,9 @@ import transport3 from "@/assets/services/transport-3.webp";
 import transport5 from "@/assets/services/transport-5.jpg";
 import transport6 from "@/assets/services/transport-6.webp";
 import transport7 from "@/assets/services/transport-7.webp";
+import transport8 from "@/assets/services/transport-8.jpg";
+import transport9 from "@/assets/services/transport-9.jpg";
+import transport10 from "@/assets/services/transport-10.jpg";
 
 import shipping from "@/assets/services/shipping.jpeg";
 import shipping1 from "@/assets/services/shipping-1.jpeg";
@@ -31,12 +37,15 @@ import car2 from "@/assets/services/car-2.jpeg";
 import car3 from "@/assets/services/car-3.jpg";
 import car4 from "@/assets/services/car-4.webp";
 import car5 from "@/assets/services/car-5.png";
+import car6 from "@/assets/services/car-6.jpg";
+import car7 from "@/assets/services/car-7.jpg";
 
 import customs1 from "@/assets/services/customs-1.webp";
 import customs2 from "@/assets/services/customs-2.jpg";
 import customs3 from "@/assets/services/customs-3.jpg";
 import customs4 from "@/assets/services/customs-4.webp";
 import customs5 from "@/assets/services/customs-5.png";
+import customs6 from "@/assets/services/customs-6.jpg";
 
 
 export const servicesData = [
@@ -45,14 +54,14 @@ export const servicesData = [
 
     title: "Warehousing & Open Yard Storage",
 
-    heroImage: warehouseImg,
+    heroImage: warehouseImg7,
 
     gallery: [
+      warehouseImg5,
+      warehouseImg6,
       yardImg,
       warehouseImg1,
       warehouseImg2,
-      warehouseImg3,
-      warehouseImg4,
     ],
 
     introTitle: "Smart, Secure & Scalable Storage Solutions",
@@ -139,11 +148,11 @@ export const servicesData = [
     heroImage: transport,
 
     gallery: [
+      transport8,
+      transport9,
+      transport10,
       transport2,
       transport3,
-      transport5,
-      transport6,
-      transport7,
     ],
 
     introTitle: "Reliable Ground Transportation Solutions",
@@ -418,9 +427,9 @@ export const servicesData = [
     heroImage: warehouseImg, 
 
     gallery: [
+      car6,
+      car7,
       car1,
-      car2, 
-      car3,
       car4,
       car5,
     ],
@@ -511,6 +520,7 @@ export const servicesData = [
     heroImage: shipping, 
 
     gallery: [
+      customs6,
       customs1,
       customs2,
       customs3,

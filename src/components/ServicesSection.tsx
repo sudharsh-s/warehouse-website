@@ -66,7 +66,7 @@ const services = [
 
 export default function ServicesSection({ isServicePage = false }) {
   return (
-    <section className={`py-20 bg-[#001F3F] overflow-hidden relative ${isServicePage ? "bg-white" : ""}`}>
+    <section className={`pt-8 pb-16 md:py-20 bg-[#001F3F] overflow-hidden relative ${isServicePage ? "bg-white" : ""}`}>
       <div className="">
         <img src={serviceBg1} alt="Tier" className={`w-1/2 absolute left-0 top-0 ${isServicePage ? "invert" : "filter-none"}`} />
       </div>
@@ -76,7 +76,7 @@ export default function ServicesSection({ isServicePage = false }) {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* Heading */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 md:mb-14">
 
           <h2 className={`title ${isServicePage ? "text-black text-5xl" : "text-white"}`}>
             Our Services
@@ -89,7 +89,7 @@ export default function ServicesSection({ isServicePage = false }) {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-11">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-11">
 
           {services.map((service, index) => {
 
@@ -127,12 +127,12 @@ export default function ServicesSection({ isServicePage = false }) {
                 <div className={`relative ml-5 -mt-24 p-6 pr-14 shadow-md z-10 service-card-content ${isServicePage ? "bg-white" : "bg-[#f3f4f6]"}`}>
 
                   {/* TITLE */}
-                  <h3 className="text-2xl font-bold mb-4 leading-7">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 leading-7">
                     {service.title}
                   </h3>
 
                   {/* DESCRIPTION */}
-                  <p className="text-gray-500 text-base leading-5 mb-6">
+                  <p className="text-gray-500 text-sm md:text-base leading-5 mb-6">
                     {service.description}
                   </p>
 

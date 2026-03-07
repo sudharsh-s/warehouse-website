@@ -47,7 +47,7 @@ export default function StatsSection() {
   const y = useTransform(scrollYProgress, [0, 1], [80, -80]);
 
   return (
-    <section ref={ref} className="relative pb-24 overflow-hidden bg-white">
+    <section ref={ref} className="relative pb-16 md:pb-24 overflow-hidden bg-white">
 
       {/* Background Image */}
     <div className="relative w-full h-[450px] overflow-hidden">
@@ -73,10 +73,10 @@ export default function StatsSection() {
           initial={{ opacity: 0, y: 60 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="bg-white border border-white/20 rounded-2xl py-10 px-12 shadow-2xl"
+          className="bg-white border border-white/20 rounded-2xl py-2 md:py-10 px-12 shadow-2xl"
         >
 
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-black/20">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 divide-x-0 md:divide-x divide-black/20">
 
             {stats.map((stat, index) => {
 
@@ -91,7 +91,7 @@ export default function StatsSection() {
                     duration: 0.6,
                     delay: index * 0.2,
                   }}
-                  className="flex items-center gap-5 px-6 py-6 text-black"
+                  className="block text-center lg:text-left lg:flex items-center gap-5 px-6 py-6 text-black"
                 >
 
                   {/* Icon */}
@@ -112,7 +112,7 @@ export default function StatsSection() {
                   <div>
 
                     {/* Count */}
-                    <div className="text-4xl font-bold">
+                    <div className="text-4xl font-bold my-2 lg:my-0">
 
                       {isInView && (
                         <CountUp

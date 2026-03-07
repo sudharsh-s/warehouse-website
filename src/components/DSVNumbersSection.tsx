@@ -11,7 +11,7 @@ export default function DSVNumbersSection() {
   return (
     <section
       ref={ref}
-      className="relative w-full py-24 bg-[#042863] text-white overflow-hidden"
+      className="relative w-full py-16 md:py-24 bg-[#042863] text-white overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 opacity-20">
@@ -26,7 +26,7 @@ export default function DSVNumbersSection() {
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         <p className="text-xl mb-12 text-gray-200 font-semibold">DSV in numbers</p>
 
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Item 1 */}
           <div>
             <h2 className="text-5xl md:text-6xl font-bold">

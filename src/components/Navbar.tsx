@@ -43,12 +43,12 @@ const Navbar = () => {
   };
 
   const serviceSubmenu = [
-    { to: "/services/warehouse-storage", label: "Warehouse & Storage" },
-    { to: "/services/road-freight", label: "Road Freight" },
-    { to: "/services/ocean-freight", label: "Ocean Freight" },
-    { to: "/services/air-freight", label: "Air Freight" },
-    { to: "/services/car-wrapping", label: "Car Wrapping" },
-    { to: "/services/inspection-customs", label: "Inspection & Customs Clearance" },
+    { to: "/services/warehouse-storage", key: "warehouse" },
+    { to: "/services/road-freight", key: "road" },
+    { to: "/services/ocean-freight", key: "ocean" },
+    { to: "/services/air-freight", key: "air" },
+    { to: "/services/car-wrapping", key: "wrapping" },
+    { to: "/services/inspection-customs", key: "inspection" },
   ];
 
   const navLinks = [
@@ -120,7 +120,7 @@ const Navbar = () => {
                             to={item.to}
                             className="block px-5 py-[10px] text-sm font-medium text-gray-700 hover:bg-primary/5 hover:text-primary transition"
                           >
-                            {item.label}
+                            {t(`nav.serviceSubmenu.${item.key}`)}
                           </Link>
                         ))}
                       </motion.div>
@@ -251,7 +251,7 @@ const Navbar = () => {
                                 onClick={() => setMobileOpen(false)}
                                 className="px-6 py-3 text-sm text-foreground hover:bg-primary/10 transition"
                               >
-                                {item.label}
+                                {t(`nav.serviceSubmenu.${item.key}`)}
                               </Link>
                             ))}
                           </motion.div>

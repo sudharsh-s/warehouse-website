@@ -8,7 +8,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import aboutContainer1 from "@/assets/services/shipping-3.jpeg";
 import aboutContainer2 from "@/assets/container-loading.jpg";
 
-import aboutImg1 from "@/assets/services/warehouse-page-header.png";
+import aboutImg1 from "@/assets/about/about-page-slider.jpg";
 import aboutImgMap from "@/assets/about/about-map.png";
 import aboutShape from "@/assets/about/about-v1-shape3.png";
 
@@ -29,22 +29,22 @@ const About = () => {
       <section className="relative w-full overflow-hidden bg-[#011533]">
       
         {/* Main Container */}
-        <div className="grid md:grid-cols-2 pt-28 pb-20 relative">
+        <div className="grid md:grid-cols-2 pt-28 pb-14 md:pb-20 relative">
 
           {/* World Map Background */}
           <div className="absolute inset-0 opacity-10 bg-[url('/src/assets/about/about-map.png')] bg-cover bg-center" />
           
           {/* LEFT RED PANEL */}
-          <div className="relative flex items-end px-10 md:px-20">
+          <div className="relative flex items-end px-10 md:px-16 lg:px-20">
 
-            <div className="relative z-10 text-white mb-14">
+            <div className="relative z-10 text-white mb-10 md:mb-14">
 
               {/* Main Title */}
               <motion.h1
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-6xl font-extrabold leading-tight"
+                className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
               >
                 Warehouse & Logistics
               </motion.h1>
@@ -54,7 +54,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="uppercase tracking-widest text-sm mt-6"
+                className="uppercase tracking-widest text-xs mt-6"
               >
                 Building innovative solutions that simplify everyday life.
               </motion.p>
@@ -92,12 +92,12 @@ const About = () => {
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="relative flex items-end"
+            className="relative flex items-end px-10 md:px-0"
           >
             <img
               src={aboutImg1}
               alt="Logistics"
-              className="w-full h-[350px] pr-20 object-cover"
+              className="w-full h-[400px] pr-0 md:pr-20 object-cover object-bottom"
             />
           </motion.div>
 
@@ -108,9 +108,9 @@ const About = () => {
 
       <div>
 
-        <section className="pt-16 pb-32 bg-white overflow-hidden relative">
+        <section className="pt-16 md:pb-20 lg:pb-32 mb-10 md:mb-0 bg-white overflow-hidden relative">
 
-          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-26 items-center">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-26 items-center">
 
             {/* LEFT CONTENT */}
             <div>
@@ -128,7 +128,7 @@ const About = () => {
 
 
               {/* Heading */}
-              <h2 className="text-[35px] font-bold text-black leading-tight mb-6">
+              <h2 className="text-3xl md:text-[35px] font-bold text-black leading-tight mb-6">
 
                 Our Expertise Stands in
 
@@ -146,7 +146,7 @@ const About = () => {
 
 
               {/* Feature Cards */}
-              <div className="grid md:grid-cols-2 gap-6 mb-10">
+              <div className="grid lg:grid-cols-2 gap-6 mb-10">
 
                 {/* Card 1 */}
                 <div className="bg-white p-6 border-l-4 border-primary shadow-sm">
@@ -183,7 +183,7 @@ const About = () => {
 
 
               {/* Buttons Row */}
-              <div className="flex items-center gap-8">
+              <div className="block lg:flex items-center gap-8">
 
                 <a href='/services/warehouse-storage' className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
                   Expolre Our Services →
@@ -191,7 +191,7 @@ const About = () => {
 
 
                 {/* Phone */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mt-10 lg:mt-0">
 
                   <div className="w-12 h-12 rounded-full bg-white shadow flex items-center justify-center">
                     <PhoneIcon className="text-primary" />
@@ -217,7 +217,7 @@ const About = () => {
 
 
             {/* RIGHT SIDE IMAGES */}
-            <div className="relative flex justify-center pl-11">
+            <div className="relative flex justify-center pl-0 md:pl-11 mt-10 md:mt-0">
 
               {/* Top Image */}
               <motion.img
@@ -234,14 +234,14 @@ const About = () => {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="absolute bottom-[-100px] right-0 w-[260px] h-[340px] shadow-xl border-8 border-white"
+                className="absolute bottom-[-100px] right-auto left-0 md:left-auto md:right-0 w-[260px] h-[340px] shadow-xl border-8 border-white"
               />
 
 
              <motion.img
               src={aboutShape}
               alt=""
-              className="absolute bottom-[-120px] about-flight"
+              className="absolute bottom-[-120px] about-flight hidden md:block"
               animate={{ y: [0, -10, 0] }}
               transition={{
                 duration: 4,
@@ -251,12 +251,12 @@ const About = () => {
             />
 
               {/* Circle Badge */}
-              <div className="relative w-[900px] h-[170px] top-56 right-[200px] flex items-center justify-center">
+              <div className="relative w-full md:w-[900px] h-[170px] top-56 right-[100px] md:right-[200px] flex items-center justify-center">
 
                 {/* Rotating Text Circle */}
                 <motion.svg
                   viewBox="0 0 200 200"
-                  className="absolute w-full h-full"
+                  className="absolute w-auto xl:w-full h-full"
                   animate={{ rotate: 360 }}
                   transition={{
                     duration: 12,
@@ -309,7 +309,7 @@ const About = () => {
 
               {/* Decorative Dots */}
               <motion.div
-                className="absolute right-[20px] top-[30px] grid grid-cols-6 gap-3 opacity-80"
+                className="absolute right-[20px] top-[30px] md:grid grid-cols-6 gap-3 opacity-80 hidden"
                 animate={{ y: [0, -15, 0] }}
                 transition={{
                   duration: 3,

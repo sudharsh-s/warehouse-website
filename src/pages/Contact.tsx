@@ -133,22 +133,22 @@ export default function ContactSection() {
       <section className="relative w-full overflow-hidden bg-[#011533]">
       
         {/* Main Container */}
-        <div className="grid md:grid-cols-2 pt-28 pb-20 relative">
+        <div className="grid md:grid-cols-2 pt-28 pb-14 md:pb-20 relative">
 
           {/* World Map Background */}
           <div className="absolute inset-0 opacity-10 bg-[url('/src/assets/about/about-map.png')] bg-cover bg-center" />
           
           {/* LEFT RED PANEL */}
-          <div className="relative flex items-end px-10 md:px-20">
+          <div className="relative flex items-end px-10 md:px-16 lg:px-20">
 
-            <div className="relative z-10 text-white mb-14">
+            <div className="relative z-10 text-white mb-10 md:mb-14">
 
               {/* Main Title */}
               <motion.h1
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-6xl font-extrabold leading-tight"
+                className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
               >
                 Start a Conversation
               </motion.h1>
@@ -196,12 +196,12 @@ export default function ContactSection() {
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="relative flex items-end"
+            className="relative flex items-end px-10 md:px-0"
           >
             <img
               src={contactImg}
               alt="Logistics"
-              className="w-full h-[350px] pr-20 object-cover"
+              className="w-full h-[400px] pr-0 md:pr-20 object-cover"
             />
           </motion.div>
 
@@ -210,7 +210,7 @@ export default function ContactSection() {
 
       <AboutRunning />
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-12 md:py-20">
         <motion.div
           initial="hidden"
           whileInView="show"

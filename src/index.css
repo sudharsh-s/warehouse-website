@@ -58,6 +58,11 @@
   .title {
     @apply text-[45px] font-extrabold tracking-tight;  
   }
+  @media screen and (max-width: 768px) {
+      .title {
+        @apply text-[35px];  
+      }
+  }
   .title span {
     background: linear-gradient(135deg, hsl(217.64deg 71.45% 56.3%) 0%, hsl(222.64deg 66.85% 35.49%) 100%);
     -webkit-background-clip: text;
@@ -259,6 +264,25 @@
   }
 }
 
+.sticky-steps {
+  margin-left: 50px;
+}
+.sticky-left {
+  padding-left: 30px;
+}
 
+
+@media screen and (max-width: 768px) {
+  .sticky-steps {
+    margin-left: 20px;
+  }
+  .sticky-left {
+    padding-left: 0px;
+  }
+  .sticky-container {
+    object-fit: cover;
+    object-position: left top;
+  }
+}
 
 
