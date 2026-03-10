@@ -16,61 +16,130 @@
     }
   },
 
-  "hero": {
-    "title": "Trusted Vehicle Auction Warehouse and Export Hub",
-    "subtitle": "Secure vehicle storage, inspection, container loading, and international shipping for auction vehicles.",
-    "cta1": "Request Storage Space",
-    "cta2": "Get Shipping Quote"
-  },
-  "stats": {
-    "vehicles": "Vehicles Processed",
-    "countries": "Countries Served",
-    "warehouses": "Warehouse Facilities",
-    "experience": "Years Experience"
-  },
-  "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive vehicle logistics solutions from auction to export",
-    "storage": {
-      "title": "Vehicle Storage & Yard Management",
-      "description": "Climate-controlled, monitored warehouse facilities with 24/7 security and surveillance systems."
+  "homeSlider": {
+    "slides": {
+      "slide1": {
+        "badge": "Trusted Global Warehouse Solutions",
+        "title": "Smart Warehouse",
+        "highlight": "Storage & Logistics",
+        "subtitle": "Secure, scalable, and technology-driven warehouse solutions for global logistics."
+      },
+      "slide2": {
+        "badge": "Global Shipping Experts",
+        "title": "Fast & Secure",
+        "highlight": "Vehicle Logistics",
+        "subtitle": "Reliable vehicle storage, shipping, and distribution worldwide."
+      },
+      "slide3": {
+        "badge": "Modern Infrastructure",
+        "title": "Advanced",
+        "highlight": "Warehouse Facilities",
+        "subtitle": "State-of-the-art facilities for secure storage and logistics operations."
+      }
     },
-    "receiving": {
-      "title": "Auction Vehicle Receiving",
-      "description": "Efficient pickup and receiving of auction vehicles from all major auction houses nationwide."
-    },
-    "towing": {
-      "title": "Towing & Dispatch Coordination",
-      "description": "Professional towing and dispatch coordination for seamless vehicle pickup and delivery."
-    },
-    "container": {
-      "title": "Loading & Containerization",
-      "description": "Expert container loading with professional securing and lashing for safe ocean transit."
-    },
-    "trucking": {
-      "title": "Domestic Trucking",
-      "description": "Reliable domestic trucking services for vehicle transport across all major routes."
-    },
-    "shipping": {
-      "title": "International Shipping Support",
-      "description": "End-to-end shipping coordination to destinations across 50+ countries worldwide."
+    "buttons": {
+      "getStarted": "Get Started",
+      "viewServices": "View Services"
     }
   },
-  "whyChooseUs": {
-    "title": "Why Choose Us",
-    "subtitle": "Trusted by logistics companies and auction buyers worldwide",
+
+  "runningText": {
+    "items": [
+      "Global Export",
+      "Transport",
+      "Global Import",
+      "Warehouse Storage",
+      "Logistics Solutions"
+    ]
+  },
+
+  "aboutWarehouse": {
+    "badge": "WHO WE ARE",
+    "title": "Strategic U.S. Vehicle Yards for Global Export",
+    "description": "Our nationwide yard network across the USA supports auction purchases, bulk inventory management, consolidation, and international shipping.",
+
+    "locations": [
+      { "title": "New Jersey", "location": "6 Linden Ave. East Jersey City, NJ 07305" },
+      { "title": "Georgia", "location": "46 Artley Road Savannah, GA 31408" },
+      { "title": "Texas", "location": "6320 Madden Ln, Houston, TX 77048" },
+      { "title": "California", "location": "131 E. Gardena Blvd. Gardena, CA 90248" },
+      { "title": "California", "location": "14611 S. Broadway. Gardena CA 90248" },
+      { "title": "Tacoma", "location": "1001 E 26th st, Tacoma 98421 WA" },
+      { "title": "Korea", "location": "Incheon, Republic of Korea" }
+    ],
+    "features": [
+      {
+        "title": "Trusted by Industry Leaders",
+        "desc": "We've earned the confidence of global brands through consistent delivery."
+      },
+      {
+        "title": "Expert Handling & Clearance",
+        "desc": "Seamless documentation and cargo handling from start to finish."
+      },
+      {
+        "title": "Digital Logistics Platform",
+        "desc": "Manage and optimize shipments with real-time tracking."
+      }
+    ]
+  },
+
+  "statsSection": {
+    "items": [
+      {
+        "value": 300,
+        "suffix": "k+",
+        "label": "Global Shipping & Auction Partners"
+      },
+      {
+        "value": 23,
+        "suffix": "+",
+        "label": "Years of Experience"
+      },
+      {
+        "value": 1500,
+        "suffix": "k+",
+        "label": "Vehicles Processed Annually"
+      }
+    ]
+  },
+
+  "servicesSection": {
+    "heading": "Our Services",
+    "subheading": "Comprehensive logistics and warehouse solutions",
+    "readMore": "Read More",
     "items": {
-      "secure": { "title": "Secure Warehouse Facilities", "description": "State-of-the-art security with 24/7 surveillance and climate-controlled storage." },
-      "experienced": { "title": "Experienced Vehicle Handling", "description": "Trained professionals with years of expertise in auction vehicle logistics." },
-      "global": { "title": "Global Export Support", "description": "Seamless shipping coordination to over 50 countries worldwide." },
-      "integrated": { "title": "Integrated Logistics Services", "description": "End-to-end solutions from auction pickup to international delivery." },
-      "reliable": { "title": "Reliable & Professional Team", "description": "Dedicated team committed to timely, damage-free vehicle handling." }
+      "warehouse-storage": {
+        "title": "Warehouse and Storage",
+        "description": "Secure, flexible warehouse solutions to store and manage your goods efficiently."
+      },
+      "road-freight": {
+        "title": "Road Freight",
+        "description": "Reliable and efficient road freight solutions to move your cargo safely and on time."
+      },
+      "ocean-freight": {
+        "title": "Ocean Freight",
+        "description": "Efficient and reliable ocean freight solutions for global shipping of your goods."
+      },
+      "air-freight": {
+        "title": "Air Freight",
+        "description": "Fast and reliable air freight solutions for urgent and international shipments."
+      },
+      "car-wrapping": {
+        "title": "Car Wrapping",
+        "description": "Easily and beautifully transform your vehicle with high-quality, custom car wraps."
+      },
+      "inspection-customs": {
+        "title": "Inspection & Customs Clearance",
+        "description": "Hassle-free inspection and customs clearance for smooth import/export."
+      }
     }
-  },
-  "whoWeServe": {
-    "title": "Who We Serve",
-    "subtitle": "Delivering excellence to a diverse range of clients",
-    "clients": {
+  },  
+
+  "whoWeServeSection": {
+    "heading": "Who We",
+    "heading2": "Serve",
+    "subheading": "Strategically located warehouses for seamless logistics",
+    "items": {
       "auction": "Auto Auction Buyers",
       "dealers": "Car Dealers",
       "exporters": "Exporters",
@@ -79,48 +148,681 @@
       "private": "Private Vehicle Owners"
     }
   },
-  "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "From auction to your doorstep — a seamless process",
-    "steps": {
-      "step1": { "title": "Vehicle Purchased", "description": "Vehicle is purchased from auction houses across the country." },
-      "step2": { "title": "Arrives at Warehouse", "description": "Vehicle is transported and received at our secure warehouse facility." },
-      "step3": { "title": "Inspection & Documentation", "description": "Complete vehicle inspection, photography, and documentation." },
-      "step4": { "title": "Secure Storage", "description": "Vehicle is stored in our climate-controlled, secure facility." },
-      "step5": { "title": "Container Loading", "description": "Professional container loading with proper securing methods." },
-      "step6": { "title": "Export Shipping", "description": "Vehicle ships to its global destination with full tracking." }
-    }
+
+  "processSection": {
+    "heading": "Warehouse To",
+    "heading2": "Shipping",
+    "subheading": "Streamlining Your Process from Start to Delivery",
+    "steps": [
+      {
+        "title": "Discovery & Booking",
+        "description": "Share your shipment details — vehicles, containers, bulk cargo, origin and destination. We assess handling requirements, compliance needs, and transport mode."
+      },
+      {
+        "title": "Receive & Store",
+        "description": "Cargo arrives via port transfer or truck. Our team unloads, inspects, documents, and registers everything into the system."
+      },
+      {
+        "title": "Manage & Add Services",
+        "description": "We provide value-added services to optimize your supply chain and prepare cargo for export or dispatch."
+      },
+      {
+        "title": "Clear & Load",
+        "description": "Our team coordinates clearance processes and prepares goods for outbound movement."
+      },
+      {
+        "title": "Ship & Deliver",
+        "description": "We manage ocean freight and final transport through trusted carrier networks."
+      }
+    ]
   },
-  "warehouse": {
-    "title": "Our Warehouse Facilities",
-    "subtitle": "State-of-the-art storage and logistics infrastructure"
+
+  "brandSection": {
+    "heading": "Our",
+    "heading2": "Partners",
+    "subheading": "Connecting businesses globally through strong and reliable partnerships."
   },
-  "about": {
-    "title": "Our Story",
-    "subtitle": "Building the future of vehicle logistics since 2010",
-    "description": "We are a global leader in auction vehicle logistics, providing secure storage, expert handling, and reliable export services to clients worldwide.",
-    "timeline": {
-      "t1": { "year": "2010", "title": "Company Founded", "description": "Started with a single warehouse and a vision to transform vehicle logistics." },
-      "t2": { "year": "2014", "title": "Warehouse Expansion", "description": "Expanded to 3 facilities covering over 500,000 sq ft of storage space." },
-      "t3": { "year": "2018", "title": "Export Growth", "description": "Reached 30+ export destinations with streamlined customs processing." },
-      "t4": { "year": "2024", "title": "Global Operations", "description": "Now serving 50+ countries with state-of-the-art logistics technology." }
-    }
+
+  "aboutPage": {
+    "heroTitle": "Warehouse & Logistics",
+    "heroSubtitle": "Building innovative solutions that simplify everyday life.",
+    "companyBadge": "Our Company ✈",
+    "mainHeadingLine1": "Our Expertise Stands in",
+    "mainHeadingLine2": "Logistics Solutions",
+    "description": "Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.",
+    "features": [
+      {
+        "title": "Worldwide Service",
+        "desc": "Logistic service provider company plays a pivotal role in the global"
+      },
+      {
+        "title": "24/7 Online Support",
+        "desc": "Logistic service provider company plays a pivotal role in the global"
+      }
+    ],
+    "exploreButton": "Explore Our Services →",
+    "phoneLabel": "Make A Phone Call"
   },
-  "contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch for a custom logistics solution",
-    "name": "Full Name",
+
+  "runningTextAbout": {
+    "items": [
+      "Freight Forwarding",
+      "Customs Clearance",
+      "Cargo Tracking",
+      "Inventory Control",
+      "Distribution Services",
+      "Shipping Solutions",
+      "Port Operations",
+      "Export Documentation",
+      "Global Trade Compliance"
+    ]
+  },
+
+  "dsvSection": {
+    "badge": "DSV in numbers",
+    "items": [
+      {
+        "value": 1500,
+        "suffix": "k+",
+        "label": "Vehicles Transported"
+      },
+      {
+        "value": 57,
+        "suffix": "+",
+        "label": "Countries"
+      },
+      {
+        "value": 150,
+        "suffix": "k+",
+        "label": "Employees"
+      },
+      {
+        "value": 23,
+        "suffix": "+",
+        "label": "Years of Experience"
+      }
+    ],
+    "button": "Explore Our Services"
+  },
+
+  "whyChoose": {
+    "heading1": "Why",
+    "heading2": "Choose Us",
+    "subheading": "We ensure efficient warehouse operations through preparation, logistics involvement, and continuous optimization.",
+    "items": [
+      {
+        "title": "4 US Warehouse Locations",
+        "description": "Industry-leading vehicle logistics with proven reliability."
+      },
+      {
+        "title": "Secure Yards with Surveillance",
+        "description": "Quick turnaround with efficient dispatch coordination."
+      },
+      {
+        "title": "Integrated Dispatch & Logistics",
+        "description": "Seamless workflow from storage to final delivery."
+      },
+      {
+        "title": "Specialized Automotive Handling",
+        "description": "Reliable logistics partner for companies and individuals."
+      },
+      {
+        "title": "Companies & Individuals",
+        "description": "Industry-leading vehicle logistics with proven reliability."
+      },
+      {
+        "title": "Domestic & International",
+        "description": "Quick turnaround with efficient dispatch coordination."
+      }
+    ]
+  },
+
+  "testimonial": {
+    "badge": "CLIENT TESTIMONIAL ✈",
+    "heading1": "What Our Customers",
+    "heading2": "Say",
+    "heading3": "ABOUT US",
+    "satisfiedTitle": "Customer Satisfied",
+    "reviews": "4.8 (15k Reviews)",
+    "items": [
+      {
+        "name": "Ronald Richards",
+        "role": "Manager",
+        "text": "A logistic service provider company plays a pivotal role in the global supply chain. Their efficiency and reliability improved our delivery performance significantly."
+      },
+      {
+        "name": "Brooklyn Simmons",
+        "role": "Director",
+        "text": "Their warehouse network and fast shipping helped us scale globally. Professional team and excellent service."
+      },
+      {
+        "name": "Leslie Alexander",
+        "role": "CEO",
+        "text": "Reliable logistics partner. Their fulfillment and transport solutions are exceptional."
+      }
+    ]
+  },
+
+  "contactPage": {
+    "heroTitle": "Start a Conversation",
+    "heroSubtitle": "We’re Here to Help You Move Forward.",
+
+    "formTitle": "Get In Touch",
+    "fullName": "Full Name",
     "email": "Email Address",
     "phone": "Phone Number",
-    "service": "Select Service",
-    "message": "Your Message",
-    "send": "Send Message",
-    "info": {
-      "address": "1234 Logistics Blvd, Houston, TX 77001",
-      "phone": "+1 (555) 123-4567",
-      "email": "info@auctionlogistics.com"
+    "service": "Service Interested In",
+    "selectService": "Select a service",
+    "subject": "Subject",
+    "message": "Message (Max 500 characters)",
+    "messagePlaceholder": "Tell us how we can assist you...",
+    "submit": "Send Message",
+
+    "contactInfoTitle": "Contact Information",
+    "office": "Office",
+    "mainPhone": "Main Phone",
+    "emailTitle": "Email",
+    "availability": "Availability",
+    "responseTime": "Response Time",
+    "workingHours": "Working Hours",
+
+    "availabilityText": "24/7 Customer Support",
+    "responseText": "Within 2 hours during business hours",
+    "workingHoursText": "Mon–Fri: 8AM–6PM (EST)",
+
+    "supportTitle": "Need Immediate Help?",
+    "supportDesc": "Chat with our support team for instant assistance.",
+    "supportButton": "Contact Support",
+
+    "fullNamePlaceholder": "John Doe",
+    "emailPlaceholder": "you@example.com",
+    "phonePlaceholder": "+1 (281) 000-0000",
+    "subjectPlaceholder": "Subject",
+
+    "officeAddress": "Nejoum Express, 6320 Madden Ln, Houston, TX 77048",
+    "mainPhoneText": "+1-734-496-3761",
+    "emailText": "cs@nejoumexpress.com"
+  },
+
+  "servicesHero": {
+    "tabs": {
+      "warehouse": {
+        "label": "Warehouse",
+        "title": "POWERING\nYOUR STORAGE",
+        "outline": "WAREHOUSE",
+        "content": "Secure and efficient warehouse and storage solutions."
+      },
+      "road": {
+        "label": "Road",
+        "title": "PROFESSIONAL\nROAD FREIGHT",
+        "outline": "ROAD",
+        "content": "Efficient ground transportation across regions."
+      },
+      "sea": {
+        "label": "Ocean",
+        "title": "GLOBAL\nOCEAN FREIGHT",
+        "outline": "OCEAN",
+        "content": "Cost-effective international sea shipping solutions."
+      },
+      "air": {
+        "label": "Air",
+        "title": "INTERNATIONAL\nAIR FREIGHT",
+        "outline": "AIR",
+        "content": "Fast and reliable air cargo solutions worldwide."
+      },
+      "car": {
+        "label": "Wrapping",
+        "title": "PROFESSIONAL\nWRAPPING",
+        "outline": "WRAPPING",
+        "content": "High-quality packaging and wrapping solutions to protect your goods."
+      },
+      "inspection": {
+        "label": "Customs",
+        "title": "THOROUGH\nINSPECTION",
+        "outline": "CLEARANCE",
+        "content": "Comprehensive inspection services ensuring compliance and safety."
+      }
+    },
+
+    "stats": {
+      "vehicles": "Vehicle Transported",
+      "experience": "Years Of Experience",
+      "countries": "Countries"
+    },
+
+    "heroDescription": "If you have a parcel and want to know its latest update, then check the latest update with your parcel ID."
+  },
+
+  "serviceDetail": {
+    "weOffer": "We Offer:",
+    "facilityHighlights": "Facility Highlights",
+    "included": "What’s Included in This Service"
+  },
+
+  "services": {
+    "warehouse-storage": {
+      "title": "Warehousing & Open Yard Storage",
+      "introTitle": "Smart, Secure & Scalable Storage Solutions",
+      "introText": "We deliver end-to-end warehousing and open yard storage solutions designed for exporters, importers, auction companies, and global logistics partners. Our facilities are built to ensure security, efficiency, and seamless cargo movement.",
+      "features": [
+        {
+          "title": "Customizable Storage Plans",
+          "description": "Flexible short-term and long-term storage options for vehicles, machinery, containers, and general cargo tailored to your operational needs."
+        },
+        {
+          "title": "Advanced Security Infrastructure",
+          "description": "24/7 CCTV monitoring, controlled gated access, perimeter protection, and trained personnel to safeguard your assets at every stage."
+        },
+        {
+          "title": "High-Capacity Handling",
+          "description": "Spacious indoor warehouses and expansive open yards capable of accommodating cars, trucks, boats, heavy equipment, and industrial freight."
+        },
+        {
+          "title": "Prime Logistics Location",
+          "description": "Strategically positioned near major seaports, airports, and highways to reduce transit time and optimize shipping efficiency."
+        }
+      ],
+      "highlights": [
+        "Rapid access to seaport and airport terminals",
+        "Direct connectivity to major highways",
+        "Efficient staging for domestic & international shipments"
+      ],
+      "enclosed": [
+        "Fully covered storage for dry and sensitive goods",
+        "Ideal for palletized, boxed, and non-vehicle cargo",
+        "Weather-protected and monitored facility"
+      ],
+      "accordion": [
+        {
+          "title": "Comprehensive Storage Services",
+          "content": [
+            "Short-term & long-term warehousing",
+            "Open yard & enclosed storage options",
+            "Vehicle, machinery & equipment storage"
+          ]
+        },
+        {
+          "title": "Facility Security & Compliance",
+          "content": [
+            "24/7 surveillance system",
+            "Controlled gated entry & exit",
+            "On-site operational supervision"
+          ]
+        },
+        {
+          "title": "Strategic Location Advantage",
+          "content": [
+            "Close proximity to major port terminals",
+            "Easy highway connectivity for faster dispatch",
+            "Optimized logistics positioning"
+          ]
+        },
+        {
+          "title": "Value-Added Services",
+          "content": [
+            "Inventory tracking & management",
+            "Container loading & unloading support",
+            "Vehicle inspection, documentation & staging"
+          ]
+        }
+      ]
+    },
+
+    "road-freight": {
+      "title": "Loading & Road Freight Support",
+      "introTitle": "Reliable Ground Transportation Solutions",
+      "introText": "We provide secure, efficient, and fully managed road freight services across the nation. From individual vehicle transport to oversized heavy equipment hauling, our logistics network ensures timely and damage-free delivery.",
+      "features": [
+        {
+          "title": "Specialized Heavy Haul Transport",
+          "description": "Expert handling of construction machinery, industrial equipment, boats, containers, prefabricated units, and oversized cargo with proper permits and route planning."
+        },
+        {
+          "title": "Professional Vehicle Transportation",
+          "description": "Safe and secure movement of cars, SUVs, trucks, and fleet vehicles using modern carriers and experienced drivers."
+        },
+        {
+          "title": "Port & Intermodal Drayage",
+          "description": "Efficient container pickup and delivery from ports, rail yards, and terminals to warehouses or final destinations."
+        },
+        {
+          "title": "Time-Critical Deliveries",
+          "description": "Dedicated trucks and optimized routing to meet urgent delivery schedules with real-time coordination."
+        }
+      ],
+      "highlights": [
+        "Nationwide coverage with strategic routing",
+        "Experienced licensed drivers",
+        "Modern fleet with GPS tracking",
+        "Permit handling for oversized loads"
+      ],
+      "enclosed": [
+        "Open carrier transport",
+        "Enclosed vehicle transport options",
+        "Flatbed & lowboy trailers",
+        "Container chassis transport"
+      ],
+      "accordion": [
+        {
+          "title": "Vehicle Transport Services",
+          "content": [
+            "Dealer & auction vehicle transport",
+            "Fleet relocation services",
+            "Door-to-door vehicle delivery"
+          ]
+        },
+        {
+          "title": "Heavy Equipment Hauling",
+          "content": [
+            "Oversized and overweight load transport",
+            "Route survey & permit coordination",
+            "Escort vehicle arrangements"
+          ]
+        },
+        {
+          "title": "Port & Container Drayage",
+          "content": [
+            "Container pickup & return",
+            "Intermodal rail coordination",
+            "Warehouse & yard delivery"
+          ]
+        },
+        {
+          "title": "Safety & Compliance",
+          "content": [
+            "Licensed and insured operations",
+            "Cargo protection measures",
+            "Regulatory compliance management"
+          ]
+        }
+      ]
+    },
+
+    "ocean-freight": {
+      "title": "Global Ocean Freight & Container Shipping Solutions",
+      "introTitle": "Reliable International Sea Freight Services",
+      "introText": "We provide end-to-end ocean freight and container shipping solutions connecting global markets with efficiency and reliability. From full container loads to specialized cargo, our team ensures seamless coordination from port to destination.",
+      "features": [
+        {
+          "title": "Full Container Load (FCL) & LCL Services",
+          "description": "Flexible shipping options including dedicated full containers and cost-effective less-than-container-load solutions tailored to your cargo volume."
+        },
+        {
+          "title": "Specialized & Project Cargo",
+          "description": "Secure transportation of vehicles, heavy machinery, oversized equipment, and breakbulk cargo with expert handling and documentation."
+        },
+        {
+          "title": "Global Shipping Network",
+          "description": "Strong partnerships with leading international carriers enabling reliable sailings, competitive transit times, and worldwide coverage."
+        },
+        {
+          "title": "End-to-End Documentation & Compliance",
+          "description": "Complete management of customs clearance, export documentation, bills of lading, and regulatory compliance for smooth international trade."
+        }
+      ],
+      "highlights": [
+        "Worldwide port-to-port coverage",
+        "Competitive freight rates",
+        "Container tracking & shipment visibility",
+        "Customs clearance coordination"
+      ],
+      "enclosed": [
+        "FCL (Full Container Load)",
+        "LCL (Less Than Container Load)",
+        "RORO (Roll-on/Roll-off) shipping",
+        "Breakbulk & project cargo handling"
+      ],
+      "accordion": [
+        {
+          "title": "Container Shipping Services",
+          "content": [
+            "Standard & high-cube containers",
+            "Refrigerated (reefer) containers",
+            "Vehicle & machinery containerization"
+          ]
+        },
+        {
+          "title": "Vehicle Export & RORO",
+          "content": [
+            "Roll-on/Roll-off vehicle shipping",
+            "Auction vehicle export handling",
+            "Pre-shipment inspection & documentation"
+          ]
+        },
+        {
+          "title": "Customs & Documentation",
+          "content": [
+            "Export declarations & compliance",
+            "Bill of lading processing",
+            "International trade documentation support"
+          ]
+        },
+        {
+          "title": "End-to-End Logistics Support",
+          "content": [
+            "Port coordination & terminal handling",
+            "Container stuffing & securing",
+            "Integrated road & warehouse support"
+          ]
+        }
+      ]
+    },
+
+    "air-freight": {
+      "title": "Fast & Reliable Air Freight Solutions",
+      "introTitle": "Global Air Cargo & Express Logistics",
+      "introText": "We provide fast, secure, and time-critical air freight services connecting global markets with speed and precision. From urgent shipments to high-value cargo, our air logistics solutions ensure rapid transit and reliable delivery.",
+      "features": [
+        {
+          "title": "Express & Priority Shipping",
+          "description": "Time-sensitive cargo solutions with priority handling and optimized flight schedules for urgent international and domestic shipments."
+        },
+        {
+          "title": "International Air Cargo Network",
+          "description": "Strategic partnerships with leading airlines and global carriers ensuring worldwide airport-to-airport and door-to-door coverage."
+        },
+        {
+          "title": "High-Value & Sensitive Cargo Handling",
+          "description": "Secure transportation for electronics, automotive parts, pharmaceuticals, and fragile goods with strict compliance standards."
+        },
+        {
+          "title": "Customs Clearance & Documentation",
+          "description": "Complete management of export/import documentation, customs clearance, and regulatory compliance for seamless cross-border trade."
+        }
+      ],
+      "highlights": [
+        "Fastest international transit times",
+        "Global airport network coverage",
+        "Real-time shipment tracking",
+        "Secure & compliant cargo handling"
+      ],
+      "enclosed": [
+        "Airport-to-airport delivery",
+        "Door-to-door express service",
+        "Temperature-controlled cargo",
+        "Charter flight arrangements"
+      ],
+      "accordion": [
+        {
+          "title": "Air Freight Services",
+          "content": [
+            "Express & priority air cargo",
+            "Consolidated air shipments",
+            "Charter aircraft solutions"
+          ]
+        },
+        {
+          "title": "Specialized Cargo Handling",
+          "content": [
+            "Pharmaceutical & medical cargo",
+            "Automotive & industrial parts",
+            "High-value & fragile goods"
+          ]
+        },
+        {
+          "title": "Customs & Compliance",
+          "content": [
+            "Export & import documentation",
+            "Customs brokerage coordination",
+            "Regulatory compliance support"
+          ]
+        },
+        {
+          "title": "Integrated Logistics Support",
+          "content": [
+            "First-mile pickup",
+            "Last-mile delivery",
+            "Warehouse & distribution integration"
+          ]
+        }
+      ]
+    },
+
+    "car-wrapping": {
+      "title": "Premium Car Wrapping & Vehicle Customization",
+      "introTitle": "Professional Vehicle Wrap Solutions",
+      "introText": "We provide high-quality car wrapping services designed to transform your vehicle with precision, creativity, and durability. From full body color changes to commercial branding wraps, we deliver flawless finishes using premium vinyl materials.",
+      "features": [
+        {
+          "title": "Full & Partial Wraps",
+          "description": "Complete color change wraps, partial accents, roof wraps, bonnet wraps, and custom detailing tailored to your style."
+        },
+        {
+          "title": "Commercial & Fleet Branding",
+          "description": "Professional vehicle branding solutions for businesses, including fleet graphics, logo placement, and promotional wraps."
+        },
+        {
+          "title": "Premium Vinyl Materials",
+          "description": "We use high-performance vinyl from trusted brands ensuring durability, UV resistance, and long-lasting finish."
+        },
+        {
+          "title": "Precision Installation",
+          "description": "Expert installers ensure bubble-free application, seamless edges, and clean detailing for a factory-quality look."
+        }
+      ],
+      "highlights": [
+        "Gloss, matte, satin & chrome finishes",
+        "Custom graphic design support",
+        "Paint protection options available",
+        "Removable & paint-safe solutions"
+      ],
+      "enclosed": [
+        "Full vehicle color change wraps",
+        "Corporate branding & advertising wraps",
+        "Paint protection film (PPF)",
+        "Headlight & taillight tinting"
+      ],
+      "accordion": [
+        {
+          "title": "Wrap Services",
+          "content": [
+            "Full body wraps",
+            "Partial & accent wraps",
+            "Custom graphic wraps"
+          ]
+        },
+        {
+          "title": "Commercial Branding",
+          "content": [
+            "Fleet vehicle branding",
+            "Business logo & marketing graphics",
+            "Promotional campaign wraps"
+          ]
+        },
+        {
+          "title": "Protection Solutions",
+          "content": [
+            "Paint protection film (PPF)",
+            "Scratch & UV protection",
+            "Ceramic coating add-ons"
+          ]
+        },
+        {
+          "title": "Why Choose Us",
+          "content": [
+            "Premium quality materials",
+            "Experienced professional installers",
+            "Clean indoor installation facility"
+          ]
+        }
+      ]
+    },
+
+    "inspection-customs": {
+      "title": "Customs Clearance & Vehicle Inspection Services",
+      "introTitle": "Fast, Compliant & Hassle-Free Clearance Solutions",
+      "introText": "We provide professional customs clearance and vehicle inspection services to ensure smooth international trade operations. Our experienced team manages documentation, compliance, and inspection processes efficiently to minimize delays and ensure regulatory adherence.",
+      "features": [
+        {
+          "title": "Customs Clearance Management",
+          "description": "Complete handling of import and export documentation, duty calculations, tariff classifications, and regulatory approvals for seamless cargo release."
+        },
+        {
+          "title": "Vehicle Inspection Services",
+          "description": "Thorough vehicle condition reports, VIN verification, damage assessment, and compliance checks for export and auction shipments."
+        },
+        {
+          "title": "Export Documentation Support",
+          "description": "Preparation and processing of bills of lading, commercial invoices, export declarations, and required trade certificates."
+        },
+        {
+          "title": "Regulatory Compliance Expertise",
+          "description": "Up-to-date knowledge of international trade regulations, customs laws, and port authority requirements to avoid penalties and delays."
+        }
+      ],
+      "highlights": [
+        "Faster customs processing",
+        "Accurate documentation handling",
+        "Vehicle export compliance support",
+        "Coordination with port & airport authorities"
+      ],
+      "enclosed": [
+        "Pre-export vehicle inspection",
+        "Import & export clearance",
+        "Duty & tax calculation assistance",
+        "Regulatory documentation processing"
+      ],
+      "accordion": [
+        {
+          "title": "Customs Clearance Services",
+          "content": [
+            "Import & export declarations",
+            "Tariff classification & duty calculation",
+            "Port & terminal coordination"
+          ]
+        },
+        {
+          "title": "Vehicle Inspection",
+          "content": [
+            "VIN & chassis verification",
+            "Condition & damage reporting",
+            "Pre-shipment inspection certificates"
+          ]
+        },
+        {
+          "title": "Documentation & Compliance",
+          "content": [
+            "Bill of lading processing",
+            "Commercial invoice verification",
+            "Regulatory compliance management"
+          ]
+        },
+        {
+          "title": "End-to-End Support",
+          "content": [
+            "Customs brokerage coordination",
+            "Government authority liaison",
+            "Integrated logistics documentation support"
+          ]
+        }
+      ]
     }
   },
+
+
+
+
+
   "footer": {
     "ctaTitle": "Efficient, Safe, & Swift Logistics Solution!",
     "ctaButton": "Contact With Us →",

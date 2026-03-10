@@ -274,7 +274,7 @@
 
 @media screen and (max-width: 768px) {
   .sticky-steps {
-    margin-left: 20px;
+    margin-left: 0px;
   }
   .sticky-left {
     padding-left: 0px;

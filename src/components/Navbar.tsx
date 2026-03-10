@@ -71,8 +71,8 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <div className='flex items-center'>
-            <img src="/logo-icon.png" alt="Nejoum Shipping" className={`h-10 w-auto object-contain ${scrolled ? 'filter-none' : 'invert brightness-0'}`}  />
-            <img src="/logo-name.png" alt="Nejoum Shipping" className={`h-10 w-auto object-contain ${scrolled ? 'filter-none' : 'invert brightness-0'}`} />
+            <img src="/logo-icon.png" alt="Nejoum Shipping" className={`h-8 md:h-10 w-auto object-contain ${scrolled ? 'filter-none' : 'invert brightness-0'}`}  />
+            <img src="/logo-name.png" alt="Nejoum Shipping" className={`h-8 md:h-10 w-auto object-contain ${scrolled ? 'filter-none' : 'invert brightness-0'}`} />
           </div>
         </Link>
 
@@ -193,13 +193,50 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden p-2 rounded-lg ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}
-        >
-          {mobileOpen ? <CloseIcon /> : <MenuIcon />}
-        </button>
+        <div className='flex items-center lg:hidden'>
+          {/* Language Switcher */}
+          <div className="relative">
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              className={`flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                scrolled ? 'text-foreground hover:bg-muted' : 'text-primary-foreground/90 hover:bg-primary-foreground/10'
+              }`}
+            >
+              <LanguageIcon sx={{ fontSize: 18 }} />
+              {i18n.language.split('-')[0].toUpperCase()}
+            </button>
+            <AnimatePresence>
+              {langOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  className="absolute top-full mt-1 end-0 bg-card rounded-lg shadow-enterprise border border-border overflow-hidden min-w-[80px]"
+                >
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLang(lang.code)}
+                      className={`w-full px-4 py-2 text-sm text-start transition-colors hover:bg-primary/10 ${
+                        i18n.language === lang.code ? 'text-primary font-semibold bg-primary/5' : 'text-foreground'
+                      }`}
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Mobile Toggle */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className={`lg:hidden p-2 rounded-lg ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}
+          >
+            {mobileOpen ? <CloseIcon /> : <MenuIcon />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -277,7 +314,7 @@ const Navbar = () => {
                   </Link>
                 );
               })}
-              <div className="flex items-center gap-2 px-4 py-3">
+              {/* <div className="flex items-center gap-2 px-4 py-3">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -291,7 +328,7 @@ const Navbar = () => {
                     {lang.label}
                   </button>
                 ))}
-              </div>
+              </div> */}
               <Link
                 to="/contact"
                 className="gradient-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-semibold text-center mx-4 mt-2"

@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 import { motion } from "framer-motion";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import SecurityIcon from "@mui/icons-material/Security";
@@ -55,16 +57,23 @@ const features = [
 ];
 
 export default function WhyChooseCircularSection() {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
+  const translatedFeatures = t("whyChoose.items", {
+    returnObjects: true,
+  }) as { title: string; description: string }[];
+
   return (
     <section className="pt-16 pb-20 md:pb-32 bg-white overflow-hidden">
         <div className="text-center mb-14 px-5 md:px-0">
           <h2 className="title">
-            Why <span>Choose US</span>
+            {t("whyChoose.heading1")}{" "}
+            <span>{t("whyChoose.heading2")}</span>
           </h2>
 
           <p className="text-gray-500 max-w-2xl mx-auto">
-            We ensure efficient warehouse operations through preparation,
-            logistics involvement, and continuous optimization.
+            {t("whyChoose.subheading")}
           </p>
         </div>
 
@@ -162,7 +171,7 @@ export default function WhyChooseCircularSection() {
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: 60 }}
+                  initial={{ opacity: 0, x: rtl ? -60 : 60 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.2 }}
                   className="flex items-center gap-6 relative"
@@ -193,10 +202,10 @@ export default function WhyChooseCircularSection() {
                   {/* Text */}
                   <div>
                     <div className="text-base mb-2 font-semibold text-gray-800">
-                      {feature.title}
+                      {translatedFeatures[index].title}
                     </div>
                     <div className="text-gray-500 text-sm">
-                      {feature.description}
+                      {translatedFeatures[index].description}
                     </div>
                   </div>
                 </motion.div>
@@ -221,7 +230,7 @@ export default function WhyChooseCircularSection() {
                   repeat: Infinity,
                   delay: index * 0.3,
                 }}
-                className={`relative md:absolute -left-4 w-16 h-16 rounded-full bg-gradient-to-br ${feature.color} hidden md:flex items-center justify-center text-white shadow-lg`}
+                className={`relative md:absolute ${ rtl ? "-right-4" : "-left-4" } w-16 h-16 rounded-full bg-gradient-to-br ${feature.color} hidden md:flex items-center justify-center text-white shadow-lg`}
                 style={{ top: `calc(50% + ${feature.y}px)` }}
               >
                 <Icon />
@@ -237,10 +246,12 @@ export default function WhyChooseCircularSection() {
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: 60 }}
+                initial={{ opacity: 0, x: rtl ? -60 : 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="hidden md:flex items-center gap-6 ml-16"
+                className={`hidden md:flex items-center gap-6 ${
+                  rtl ? "mr-16 flex-row text-right" : "ml-16"
+                }`}
               >
 
                 {/* Line */}
@@ -250,11 +261,11 @@ export default function WhyChooseCircularSection() {
                 <div>
 
                   <div className="text-xl font-semibold text-gray-800">
-                    {feature.title}
+                    {translatedFeatures[index].title}
                   </div>
 
                   <div className="text-gray-500">
-                    {feature.description}
+                    {translatedFeatures[index].description}
                   </div>
 
                 </div>

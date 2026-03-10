@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import GavelIcon from "@mui/icons-material/Gavel";
 import StorefrontIcon from "@mui/icons-material/Storefront";
@@ -8,39 +9,17 @@ import BusinessIcon from "@mui/icons-material/Business";
 import PersonIcon from "@mui/icons-material/Person";
 
 const clients = [
-  {
-    title: "Auto Auction Buyers",
-    icon: GavelIcon,
-    gradient: "from-blue-500 to-indigo-600",
-  },
-  {
-    title: "Car Dealers",
-    icon: StorefrontIcon,
-    gradient: "from-purple-500 to-indigo-600",
-  },
-  {
-    title: "Exporters",
-    icon: ImportExportIcon,
-    gradient: "from-cyan-500 to-blue-600",
-  },
-  {
-    title: "Fleet Operators",
-    icon: AirportShuttleIcon,
-    gradient: "from-orange-500 to-red-600",
-  },
-  {
-    title: "Logistics Companies",
-    icon: BusinessIcon,
-    gradient: "from-emerald-500 to-teal-600",
-  },
-  {
-    title: "Private Vehicle Owners",
-    icon: PersonIcon,
-    gradient: "from-pink-500 to-rose-600",
-  },
+  { key: "auction", icon: GavelIcon, gradient: "from-blue-500 to-indigo-600" },
+  { key: "dealers", icon: StorefrontIcon, gradient: "from-purple-500 to-indigo-600" },
+  { key: "exporters", icon: ImportExportIcon, gradient: "from-cyan-500 to-blue-600" },
+  { key: "fleet", icon: AirportShuttleIcon, gradient: "from-orange-500 to-red-600" },
+  { key: "logistics", icon: BusinessIcon, gradient: "from-emerald-500 to-teal-600" },
+  { key: "private", icon: PersonIcon, gradient: "from-pink-500 to-rose-600" },
 ];
 
 export default function WhoWeServeModern() {
+  const { t } = useTranslation();
+
   return (
     <section className="pt-12 md:pt-16 bg-white">
 
@@ -54,11 +33,11 @@ export default function WhoWeServeModern() {
           className="text-center mb-6 md:mb-16"
         >
           <h2 className="title">
-            Who We <span>Serve</span>
+            {t("whoWeServeSection.heading")} <span>{t("whoWeServeSection.heading2")}</span>
           </h2>
 
           <p className="text-gray-500 max-w-2xl mx-auto">
-            Strategically located warehouses for seamless logistics
+            {t("whoWeServeSection.subheading")}
           </p>
 
         </motion.div>
@@ -96,7 +75,7 @@ export default function WhoWeServeModern() {
 
                   {/* Title */}
                   <h3 className="font-semibold text-gray-800">
-                    {client.title}
+                    {t(`whoWeServeSection.items.${client.key}`)}
                   </h3>
 
                 </div>

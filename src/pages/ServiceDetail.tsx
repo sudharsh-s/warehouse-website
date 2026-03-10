@@ -5,14 +5,24 @@ import { CheckCircle, ArrowRight, Check } from "lucide-react";
 import ServicePageHeader from "@/components/ServicePageHeader";
 import ServiceAccordion from "@/components/ServiceAccordion";
 
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
+
 export default function ServiceDetail() {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
   const { slug } = useParams<{ slug: string }>();
 
   const params = useParams();
 
-  const service = servicesData.find(s => s.slug === slug);
+  const serviceImages = servicesData.find(s => s.slug === slug);
 
-  if (!service) return null;
+  const serviceContent = t(`services.${slug}`, {
+    returnObjects: true,
+  }) as any;
+
+if (!slug || !serviceImages || !serviceContent) return null;
 
   return (
     <>
@@ -29,7 +39,7 @@ export default function ServiceDetail() {
 
             {/* TITLE */}
             <h2 className="text-[30px] md:text-[35px] leading-8 md:leading-10 font-bold mb-5">
-              {service.title}
+              {serviceContent.title}
             </h2>
 
             {/* HERO IMAGE */}
@@ -40,16 +50,16 @@ export default function ServiceDetail() {
 
             {/* TEXT */}
             <p className="text-gray-500 text-base leading-6 mb-6">
-              {service.introText}
+              {serviceContent.introText}
             </p>
 
             {/* FEATURES */}
             <h3 className="text-xl text-gray-600 font-bold mb-4">
-              We Offer:
+              {t("serviceDetail.weOffer")}
             </h3>
 
             <ul className="space-y-3 mb-8">
-              {service.features.map((item, i) => (
+              {serviceContent.features.map((item: any, i: number) => (
                 <li key={i} className="flex gap-3 items-start">
                   <CheckCircle className="w-5 h-5 text-primary mt-1 shrink-0" />
 
@@ -66,11 +76,11 @@ export default function ServiceDetail() {
 
             {/* HIGHLIGHTS */}
             <h3 className="text-xl font-bold text-gray-600 mb-4">
-              Facility Highlights
+              {t("serviceDetail.facilityHighlights")}
             </h3>
 
             <ul className="space-y-3 mb-8">
-              {service.highlights.map((item, i) => (
+              {serviceContent.highlights.map((item: string, i: number) => (
                 <li key={i} className="flex gap-3 items-start">
                   <ArrowRight className="w-5 h-5 text-primary" />
                   <span className="text-gray-500 text-base leading-6">{item}</span>
@@ -80,11 +90,11 @@ export default function ServiceDetail() {
 
             {/* Enclosed */}
             <h3 className="text-xl text-gray-600 font-bold mb-4">
-              What’s Included in This Service
+              {t("serviceDetail.included")}
             </h3>
 
             <ul className="space-y-3">
-              {service.enclosed.map((item, i) => (
+              {serviceContent.enclosed.map((item: string, i: number) => (
                 <li key={i} className="flex gap-3 items-start">
                   <Check className="w-5 h-5 text-primary" />
                   <span className="text-gray-500 text-base leading-6">{item}</span>
@@ -93,7 +103,9 @@ export default function ServiceDetail() {
             </ul>
 
             <div className="mt-10">
-              <ServiceAccordion items={service.accordion} />
+              {serviceContent.accordion && (
+                <ServiceAccordion items={serviceContent.accordion} />
+              )}
             </div>
           </div>
 
@@ -101,7 +113,7 @@ export default function ServiceDetail() {
           {/* RIGHT GALLERY */}
           <div className="space-y-4">
 
-            {service.gallery.map((img, i) => (
+            {serviceImages.gallery.map((img, i) => (
               <motion.img
                 key={i}
                 src={img}

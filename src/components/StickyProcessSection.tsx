@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 import img1 from "@/assets/process/process-1.png";
 import img2 from "@/assets/process/process-2.jpg";
@@ -8,45 +9,15 @@ import img4 from "@/assets/process/process-4.png";
 import img5 from "@/assets/process/process-5.png";
 import container from "@/assets/container-bg.jpg";
 
-const steps = [
-  {
-    number: "01",
-    title: "Discovery & Booking",
-    description:
-      "Share your shipment details — vehicles, containers, bulk cargo, origin and destination. We assess handling requirements, compliance needs, and transport mode.",
-    image: img1,
-  },
-  {
-    number: "02",
-    title: "Receive & Store",
-    description:
-      "Cargo arrives via port transfer or truck. Our team unloads, inspects, documents, and registers everything into the system.",
-    image: img2,
-  },
-  {
-    number: "03",
-    title: "Manage & Add Services",
-    description:
-      "We provide value-added services to optimize your supply chain and prepare cargo for export or dispatch.",
-    image: img3,
-  },
-  {
-    number: "04",
-    title: "Clear & Load",
-    description:
-      "Our team coordinates clearance processes and prepares goods for outbound movement.",
-    image: img4,
-  },
-  {
-    number: "05",
-    title: "Ship & Deliver",
-    description:
-      "We manage ocean freight and final transport through trusted carrier networks.",
-    image: img5,
-  },
-];
+const stepImages = [img1, img2, img3, img4, img5];
 
 export default function StickyProcessSection() {
+  const { t } = useTranslation();
+
+  const steps = t("processSection.steps", {
+    returnObjects: true,
+  }) as { title: string; description: string }[];
+
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -57,13 +28,17 @@ export default function StickyProcessSection() {
   const [activeStep, setActiveStep] = useState(0);
 
   useEffect(() => {
-    return scrollYProgress.on("change", (progress) => {
+    if (window.innerWidth < 768) return; // stop on mobile
+
+    const unsubscribe = scrollYProgress.on("change", (progress) => {
       const step = Math.min(
         steps.length - 1,
         Math.floor(progress * steps.length)
       );
       setActiveStep(step);
     });
+
+    return () => unsubscribe();
   }, [scrollYProgress]);
 
   const progressHeight = useTransform(
@@ -75,20 +50,24 @@ export default function StickyProcessSection() {
   return (
     <>
       <div className="text-center bg-white" style={{padding: "70px 0px 50px"}}>
-        <h2 className="title">Warehouse To <span>Shipping</span></h2>
-        <p className="text-gray-500 max-w-2xl mx-auto">Streamlining Your Process from Start to Delivery</p>
+        <h2 className="title">{t("processSection.heading")} <span>{t("processSection.heading2")}</span></h2>
+        <p className="text-gray-500 max-w-2xl mx-auto">{t("processSection.subheading")}</p>
       </div>
 
       <section
         ref={containerRef}
         className="relative bg-white"
-        style={{ height: `${steps.length * 100}vh` }}
+        style={{
+          ...(window.innerWidth >= 768 && {
+            height: `${steps.length * 100}vh`,
+          }),
+        }}
       >
-        <div className="absolute top-0 left-0 w-full h-full" style={{background: "#00000078", zIndex: "1"}}></div>
+        <div className="absolute top-0 left-0 w-full h-full z-[0] md:z-[1]" style={{background: "#00000078"}}></div>
         <img src={container} alt="continer" className="absolute top-0 left-0 w-full h-full sticky-container" />
 
         {/* Sticky container */}
-        <div className="h-[25%] lg:h-screen flex items-center" style={{ position: "sticky", top: "60px", padding: "60px 0px", zIndex: "2" }}>
+        <div className="h-[25%] lg:h-screen flex items-center md:sticky md:top-[60px] py-[60px] z-[2]">
 
           <div className="max-w-7xl mx-auto px-6 flex-wrap md:flex-none flex items-center w-full flex-col-reverse md:flex-row">
 
@@ -106,7 +85,7 @@ export default function StickyProcessSection() {
               </div>
 
               {/* Steps */}
-              <div className="sticky-steps">
+              <div className="sticky-steps mt-3 md:mt-0">
 
                 {steps.map((step, index) => {
 
@@ -115,21 +94,28 @@ export default function StickyProcessSection() {
                   return (
                     <motion.div
                       key={index}
-                      animate={{
-                        opacity: isActive ? 1 : 0.2,
-                        x: isActive ? 0 : -20,
-                      }}
+                      animate={
+                        window.innerWidth >= 768
+                          ? {
+                              opacity: isActive ? 1 : 0.2,
+                              x: isActive ? 0 : -20,
+                            }
+                          : {
+                              opacity: 1,
+                              x: 0,
+                            }
+                      }
                       transition={{ duration: 0.4 }}
                       style={{marginBottom: "2.5rem"}}
                     >
 
                       <div className="flex gap-2 items-start">
-                        <div className="text-sm text-gray-300 font-semibold mt-2 mb-2">
-                          {step.number}
+                        <div className="text-lg md:text-sm text-white md:text-gray-300 font-semibold mt-0 mr-3 md:mr-0 md:mt-2 mb-2">
+                          {String(index + 1).padStart(2, "0")}
                         </div>
 
                         <div>
-                          <h2 className="text-[20px] leading-5 lg:text-3xl text-white font-bold mb-2 flex items-center gap-2">
+                          <h2 className="text-[20px] leading-5 lg:text-3xl text-white font-bold mb-3 md:mb-2 flex items-center gap-2">
 
                           <span className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-t-transparent border-b-transparent border-l-primary stickyarrow" />
 
@@ -137,7 +123,7 @@ export default function StickyProcessSection() {
 
                           </h2>
 
-                          <p className="text-gray-400">
+                          <p className="text-white md:text-gray-400">
                             {step.description}
                           </p>
                         </div>
@@ -154,7 +140,7 @@ export default function StickyProcessSection() {
 
               <motion.img
                 key={activeStep}
-                src={steps[activeStep].image}
+                src={stepImages[activeStep]}
                 initial={{ opacity: 0, y: 80, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6 }}

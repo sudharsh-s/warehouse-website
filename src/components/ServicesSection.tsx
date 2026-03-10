@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import "@/index.css";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 import airImg from "@/assets/services/air-freight.png";
 import oceanImg from "@/assets/services/ocean-freight.png";
@@ -18,6 +19,7 @@ import DocumentScannerIcon from '@mui/icons-material/DocumentScanner';
 
 import serviceBg1 from "@/assets/services/service-bg-1.png";
 import serviceBg2 from "@/assets/services/service-bg-2.png";
+import i18n from "@/i18n";
 
 const services = [
   {
@@ -65,6 +67,9 @@ const services = [
 ];
 
 export default function ServicesSection({ isServicePage = false }) {
+  const { t } = useTranslation();
+  const isRTL = i18n.dir() === "rtl";
+
   return (
     <section className={`pt-8 pb-16 md:py-20 bg-[#001F3F] overflow-hidden relative ${isServicePage ? "bg-white" : ""}`}>
       <div className="">
@@ -79,11 +84,11 @@ export default function ServicesSection({ isServicePage = false }) {
         <div className="text-center mb-10 md:mb-14">
 
           <h2 className={`title ${isServicePage ? "text-black text-5xl" : "text-white"}`}>
-            Our Services
+            {t("servicesSection.heading")}
           </h2>
 
           <p className={`text-white/70 ${isServicePage ? "text-black" : "text-white"}`}>
-            Comprehensive logistics and warehouse solutions
+            {t("servicesSection.subheading")}
           </p>
 
         </div>
@@ -128,12 +133,12 @@ export default function ServicesSection({ isServicePage = false }) {
 
                   {/* TITLE */}
                   <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 leading-7">
-                    {service.title}
+                    {t(`servicesSection.items.${service.slug}.title`)}
                   </h3>
 
                   {/* DESCRIPTION */}
                   <p className="text-gray-500 text-sm md:text-base leading-5 mb-6">
-                    {service.description}
+                    {t(`servicesSection.items.${service.slug}.description`)}
                   </p>
 
                   {/* READ MORE */}
@@ -141,17 +146,21 @@ export default function ServicesSection({ isServicePage = false }) {
                     to={`/services/${service.slug}`}
                     className="inline-flex items-center gap-1 font-semibold text-black"
                   >
-                    Read More <ArrowRight className="w-5 h-5 mt-1 shrink-0 transition-transform duration-300 group-hover:translate-x-2" />
+                    {t("servicesSection.readMore")} <ArrowRight className="w-5 h-5 mt-1 shrink-0 transition-transform duration-300 group-hover:translate-x-2" />
                   </Link>
 
                 </div>
 
 
                 {/* ICON CORNER BOX */}
-                <div className="absolute bottom-0 z-10 -right-5">
+                <div className="absolute bottom-0 z-10 -right-5 rtl:-left-5 rtl:right-auto">
 
                   {/* Triangle Fold */}
-                  <div className=" absolute right-[2px] -top-[23px] rotate-90 w-0 h-0 border-l-[20px] border-l-transparent border-b-[26px] border-b-[#1f3d8e]"></div>
+                  <div
+                      className={`absolute right-[2px] -top-[23px] rotate-90 w-0 h-0 border-l-[20px] border-l-transparent border-b-[26px] border-b-[#1f3d8e] ${
+                        isRTL ? "hidden" : ""
+                      }`}
+                    ></div>
 
                   {/* Orange Icon Box */}
                   <div className=" w-20 h-20 gradient-primary flex items-center justify-center shadow-lg">

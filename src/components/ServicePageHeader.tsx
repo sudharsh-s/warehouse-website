@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { useParams, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import truckRoad from "@/assets/services/service-header-truck.png"; 
 import warehouse from "@/assets/services/warehouse-page-header.png"; 
@@ -16,6 +18,8 @@ import warehouseImg7 from "@/assets/services/warehouse-stroage-7.jpg";
 
 
 export default function TransportHero() {
+    const { t, i18n } = useTranslation();
+    const rtl = isRTL(i18n.language);
 
   const detailRef = useRef(null);
 
@@ -69,55 +73,55 @@ export default function TransportHero() {
     };
 
     const tabs = [
-    {
-      id: "warehouse",
-      slug: "warehouse-storage",
-      label: "Warehouse",
-      title: "POWERING\nYOUR STORAGE",
-      outline: "WAREHOUSE",
-      content: "Secure and efficient warehouse and storage solutions.",
-    },
-    {
-      id: "road",
-      slug: "road-freight",
-      label: "Road",
-      title: "PROFESSIONAL\nROAD FREIGHT",
-      outline: "ROAD",
-      content: "Efficient ground transportation across regions.",
-    },
-    {
-      id: "sea",
-      slug: "ocean-freight",
-      label: "Ocean",
-      title: "GLOBAL\nOCEAN FREIGHT",
-      outline: "OCEAN",
-      content: "Cost-effective international sea shipping solutions.",
-    },
-    {
-      id: "air",
-      slug: "air-freight",
-      label: "Air",
-      title: "INTERNATIONAL\nAIR FREIGHT",
-      outline: "AIR",
-      content: "Fast and reliable air cargo solutions worldwide.",
-    },
-    {
-      id: "car",
-      slug: "car-wrapping",
-      label: "Wrapping",
-      title: "PROFESSIONAL\nWRAPPING",
-      outline: "WRAPPING",
-      content: "High-quality packaging and wrapping solutions to protect your goods.",
-    },
-    {
-      id: "inspection",
-      slug: "inspection-customs",
-      label: "Customs",
-      title: "THOROUGH\nINSPECTION",
-      outline: "CLEARANCE",
-      content: "Comprehensive inspection services ensuring compliance and safety.",
-    },
-  ];
+      {
+        id: "warehouse",
+        slug: "warehouse-storage",
+        label: t("servicesHero.tabs.warehouse.label"),
+        title: t("servicesHero.tabs.warehouse.title"),
+        outline: t("servicesHero.tabs.warehouse.outline"),
+        content: t("servicesHero.tabs.warehouse.content"),
+      },
+      {
+        id: "road",
+        slug: "road-freight",
+        label: t("servicesHero.tabs.road.label"),
+        title: t("servicesHero.tabs.road.title"),
+        outline: t("servicesHero.tabs.road.outline"),
+        content: t("servicesHero.tabs.road.content"),
+      },
+      {
+        id: "sea",
+        slug: "ocean-freight",
+        label: t("servicesHero.tabs.sea.label"),
+        title: t("servicesHero.tabs.sea.title"),
+        outline: t("servicesHero.tabs.sea.outline"),
+        content: t("servicesHero.tabs.sea.content"),
+      },
+      {
+        id: "air",
+        slug: "air-freight",
+        label: t("servicesHero.tabs.air.label"),
+        title: t("servicesHero.tabs.air.title"),
+        outline: t("servicesHero.tabs.air.outline"),
+        content: t("servicesHero.tabs.air.content"),
+      },
+      {
+        id: "car",
+        slug: "car-wrapping",
+        label: t("servicesHero.tabs.car.label"),
+        title: t("servicesHero.tabs.car.title"),
+        outline: t("servicesHero.tabs.car.outline"),
+        content: t("servicesHero.tabs.car.content"),
+      },
+      {
+        id: "inspection",
+        slug: "inspection-customs",
+        label: t("servicesHero.tabs.inspection.label"),
+        title: t("servicesHero.tabs.inspection.title"),
+        outline: t("servicesHero.tabs.inspection.outline"),
+        content: t("servicesHero.tabs.inspection.content"),
+      },
+    ];
 
   const truckImages = {
     "warehouse-storage": { src: warehouseImg7, className: "w-[65%] md:w-[35%] bottom-8 -left-3" },
@@ -157,7 +161,7 @@ export default function TransportHero() {
 
   return (
     <>
-      <section className="relative service-page-header min-h-[800px] overflow-hidden flex items-center pt-24">
+      <section className="relative service-page-header min-h-[650px] md:min-h-[800px] overflow-hidden flex items-center pt-24">
 
         {/* RIGHT FLOAT IMAGE */}
         <motion.div
@@ -168,7 +172,9 @@ export default function TransportHero() {
             repeatType: "reverse",
             ease: "easeInOut"
           }}
-          className="absolute top-20 -right-20 hidden lg:block z-[2]"
+          className={`absolute top-20 hidden lg:block z-[2] ${
+            rtl ? "-left-20" : "-right-20"
+          }`}
         >
           <div className="service-page-img-1">
             <img
@@ -182,22 +188,38 @@ export default function TransportHero() {
         {/* LEFT TRUCK IMAGE */}
         <motion.img
           src={currentTruck.src}
-          animate={{ x: [ -10, 10 ] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut"
+          animate={{
+            x: [-10, 10],
+            scaleX: rtl ? -1 : 1
           }}
-          className={`absolute block z-[1] ${currentTruck.className}`}
+          transition={{
+            x: {
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut"
+            },
+            scaleX: {
+              duration: 0
+            }
+          }}
+          className={`absolute block z-[1] ${
+            rtl
+              ? currentTruck.className
+                  .replace(/-left/g, "-right")
+                  .replace(/left/g, "right")
+              : currentTruck.className
+          }`}
         />
 
         {/* CONTENT */}
-        <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 items-center -mt-24 md:-mt-0">
+        <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 items-center -mt-16 md:-mt-0">
 
           <img src={shape2} alt="Shape 2" className="absolute opacity-25 z-0" />
 
-          <div className="text-white absolute top-32 left-4 md:left-1/2 transform md:-translate-x-1/2 z-10">
+          <div className={`text-white absolute top-32 transform md:-translate-x-1/2 z-10 ${
+            rtl ? "right-4 md:right-1/2 text-right" : "left-4 md:left-1/2 text-left"
+          }`}>
 
             {/* Main Heading */}
             <motion.h1
@@ -218,7 +240,10 @@ export default function TransportHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.25 }}
               transition={{ duration: 0.8 }}
-              className="absolute text-[45px] md:text-[70px] font-bold top-16 md:top-24 left-0 text-transparent select-none pointer-events-none"
+              className={`absolute text-[45px] md:text-[70px] font-bold 
+                top-16 md:top-24 
+                ${rtl ? "right-0 text-right" : "left-0 text-left"} 
+                text-transparent select-none pointer-events-none`}
               style={{
                 WebkitTextStroke: "1px white",
               }}
@@ -233,19 +258,20 @@ export default function TransportHero() {
 
           {/* RIGHT CONTENT */}
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: rtl ? -100 : 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-            className="text-white mt-10 ml-0 md:-ml-20"
+            className="text-white mt-0 md:mt-10 ml-0 md:-ml-20"
           >
 
             <p className="text-white/80 mb-6 max-w-md">
-              If you have a parcel and want to know its latest update,
-              then check the latest update with your parcel ID.
+              {t("servicesHero.heroDescription")}
             </p>
 
             {/* Tabs */}
-            <div className="block bg-gray-200 md:bg-none md:flex w-fit rounded overflow-hidden shadow-md relative z-10">
+            <div className={`hidden md:flex w-fit rounded overflow-hidden shadow-md relative z-10 ${
+              rtl ? "flex-row-reverse" : ""
+            }`}>
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -278,7 +304,9 @@ export default function TransportHero() {
 
         </div>
 
-        <section className="absolute right-0 hidden md:block w-[55%] bottom-0 overflow-hidden">
+        <section className={`absolute hidden md:block w-[55%] bottom-0 overflow-hidden ${
+          rtl ? "left-0" : "right-0"
+        }`}>
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
 
             {/* 1 */}
@@ -287,7 +315,7 @@ export default function TransportHero() {
                 <Counter to={1500} />k+
               </h2>
               <p className="mt-2 text-lg font-semibold text-gray-700">
-                Vehicle Transported
+                {t("servicesHero.stats.vehicles")}
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
             </div>
@@ -298,7 +326,7 @@ export default function TransportHero() {
                 <Counter to={23} />+
               </h2>
               <p className="mt-2 text-lg font-semibold text-gray-700">
-                Years Of Experience
+                {t("servicesHero.stats.experience")}
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
             </div>
@@ -309,7 +337,7 @@ export default function TransportHero() {
                 <Counter to={57} />+
               </h2>
               <p className="mt-2 text-lg font-semibold text-gray-700">
-                Countries
+                {t("servicesHero.stats.countries")}
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
             </div>
@@ -328,7 +356,7 @@ export default function TransportHero() {
                 <Counter to={1500} />k+
               </h2>
               <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">
-                Vehicle Transported
+                {t("servicesHero.stats.vehicles")}
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
             </div>
@@ -339,7 +367,7 @@ export default function TransportHero() {
                 <Counter to={23} />+
               </h2>
               <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">
-                Years Of Experience
+                {t("servicesHero.stats.experience")}
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
             </div>
@@ -350,7 +378,7 @@ export default function TransportHero() {
                 <Counter to={57} />+
               </h2>
               <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">
-                Countries
+                {t("servicesHero.stats.countries")}
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
             </div>

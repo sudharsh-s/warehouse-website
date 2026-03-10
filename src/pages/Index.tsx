@@ -51,29 +51,17 @@ const Index = () => {
     {
       type: "video",
       src: "/videos/home_slider_1.mp4",
-      badge: "Trusted Global Warehouse Solutions",
-      title: "Smart Warehouse",
-      highlight: "Storage & Logistics",
-      subtitle:
-        "Secure, scalable, and technology-driven warehouse solutions for global logistics.",
+      key: "slide1",
     },
     {
       type: "video",
       src: "/videos/home_slider_2.mp4",
-      badge: "Global Shipping Experts",
-      title: "Fast & Secure",
-      highlight: "Vehicle Logistics",
-      subtitle:
-        "Reliable vehicle storage, shipping, and distribution worldwide.",
+      key: "slide2",
     },
     {
       type: "video",
       src: "/videos/home_slider_3.mp4",
-      badge: "Modern Infrastructure",
-      title: "Advanced",
-      highlight: "Warehouse Facilities",
-      subtitle:
-        "State-of-the-art facilities for secure storage and logistics operations.",
+      key: "slide3",
     },
   ];
 
@@ -136,20 +124,20 @@ const Index = () => {
 
             {/* Badge */}
             <div className="inline-block px-4 py-2 mb-4 rounded-full bg-white/20 border border-white/40 text-white text-xs md:text-sm font-semibold backdrop-blur">
-              {slides[current].badge}
+              {t(`homeSlider.slides.${slides[current].key}.badge`)}
             </div>
 
             {/* Heading */}
             <h1 className="text-[40px] leading-10 md:leading-none md:text-[60px] font-black text-white mb-6">
-              {slides[current].title}
+              {t(`homeSlider.slides.${slides[current].key}.title`)}
               <span className="block text-secondary">
-                {slides[current].highlight}
+                {t(`homeSlider.slides.${slides[current].key}.highlight`)}
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg text-white/80 mb-8">
-              {slides[current].subtitle}
+              {t(`homeSlider.slides.${slides[current].key}.subtitle`)}
             </p>
 
             {/* Buttons */}
@@ -159,14 +147,14 @@ const Index = () => {
                 to="/contact"
                 className="gradient-primary text-white px-3 md:px-8 py-3 md:py-4 rounded-xl font-semibold hover:scale-105 transition"
               >
-                Get Started
+                {t('homeSlider.buttons.getStarted')}
               </Link>
 
               <Link
                 to="/services/warehouse-storage"
                 className="border border-white/40 bg-white/20 text-white px-3 md:px-8 py-3 md:py-4 rounded-xl hover:bg-white/10 transition"
               >
-                View Services
+                {t('homeSlider.buttons.viewServices')}
               </Link>
 
             </div>

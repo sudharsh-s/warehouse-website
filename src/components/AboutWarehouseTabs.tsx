@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import WarehouseIcon from "@mui/icons-material/Warehouse";
 import VerifiedUser from "@mui/icons-material/VerifiedUser";
 import Language from "@mui/icons-material/Language";
+import { useTranslation } from "react-i18next";
 
 import warehouse1 from "@/assets/about/aboutwarehouse-1.jpg";
 import warehouse2 from "@/assets/about/aboutwarehouse-2.jpg";
@@ -16,55 +17,32 @@ import worldMap from "@/assets/about/about-world-map.webp";
 import side from "@/assets/about/about-page-slider.jpg";
 
 const tabs = [
-  {
-    id: 1,
-    title: "New Jersey",
-    location: "6 Linden Ave. East Jersey City, NJ 07305",
-    image: side,
-  },
-  {
-    id: 2,
-    title: "Georgia",
-    location: "46 Artley Road Savannah, GA 31408",
-    image: side,
-  },
-  {
-    id: 3,
-    title: "Texas",
-    location: "6320 Madden Ln, Houston, TX 77048",
-    image: side,
-  },
-  {
-    id: 4,
-    title: "California",
-    location: "131 E. Gardena Blvd. Gardena, CA 90248",
-    image: side,
-  },
-  {
-    id: 5,
-    title: "California",
-    location: "14611 S. Broadway. Gardena CA 90248",
-    image: side,
-  },
-  {
-    id: 6,
-    title: "Tacoma",
-    location: "1001 E 26th st, Tacoma 98421 WA",
-    image: side,
-  },
-  {
-    id: 7,
-    title: "Korea",
-    location: "Incheon, Republic of Korea",
-    image: side,
-  },
+  { id: 1, image: side },
+  { id: 2, image: side },
+  { id: 3, image: side },
+  { id: 4, image: side },
+  { id: 5, image: side },
+  { id: 6, image: side },
+  { id: 7, image: side },
 ];
 
 export default function AboutWarehouseTabs() {
 
+  const { t } = useTranslation();
+  const locations = t("aboutWarehouse.locations", {
+    returnObjects: true,
+  }) as { title: string; location: string }[];
+
+  const features = t("aboutWarehouse.features", {
+    returnObjects: true,
+  }) as { title: string; desc: string }[];
+
   const [activeTab, setActiveTab] = useState(0);
 
-  const active = tabs[activeTab];
+  const active = {
+    ...tabs[activeTab],
+    ...locations[activeTab],
+  };
 
   return (
     <section className="relative py-14 md:py-24 bg-white overflow-hidden">
@@ -78,7 +56,7 @@ export default function AboutWarehouseTabs() {
             <div className="flex items-center gap-3 text-primary mb-3 md:mb-6">
 
               <div className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-l-primary border-t-transparent border-b-transparent"/>
-              <span className="text-base md:text-2xl font-semibold leading-8">WHO WE ARE </span>
+              <span className="text-base md:text-2xl font-semibold leading-8">{t("aboutWarehouse.badge")}</span>
 
             </div>
           </div>
@@ -98,9 +76,9 @@ export default function AboutWarehouseTabs() {
             />
 
             <div>
-              <h5 className="text-2xl md:text-[35px] font-semibold leading-7 md:leading-10 mb-2">Strategic U.S. Vehicle Yards for Global Export</h5>
+              <h5 className="text-2xl md:text-[35px] font-semibold leading-7 md:leading-10 mb-2">{t("aboutWarehouse.title")}</h5>
               <p className="text-gray-500 text-base leading-[22px]">
-                Our nationwide yard network across the USA supports auction purchases, bulk inventory management, consolidation, and international shipping. Designed for efficiency and scale, our facilities streamline towing, warehousing, loading, and export clearance — ensuring your vehicles move faster from auction floor to global destination.
+                {t("aboutWarehouse.description")}
               </p>
             </div>
 
@@ -172,6 +150,7 @@ export default function AboutWarehouseTabs() {
                 <div>
 
                   {tabs.map((tab, index) => {
+                    const translated = locations[index];
 
                     const isActive = index === activeTab;
 
@@ -207,11 +186,11 @@ export default function AboutWarehouseTabs() {
                             <div className={`font-semibold text-md ${
                               isActive ? "text-primary" : "text-gray-700"
                             }`}>
-                              {tab.title}
+                              {translated.title}
                             </div>
 
                             <div className={`text-sm font-medium ${isActive ? "text-primary" : "text-gray-700"} mt-1`}>
-                              {tab.location}
+                              {translated.location}
                             </div>
 
                           </div>
@@ -231,23 +210,14 @@ export default function AboutWarehouseTabs() {
               {/* Bottom Feature Cards */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-5 mt-5 md:mt-10 border-t border-l border-r divide-y md:divide-y-0 md:divide-x divide-grey/10">
 
-                <Feature
-                  icon={VerifiedUser}
-                  title="Trusted by Industry Leaders"
-                  desc="We've earned the confidence of global brands through consistent delivery."
-                />
-
-                <Feature
-                  icon={WarehouseIcon}
-                  title="Expert Handling & Clearance"
-                  desc="Seamless documentation and cargo handling from start to finish."
-                />
-
-                <Feature
-                  icon={Language}
-                  title="Digital Logistics Platform"
-                  desc="Manage and optimize shipments with real-time tracking."
-                />
+                {features.map((feature, index) => (
+                  <Feature
+                    key={index}
+                    icon={[VerifiedUser, WarehouseIcon, Language][index]}
+                    title={feature.title}
+                    desc={feature.desc}
+                  />
+                ))}
 
               </div>
             </div>

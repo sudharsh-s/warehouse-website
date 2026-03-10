@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 
 import { useTranslation } from 'react-i18next';
+import { isRTL } from "@/i18n";
 
 import plane from "@/assets/footer-plane.png";
 import worldMap from "@/assets/about/about-map.png";
@@ -16,7 +17,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import XIcon from '@mui/icons-material/X';
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
   const year = new Date().getFullYear();
 
   return (
@@ -32,31 +34,42 @@ export default function Footer() {
       <div className="relative bg-secondary/95">
 
         {/* angled shape */}
-        <div className="absolute right-0 top-1 w-[27%] h-full bg-[#011533] clip-diagonal hidden lg:block"></div>
+        <div
+          className={`absolute top-0 w-[27%] h-full bg-[#011533] clip-diagonal hidden lg:block
+          ${rtl ? "left-0 scale-x-[-1]" : "right-0"}`}
+        ></div>
 
-        <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center gap-10 relative z-10">
+        <div
+          className={`max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center gap-10 relative z-10
+          ${rtl ? "md:flex-row text-right" : ""}`}
+        >
 
-          {/* LEFT */}
-          <div className="flex items-center gap-4 text-2xl md:text-3xl font-bold ml-14">
+          {/* LEFT TEXT */}
+          <div
+            className={`flex items-center gap-4 text-2xl md:text-3xl font-bold
+            ${rtl ? "mr-14" : "ml-14"}`}
+          >
 
-            <img src={plane} className="w-40 absolute left-4 lg:left-0 top-[40%] lg:top-[30%]"/>
+            <img
+              src={plane}
+              className={`w-40 absolute
+              ${rtl ? "right-4 lg:right-0 scale-x-[-1] top-[27%] lg:top-[30%]" : "left-4 lg:left-0 top-[40%] lg:top-[30%]"}`}
+            />
 
             {t("footer.ctaTitle")}
 
           </div>
 
-
           {/* BUTTON */}
-          <a href="/contact" className="gradient-primary hover:bg-black transition px-6 py-3 rounded-md font-semibold">
-
+          <a
+            href="/contact"
+            className="gradient-primary hover:bg-black transition px-6 py-3 rounded-md font-semibold"
+          >
             {t("footer.ctaButton")}
-
           </a>
 
         </div>
-
       </div>
-
 
 
       {/* ================= MAIN FOOTER ================= */}
@@ -228,12 +241,11 @@ export default function Footer() {
 
       </div>
 
-
-
       {/* CONTAINERS IMAGE */}
       <img
         src={containers}
-        className="absolute right-0 top-0 w-60 hidden xl:block"
+        className={`absolute top-0 w-60 hidden xl:block
+        ${rtl ? "left-0 scale-x-[-1]" : "right-0"}`}
       />
 
     </footer>

@@ -1,4 +1,5 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 import { AnimatePresence, motion } from "framer-motion";
 import PublicIcon from "@mui/icons-material/Public";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
@@ -23,6 +24,14 @@ import SouthIcon from '@mui/icons-material/South';
 
 const About = () => {
 
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
+  const features = t("aboutPage.features", { returnObjects: true }) as {
+    title: string;
+    desc: string;
+  }[];
+
   return (
     <>
       
@@ -46,7 +55,7 @@ const About = () => {
                 transition={{ duration: 0.8 }}
                 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
               >
-                Warehouse & Logistics
+                {t("aboutPage.heroTitle")}
               </motion.h1>
 
               {/* Small Heading */}
@@ -56,7 +65,7 @@ const About = () => {
                 transition={{ duration: 0.6 }}
                 className="uppercase tracking-widest text-xs mt-6"
               >
-                Building innovative solutions that simplify everyday life.
+                {t("aboutPage.heroSubtitle")}
               </motion.p>
 
               {/* Scroll Down */}
@@ -121,7 +130,7 @@ const About = () => {
                 <div className="w-8 h-[2px] bg-primary"></div>
 
                 <span className="uppercase tracking-widest text-gray-500 font-semibold text-sm">
-                  Our Company ✈
+                  {t("aboutPage.companyBadge")}
                 </span>
 
               </div>
@@ -130,10 +139,10 @@ const About = () => {
               {/* Heading */}
               <h2 className="text-3xl md:text-[35px] font-bold text-black leading-tight mb-6">
 
-                Our Expertise Stands in
+                {t("aboutPage.mainHeadingLine1")}
 
                 <span className="block text-primary underline decoration-primary decoration-4 underline-offset-4">
-                  Logistics Solutions
+                  {t("aboutPage.mainHeadingLine2")}
                 </span>
 
               </h2>
@@ -141,43 +150,32 @@ const About = () => {
 
               {/* Description */}
               <p className="text-gray-500 text-base leading-5 mb-10 max-w-xl">
-                Logistic service provider company plays a pivotal role in the global supply chain ecosystem by efficiently managing the movement of goods from origin to final destination.
+                {t("aboutPage.description")}
               </p>
 
 
               {/* Feature Cards */}
               <div className="grid lg:grid-cols-2 gap-6 mb-10">
 
-                {/* Card 1 */}
-                <div className="bg-white p-6 border-l-4 border-primary shadow-sm">
+                {features.map((feature, index) => (
+                  <div key={index} className="bg-white p-6 border-l-4 border-primary shadow-sm">
 
-                  <PublicIcon className="text-primary mb-3" />
+                    {index === 0 ? (
+                      <PublicIcon className="text-primary mb-3" />
+                    ) : (
+                      <SupportAgentIcon className="text-primary mb-3" />
+                    )}
 
-                  <h4 className="font-semibold text-lg text-[#0b2c3d] mb-2">
-                    Worldwide Service
-                  </h4>
+                    <h4 className="font-semibold text-lg text-[#0b2c3d] mb-2">
+                      {feature.title}
+                    </h4>
 
-                  <p className="text-gray-500 text-base leading-5">
-                    Logistic service provider company plays a pivotal role in the global
-                  </p>
+                    <p className="text-gray-500 text-base leading-5">
+                      {feature.desc}
+                    </p>
 
-                </div>
-
-
-                {/* Card 2 */}
-                <div className="bg-white p-6 border-l-4 border-primary shadow-sm">
-
-                  <SupportAgentIcon className="text-primary mb-3" />
-
-                  <h4 className="font-semibold text-lg text-[#0b2c3d] mb-2">
-                    24/7 Online Support
-                  </h4>
-
-                  <p className="text-gray-500 text-base leading-5">
-                    Logistic service provider company plays a pivotal role in the global
-                  </p>
-
-                </div>
+                  </div>
+                ))}
 
               </div>
 
@@ -186,7 +184,7 @@ const About = () => {
               <div className="block lg:flex items-center gap-8">
 
                 <a href='/services/warehouse-storage' className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
-                  Expolre Our Services →
+                  {t("aboutPage.exploreButton")}
                 </a>
 
 
@@ -200,7 +198,7 @@ const About = () => {
                   <div>
 
                     <div className="text-primary font-semibold">
-                      Make A Phone Call
+                      {t("aboutPage.phoneLabel")}
                     </div>
 
                     <div className="font-bold text-[#0b2c3d]">
@@ -217,7 +215,10 @@ const About = () => {
 
 
             {/* RIGHT SIDE IMAGES */}
-            <div className="relative flex justify-center pl-0 md:pl-11 mt-10 md:mt-0">
+            <div
+              className={`relative flex justify-center mt-10 md:mt-0
+              ${rtl ? "md:mr-11" : "md:pl-11"}`}
+            >
 
               {/* Top Image */}
               <motion.img
@@ -251,7 +252,14 @@ const About = () => {
             />
 
               {/* Circle Badge */}
-              <div className="relative w-full md:w-[900px] h-[170px] top-56 right-[100px] md:right-[200px] flex items-center justify-center">
+              <div
+                className={`relative w-full md:w-[900px] h-[170px] top-56 flex items-center justify-center
+                ${
+                  rtl
+                    ? "left-[100px] md:left-[200px]"
+                    : "right-[100px] md:right-[200px]"
+                }`}
+              >
 
                 {/* Rotating Text Circle */}
                 <motion.svg
@@ -309,7 +317,7 @@ const About = () => {
 
               {/* Decorative Dots */}
               <motion.div
-                className="absolute right-[20px] top-[30px] md:grid grid-cols-6 gap-3 opacity-80 hidden"
+                className={`absolute top-[30px] md:grid grid-cols-6 gap-3 opacity-80 hidden ${rtl ? "left-[20px]" : "right-[20px]"}`}
                 animate={{ y: [0, -15, 0] }}
                 transition={{
                   duration: 3,

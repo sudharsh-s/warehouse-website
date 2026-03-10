@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
 
 import warehouseImg from "@/assets/about/about-page-slider.jpeg";
 
@@ -10,34 +12,29 @@ import user1 from "@/assets/user/user-1.png";
 import user2 from "@/assets/user/user-2.png";
 import user3 from "@/assets/user/user-3.png";
 
-const testimonials = [
-  {
-    id: 1,
-    name: "Ronald Richards",
-    role: "Manager",
-    image: user1,
-    rating: 5,
-    text: "A logistic service provider company plays a pivotal role in the global supply chain. Their efficiency and reliability improved our delivery performance significantly.",
-  },
-  {
-    id: 2,
-    name: "Brooklyn Simmons",
-    role: "Director",
-    image: user2,
-    rating: 5,
-    text: "Their warehouse network and fast shipping helped us scale globally. Professional team and excellent service.",
-  },
-  {
-    id: 3,
-    name: "Leslie Alexander",
-    role: "CEO",
-    image: user3,
-    rating: 5,
-    text: "Reliable logistics partner. Their fulfillment and transport solutions are exceptional.",
-  },
+const testimonialAssets = [
+  { image: user1, rating: 5 },
+  { image: user2, rating: 5 },
+  { image: user3, rating: 5 },
 ];
 
 export default function TestimonialSection() {
+
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
+  const translatedTestimonials = t("testimonial.items", {
+    returnObjects: true,
+  }) as {
+    name: string;
+    role: string;
+    text: string;
+  }[];
+
+  const testimonials = translatedTestimonials.map((item, i) => ({
+    ...item,
+    ...testimonialAssets[i],
+  }));
 
   const [index, setIndex] = useState(0);
 
@@ -79,16 +76,16 @@ export default function TestimonialSection() {
 
               <div className="w-6 h-[2px] bg-white"/>
 
-              CLIENT TESTIMONIAL ✈
+              {t("testimonial.badge")}
 
             </div>
 
             <h2 className="text-3xl md:text-[35px] font-bold text-white leading-tight">
 
-              What Our Customers
+              {t("testimonial.heading1")}
               <br />
 
-              Say <span className="text-secondary underline">ABOUT US</span>
+              {t("testimonial.heading2")}{" "} <span className="text-secondary underline">{t("testimonial.heading3")}</span>
 
             </h2>
 
@@ -99,11 +96,21 @@ export default function TestimonialSection() {
           <div className="relative bg-white shadow-md p-10 pl-5 md:pl-14">
 
             {/* Left Orange Line */}
-            <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-secondary"/>
+            <div
+              className={`absolute top-0 bottom-0 w-[4px] bg-secondary ${
+                rtl ? "right-0" : "left-0"
+              }`}
+            />
 
 
             {/* Quote badge */}
-            <div className="absolute top-0 right-0 bg-secondary text-white px-6 py-3 rounded-bl-xl text-lg">
+            <div
+              className={`absolute top-0 bg-secondary text-white px-6 py-3 text-lg ${
+                rtl
+                  ? "left-0 rounded-br-xl"
+                  : "right-0 rounded-bl-xl"
+              }`}
+            >
               <FormatQuoteIcon />
             </div>
 
@@ -112,10 +119,10 @@ export default function TestimonialSection() {
             <AnimatePresence mode="wait">
 
               <motion.div
-                key={testimonial.id}
-                initial={{ opacity: 0, x: 40 }}
+                key={index}
+                initial={{ opacity: 0, x: rtl ? -40 : 40 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
+                exit={{ opacity: 0, x: rtl ? 40 : -40 }}
                 transition={{ duration: 0.6 }}
               >
 
@@ -180,11 +187,11 @@ export default function TestimonialSection() {
               <div>
 
                 <div className="font-semibold text-white">
-                  Customer Satisfied
+                  {t("testimonial.satisfiedTitle")}
                 </div>
 
                 <div className="text-white text-sm">
-                  4.8 (15k Reviews)
+                  {t("testimonial.reviews")}
                 </div>
 
               </div>

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import CountUp from "react-countup";
+import { useTranslation } from "react-i18next";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 
 import Language from "@mui/icons-material/Language";
@@ -8,28 +9,23 @@ import LocalShipping from "@mui/icons-material/LocalShipping";
 
 // import statsBg from "@//videos//staticvideo";
 
-const stats = [
-  {
-    icon: Language,
-    value: 300,
-    suffix: "k+",
-    label: "Global Shipping & Auction Partners",
-  },
-  {
-    icon: WorkspacePremiumIcon,
-    value: 23,
-    suffix: "+",
-    label: "Years of Experience",
-  },
-  {
-    icon: LocalShipping,
-    value: 1500,
-    suffix: "k+",
-    label: "Vehicles Processed Annually",
-  },
-];
-
 export default function StatsSection() {
+
+  const { t } = useTranslation();
+
+  const stats = t("statsSection.items", {
+    returnObjects: true,
+  }) as {
+    value: number;
+    suffix: string;
+    label: string;
+  }[];
+
+  const statIcons = [
+    Language,
+    WorkspacePremiumIcon,
+    LocalShipping,
+  ];
 
   const ref = useRef(null);
 
@@ -76,11 +72,10 @@ export default function StatsSection() {
           className="bg-white border border-white/20 rounded-2xl py-2 md:py-10 px-12 shadow-2xl"
         >
 
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 divide-x-0 md:divide-x divide-black/20">
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 divide-x-0 md:divide-x rtl:divide-x-reverse divide-black/20">
 
             {stats.map((stat, index) => {
-
-              const Icon = stat.icon;
+              const Icon = statIcons[index];
 
               return (
                 <motion.div

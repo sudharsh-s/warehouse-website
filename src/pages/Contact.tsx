@@ -7,6 +7,9 @@ import {
 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
+
 import EastIcon from '@mui/icons-material/East';
 import ChatIcon from '@mui/icons-material/ChatBubbleOutline';
 
@@ -23,6 +26,9 @@ import AboutRunning from "@/components/AboutRunning";
 // ];
 
 export default function ContactSection() {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
   const [index, setIndex] = useState(0);
   
     // Auto slide change
@@ -150,7 +156,7 @@ export default function ContactSection() {
                 transition={{ duration: 0.8 }}
                 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
               >
-                Start a Conversation
+                {t("contactPage.heroTitle")}
               </motion.h1>
 
               {/* Small Heading */}
@@ -160,7 +166,7 @@ export default function ContactSection() {
                 transition={{ duration: 0.6 }}
                 className="uppercase tracking-widest text-sm mt-6"
               >
-                We’re Here to Help You Move Forward.
+                {t("contactPage.heroSubtitle")}
               </motion.p>
 
               {/* Scroll Down */}
@@ -240,7 +246,7 @@ export default function ContactSection() {
               transition={{ duration: 0.3 }}
               className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100"
             >
-              <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
+              <h2 className="text-2xl font-bold mb-6">{t("contactPage.formTitle")}</h2>
 
               <form className="space-y-6">
 
@@ -252,11 +258,11 @@ export default function ContactSection() {
                   viewport={{ once: true }}
                 >
                   <label className="block text-sm font-medium mb-2">
-                    Full Name
+                    {t("contactPage.fullName")}
                   </label>
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder={t("contactPage.fullNamePlaceholder")}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:outline-none transition"
                   />
                 </motion.div>
@@ -271,11 +277,11 @@ export default function ContactSection() {
                     viewport={{ once: true }}
                   >
                     <label className="block text-sm font-medium mb-2">
-                      Email Address
+                      {t("contactPage.email")}
                     </label>
                     <input
                       type="email"
-                      placeholder="you@example.com"
+                      placeholder={t("contactPage.emailPlaceholder")}
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:outline-none transition"
                     />
                   </motion.div>
@@ -287,11 +293,11 @@ export default function ContactSection() {
                     viewport={{ once: true }}
                   >
                     <label className="block text-sm font-medium mb-2">
-                      Phone Number
+                      {t("contactPage.phone")}
                     </label>
                     <input
                       type="text"
-                      placeholder="+1 (281) 000-0000"
+                      placeholder={t("contactPage.phonePlaceholder")}
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:outline-none transition"
                     />
                   </motion.div>
@@ -304,10 +310,10 @@ export default function ContactSection() {
                     viewport={{ once: true }}
                   >
                     <label className="block text-sm font-medium mb-2">
-                      Service Interested In
+                      {t("contactPage.service")}
                     </label>
                     <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:outline-none transition">
-                      <option>Select a service</option>
+                      <option>{t("contactPage.selectService")}</option>
                       <option>Warehouse</option>
                       <option>Transport</option>
                       <option>Air Freight</option>
@@ -322,11 +328,11 @@ export default function ContactSection() {
                     viewport={{ once: true }}
                   >
                     <label className="block text-sm font-medium mb-2">
-                      Subject
+                      {t("contactPage.subject")}
                     </label>
                     <input
                       type="text"
-                      placeholder="Subject"
+                      placeholder={t("contactPage.subjectPlaceholder")}
                       className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:outline-none transition"
                     />
                   </motion.div>
@@ -341,12 +347,12 @@ export default function ContactSection() {
                   viewport={{ once: true }}
                 >
                   <label className="block text-sm font-medium mb-2">
-                    Message (Max 500 characters)
+                    {t("contactPage.message")}
                   </label>
                   <textarea
                     rows={4}
                     maxLength={500}
-                    placeholder="Tell us how we can assist you..."
+                    placeholder={t("contactPage.messagePlaceholder")}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:outline-none transition"
                   />
                 </motion.div>
@@ -358,7 +364,7 @@ export default function ContactSection() {
                   type="submit"
                   className="px-8 py-3 rounded-lg gradient-primary text-white font-semibold shadow-md transition"
                 >
-                  Send Message <EastIcon />
+                  {t("contactPage.submit")} <EastIcon />
                 </motion.button>
 
               </form>
@@ -390,40 +396,40 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+            <h2 className="text-2xl font-bold mb-6">{t("contactPage.contactInfoTitle")}</h2>
 
             <div className="space-y-5">
 
               {[
                 {
                   icon: <MapPin size={20} />,
-                  title: "Office",
-                  text: "Nejoum Express, 6320 Madden Ln, Houston, TX 77048",
+                  title: t("contactPage.office"),
+                  text: t("contactPage.officeAddress"),
                 },
                 {
                   icon: <Phone size={20} />,
-                  title: "Main Phone",
-                  text: "+1-734-496-3761",
+                  title: t("contactPage.mainPhone"),
+                  text: t("contactPage.mainPhoneText"),
                 },
                 {
                   icon: <Mail size={20} />,
-                  title: "Email",
-                  text: "cs@nejoumexpress.com",
+                  title: t("contactPage.emailTitle"),
+                  text: t("contactPage.emailText"),
                 },
                 {
                   icon: <Clock size={20} />,
-                  title: "Availability",
-                  text: "24/7 Customer Support",
+                  title: t("contactPage.availability"),
+                  text: t("contactPage.availabilityText"),
                 },
                 {
                   icon: <ChatIcon fontSize="small" />,
-                  title: "Response Time",
-                  text: "Within 2 hours during business hours",
+                  title: t("contactPage.responseTime"),
+                  text: t("contactPage.responseText"),
                 },
                 {
                   icon: <Clock size={20} />,
-                  title: "Working Hours",
-                  text: "Mon–Fri: 8AM–6PM (EST)",
+                  title: t("contactPage.workingHours"),
+                  text: t("contactPage.workingHoursText"),
                 },
               ].map((item, index) => (
                 <motion.div
@@ -463,11 +469,11 @@ export default function ContactSection() {
                 </div>
 
                 <h4 className="font-semibold text-lg mb-2">
-                  Need Immediate Help?
+                  {t("contactPage.supportTitle")}
                 </h4>
 
                 <p className="text-gray-500 text-sm mb-4">
-                  Chat with our support team for instant assistance.
+                  {t("contactPage.supportDesc")}
                 </p>
 
                 <motion.button
@@ -475,7 +481,7 @@ export default function ContactSection() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-3 rounded-lg gradient-primary text-white font-semibold shadow-md transition"
                 >
-                  Contact Support
+                  {t("contactPage.supportButton")}
                 </motion.button>
               </motion.div>
 
