@@ -125,7 +125,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
 
         {/* Content */}
-        <div className="relative z-10 text-center max-w-3xl px-6">
+        <div className="relative z-10 text-center max-w-3xl px-4 md:px-6">
 
           <motion.div
             key={current + "-content"}
@@ -157,14 +157,14 @@ const Index = () => {
 
               <Link
                 to="/contact"
-                className="gradient-primary text-white px-4 md:px-8 py-3 md:py-4 rounded-xl font-semibold hover:scale-105 transition"
+                className="gradient-primary text-white px-3 md:px-8 py-3 md:py-4 rounded-xl font-semibold hover:scale-105 transition"
               >
                 Get Started
               </Link>
 
               <Link
                 to="/services/warehouse-storage"
-                className="border border-white/40 bg-white/20 text-white px-4 md:px-8 py-3 md:py-4 rounded-xl hover:bg-white/10 transition"
+                className="border border-white/40 bg-white/20 text-white px-3 md:px-8 py-3 md:py-4 rounded-xl hover:bg-white/10 transition"
               >
                 View Services
               </Link>

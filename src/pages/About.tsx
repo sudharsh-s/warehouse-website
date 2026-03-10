@@ -35,7 +35,7 @@ const About = () => {
           <div className="absolute inset-0 opacity-10 bg-[url('/src/assets/about/about-map.png')] bg-cover bg-center" />
           
           {/* LEFT RED PANEL */}
-          <div className="relative flex items-end px-10 md:px-16 lg:px-20">
+          <div className="relative flex items-end px-5 md:px-16 lg:px-20">
 
             <div className="relative z-10 text-white mb-10 md:mb-14">
 
@@ -92,12 +92,12 @@ const About = () => {
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="relative flex items-end px-10 md:px-0"
+            className="relative flex items-end px-5 md:px-0"
           >
             <img
               src={aboutImg1}
               alt="Logistics"
-              className="w-full h-[400px] pr-0 md:pr-20 object-cover object-bottom"
+              className="w-full h-[250px] md:h-[400px] pr-0 md:pr-20 object-cover object-bottom"
             />
           </motion.div>
 
@@ -108,7 +108,7 @@ const About = () => {
 
       <div>
 
-        <section className="pt-16 md:pb-20 lg:pb-32 mb-10 md:mb-0 bg-white overflow-hidden relative">
+        <section className="pt-10 md:pb-20 lg:pb-32 mb-10 md:mb-0 bg-white overflow-hidden relative">
 
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-26 items-center">
 

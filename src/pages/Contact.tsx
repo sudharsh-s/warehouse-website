@@ -201,7 +201,7 @@ export default function ContactSection() {
             <img
               src={contactImg}
               alt="Logistics"
-              className="w-full h-[400px] pr-0 md:pr-20 object-cover"
+              className="w-full h-[250px] md:h-[400px] pr-0 md:pr-20 object-cover"
             />
           </motion.div>
 

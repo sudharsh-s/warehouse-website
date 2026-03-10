@@ -57,7 +57,7 @@ const features = [
 export default function WhyChooseCircularSection() {
   return (
     <section className="pt-16 pb-20 md:pb-32 bg-white overflow-hidden">
-        <div className="text-center mb-14">
+        <div className="text-center mb-14 px-5 md:px-0">
           <h2 className="title">
             Why <span>Choose US</span>
           </h2>
@@ -71,7 +71,7 @@ export default function WhyChooseCircularSection() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-center gap-16 mt-16">
 
         {/* LEFT SIDE */}
-        <div className="relative w-[300px] h-[330px] md:w-[600px] md:h-[500px] flex items-center justify-center">
+        <div className="relative w-[300px] h-[330px] md:w-[600px] md:h-[500px] flex items-center justify-center px-7 md:px-0">
 
           {/* Background Circle */}
           <motion.img
@@ -192,10 +192,10 @@ export default function WhyChooseCircularSection() {
 
                   {/* Text */}
                   <div>
-                    <div className="text-xl font-semibold text-gray-800">
+                    <div className="text-base mb-2 font-semibold text-gray-800">
                       {feature.title}
                     </div>
-                    <div className="text-gray-500">
+                    <div className="text-gray-500 text-sm">
                       {feature.description}
                     </div>
                   </div>

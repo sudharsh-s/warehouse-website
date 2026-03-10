@@ -129,7 +129,7 @@ export default function StickyProcessSection() {
                         </div>
 
                         <div>
-                          <h2 className="text-2xl lg:text-3xl text-white font-bold mb-2 flex items-center gap-2">
+                          <h2 className="text-[20px] leading-5 lg:text-3xl text-white font-bold mb-2 flex items-center gap-2">
 
                           <span className="w-0 h-0 border-t-[6px] border-b-[6px] border-l-[10px] border-t-transparent border-b-transparent border-l-primary stickyarrow" />
 

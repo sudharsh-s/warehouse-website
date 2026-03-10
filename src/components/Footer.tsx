@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center gap-10 relative z-10">
 
           {/* LEFT */}
-          <div className="flex items-center gap-4 text-3xl font-bold ml-14">
+          <div className="flex items-center gap-4 text-2xl md:text-3xl font-bold ml-14">
 
             <img src={plane} className="w-40 absolute left-4 lg:left-0 top-[40%] lg:top-[30%]"/>
 

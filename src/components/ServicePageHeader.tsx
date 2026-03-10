@@ -327,7 +327,7 @@ export default function TransportHero() {
               <h2 className="text-5xl font-bold text-primary">
                 <Counter to={1500} />k+
               </h2>
-              <p className="mt-2 text-lg font-semibold text-gray-700">
+              <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">
                 Vehicle Transported
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
@@ -338,7 +338,7 @@ export default function TransportHero() {
               <h2 className="text-5xl font-bold text-primary">
                 <Counter to={23} />+
               </h2>
-              <p className="mt-2 text-lg font-semibold text-gray-700">
+              <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">
                 Years Of Experience
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
@@ -349,7 +349,7 @@ export default function TransportHero() {
               <h2 className="text-5xl font-bold text-primary">
                 <Counter to={57} />+
               </h2>
-              <p className="mt-2 text-lg font-semibold text-gray-700">
+              <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">
                 Countries
               </p>
               <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />

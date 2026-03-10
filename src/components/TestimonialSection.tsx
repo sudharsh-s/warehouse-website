@@ -129,7 +129,7 @@ export default function TestimonialSection() {
 
                   <div>
 
-                    <div className="font-semibold text-lg text-[#0b2c3d]">
+                    <div className="font-semibold text-base md:text-lg text-[#0b2c3d]">
                       {testimonial.name}
                     </div>
 
@@ -163,7 +163,7 @@ export default function TestimonialSection() {
           <div className="flex justify-between items-center mt-8">
             <div className="flex items-center gap-4">
 
-              <div className="flex -space-x-3">
+              <div className="hidden md:flex -space-x-3">
 
                 {[user1, user2, user3].map((img, i) => (
 
