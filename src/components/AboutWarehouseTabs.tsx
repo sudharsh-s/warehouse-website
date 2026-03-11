@@ -185,20 +185,19 @@ export default function AboutWarehouseTabs() {
                               duration: 0.3,
                               ease: "easeOut"
                             }}
-                            className="w-0 h-0 mt-2 border-t-[5px] border-b-[5px]
-                                      border-l-[8px] border-l-primary
-                                      border-t-transparent border-b-transparent"
+                            // className="w-0 h-0 mt-2 border-t-[5px] border-b-[5px]
+                            //           border-l-[8px] border-l-primary
+                            //           border-t-transparent border-b-transparent"
                           />
 
                           <div>
 
-                            <div className={`font-semibold text-md ${
-                              isActive ? "text-primary" : "text-gray-700"
+                            <div className={`font-semibold text-md text-gray-700"
                             }`}>
                               {translated.title}
                             </div>
 
-                            <div className={`text-sm font-medium ${isActive ? "text-primary" : "text-gray-700"} mt-1`}>
+                            <div className={`text-sm font-medium text-gray-700 mt-1`}>
                               {translated.location}
                             </div>
 
