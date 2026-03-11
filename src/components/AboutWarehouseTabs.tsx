@@ -101,7 +101,7 @@ export default function AboutWarehouseTabs() {
                 <div className="relative">
 
                   {/* Image Animation */}
-                  <AnimatePresence mode="wait">
+                  {/* <AnimatePresence mode="wait">
 
                     <motion.img
                       key={active.image}
@@ -113,7 +113,16 @@ export default function AboutWarehouseTabs() {
                       className="rounded-lg shadow-lg w-full h-[300px] md:h-[450px] object-cover"
                     />
 
-                  </AnimatePresence>
+                  </AnimatePresence> */}
+
+                  <motion.img
+                    src={side}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.5 }}
+                    className="rounded-lg shadow-lg w-full h-[300px] md:h-[450px] object-cover"
+                  />
 
 
                   {/* Floating + Button */}
@@ -126,7 +135,7 @@ export default function AboutWarehouseTabs() {
 
 
                   {/* Image Label */}
-                  <motion.div
+                  {/* <motion.div
                     key={active.id + "-label"}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -139,9 +148,10 @@ export default function AboutWarehouseTabs() {
 
                     <div className="text-xs opacity-80">
                       {active.location}
+                      {locations[0]?.location}
                     </div>
 
-                  </motion.div>
+                  </motion.div> */}
 
                 </div>
 
@@ -165,7 +175,6 @@ export default function AboutWarehouseTabs() {
 
                         <div className="flex items-start gap-3">
 
-                          {/* Arrow indicator */}
                           <motion.div
                             initial={false}
                             animate={{
