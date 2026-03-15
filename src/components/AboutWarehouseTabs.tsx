@@ -29,9 +29,17 @@ const tabs = [
 export default function AboutWarehouseTabs() {
 
   const { t } = useTranslation();
+  const mailTitle = t("aboutWarehouse.mailTitle");
+  const phoneTitle = t("aboutWarehouse.phoneTitle");
   const locations = t("aboutWarehouse.locations", {
     returnObjects: true,
-  }) as { title: string; location: string }[];
+  }) as {
+    title: string;
+    location: string;
+    name?: string;
+    phone?: string;
+    mail?: string;
+  }[];
 
   const features = t("aboutWarehouse.features", {
     returnObjects: true,
@@ -159,15 +167,14 @@ export default function AboutWarehouseTabs() {
                 {/* RIGHT TABS */}
                 <div>
 
-                  {tabs.map((tab, index) => {
-                    const translated = locations[index];
+                  {locations.map((translated, index) => {
 
                     const isActive = index === activeTab;
 
                     return (
 
                       <motion.div
-                        key={tab.id}
+                        key={index}
                         onClick={() => setActiveTab(index)}
                         whileHover={{ x: 5 }}
                         className="cursor-pointer py-3 md:py-5 border-b last:border-b-0 border-gray-200"
@@ -175,30 +182,27 @@ export default function AboutWarehouseTabs() {
 
                         <div className="flex items-start gap-3">
 
-                          <motion.div
-                            initial={false}
-                            animate={{
-                              x: isActive ? 0 : -12,  
-                              opacity: isActive ? 1 : 0
-                            }}
-                            transition={{
-                              duration: 0.3,
-                              ease: "easeOut"
-                            }}
-                            // className="w-0 h-0 mt-2 border-t-[5px] border-b-[5px]
-                            //           border-l-[8px] border-l-primary
-                            //           border-t-transparent border-b-transparent"
-                          />
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
 
-                          <div>
+                            <div>
+                              <div className="font-semibold text-md text-gray-700">
+                                {translated.title}
+                              </div>
 
-                            <div className={`font-semibold text-md text-gray-700"
-                            }`}>
-                              {translated.title}
+                              <div className="text-sm font-medium text-gray-700 mt-1">
+                                {translated.location}
+                              </div>
                             </div>
 
-                            <div className={`text-sm font-medium text-gray-700 mt-1`}>
-                              {translated.location}
+                            <div>
+                              <div className="font-semibold text-md text-gray-700">
+                                {translated.name}
+                              </div>
+
+                              <div className="text-sm font-medium text-gray-700 mt-1">
+                                <p><span className="font-semibold text-black">{phoneTitle}:</span> {translated.phone}</p>
+                                <p><span className="font-semibold text-black">{mailTitle}:</span> {translated.mail}</p>
+                              </div>
                             </div>
 
                           </div>
@@ -208,7 +212,6 @@ export default function AboutWarehouseTabs() {
                       </motion.div>
 
                     );
-
                   })}
 
                 </div>

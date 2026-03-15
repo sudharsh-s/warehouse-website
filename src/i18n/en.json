@@ -57,15 +57,14 @@
     "badge": "WHO WE ARE",
     "title": "Strategic U.S. Vehicle Yards for Global Export",
     "description": "Our nationwide yard network across the USA supports auction purchases, bulk inventory management, consolidation, and international shipping.",
-
+    "mailTitle": "Email",
+    "phoneTitle": "Phone",
+    
     "locations": [
-      { "title": "New Jersey", "location": "6 Linden Ave. East Jersey City, NJ 07305" },
-      { "title": "Georgia", "location": "46 Artley Road Savannah, GA 31408" },
-      { "title": "Texas", "location": "6320 Madden Ln, Houston, TX 77048" },
-      { "title": "California", "location": "131 E. Gardena Blvd. Gardena, CA 90248" },
-      { "title": "California", "location": "14611 S. Broadway. Gardena CA 90248" },
-      { "title": "Tacoma", "location": "1001 E 26th st, Tacoma 98421 WA" },
-      { "title": "Korea", "location": "Incheon, Republic of Korea" }
+      { "title": "Nejoum Express California", "location": "14611 S. Broadway Gardena CA 90248", "name": "Johnny lutfallah", "phone": "9494006524", "mail": "La.manager@nejoumexpress.com" },
+      { "title": "Nejoum Express GA ", "location": "42 Artley Rd, Savannah, GA 31408", "name": "J Alsaadi", "phone": "7079779799", "mail": "GA@nejoumexpress.com" },
+      { "title": "Nejoum Express NJ", "location": "6 Linden Ave East, Jersey City, NJ", "name": "Mazen Mohammed", "phone": "3466068666", "mail": "NJ@nejoumexpress.com" },
+      { "title": "Nejoum Express WA", "location": "1001 E 26th St, Tacoma, WA 98421", "name": "Ammar Al-Azzani", "phone": "3466321111", "mail": "wa.manager@nejoumexpress.com" }
     ],
     "features": [
       {
