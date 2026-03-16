@@ -195,9 +195,9 @@ export default function AboutWarehouseTabs() {
                             </div>
 
                             <div>
-                              <div className="font-semibold text-md text-gray-700">
+                              {/* <div className="font-semibold text-md text-gray-700">
                                 {translated.name}
-                              </div>
+                              </div> */}
 
                               <div className="text-sm font-medium text-gray-700 mt-1">
                                 <p><span className="font-semibold text-black">{phoneTitle}:</span> {translated.phone}</p>

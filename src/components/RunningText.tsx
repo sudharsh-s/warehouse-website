@@ -6,7 +6,7 @@ export default function RunningText() {
   const text = t("runningText.items", { returnObjects: true }) as string[];
 
   return (
-    <div className="w-full overflow-hidden bg-[#013188] py-4">
+    <div className="w-full overflow-hidden bg-[#013188] py-3">
 
       <div className="marquee group flex whitespace-nowrap">
 

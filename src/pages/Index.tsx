@@ -53,11 +53,11 @@ const Index = () => {
       src: "/videos/home_slider_1.mp4",
       key: "slide1",
     },
-    {
-      type: "video",
-      src: "/videos/home_slider_2.mp4",
-      key: "slide2",
-    },
+    // {
+    //   type: "video",
+    //   src: "/videos/home_slider_2.mp4",
+    //   key: "slide2",
+    // },
     {
       type: "video",
       src: "/videos/home_slider_3.mp4",
@@ -79,7 +79,7 @@ const Index = () => {
   return (
     <div>
       {/* Hero Section with Background Video */}
-      <section className="relative h-[90vh] md:h-[70vh] lg:h-[80vh]  flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] md:h-[70vh] lg:h-[60vh]  flex items-center justify-center overflow-hidden">
 
         {/* Slides */}
         {slides.map((slide, index) => (
@@ -113,7 +113,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
 
         {/* Content */}
-        <div className="relative z-10 text-center max-w-3xl px-4 md:px-6">
+        <div className="relative z-10 text-center max-w-3xl px-4 md:px-6 mt-0 md:mt-10">
 
           <motion.div
             key={current + "-content"}
@@ -123,12 +123,12 @@ const Index = () => {
           >
 
             {/* Badge */}
-            <div className="inline-block px-4 py-2 mb-4 rounded-full bg-white/20 border border-white/40 text-white text-xs md:text-sm font-semibold backdrop-blur">
+            {/* <div className="inline-block px-4 py-2 mb-4 rounded-full bg-white/20 border border-white/40 text-white text-xs md:text-sm font-semibold backdrop-blur">
               {t(`homeSlider.slides.${slides[current].key}.badge`)}
-            </div>
+            </div> */}
 
             {/* Heading */}
-            <h1 className="text-[40px] leading-10 md:leading-none md:text-[60px] font-black text-white mb-6">
+            <h1 className="text-[40px] leading-10 md:leading-none md:text-[50px] font-black text-white mb-6">
               {t(`homeSlider.slides.${slides[current].key}.title`)}
               <span className="block text-secondary">
                 {t(`homeSlider.slides.${slides[current].key}.highlight`)}
