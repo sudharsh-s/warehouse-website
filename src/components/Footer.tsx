@@ -53,7 +53,7 @@ export default function Footer() {
             <img
               src={plane}
               className={`w-40 absolute
-              ${rtl ? "right-4 lg:right-0 scale-x-[-1] top-[27%] lg:top-[30%]" : "left-4 lg:left-0 top-[40%] lg:top-[30%]"}`}
+              ${rtl ? "right-4 lg:right-0 scale-x-[-1] top-[27%] lg:top-[30%]" : "left-4 lg:left-0 top-[30%] lg:top-[30%]"}`}
             />
 
             {t("footer.ctaTitle")}

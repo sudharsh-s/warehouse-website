@@ -51,26 +51,32 @@ import customs6 from "@/assets/services/customs-6.jpg";
 export const servicesData = [
   {
     slug: "warehouse-storage",
-    gallery: [warehouseImg5, warehouseImg6, yardImg, warehouseImg1, warehouseImg2],
+    // gallery: [warehouseImg5, warehouseImg6, yardImg, warehouseImg1, warehouseImg2],
+    gallery: [warehouseImg5],
   },
   {
     slug: "road-freight",
-    gallery: [transport8, transport9, transport10, transport2, transport3],
+    // gallery: [transport8, transport9, transport10, transport2, transport3],
+    gallery: [transport10],
   },
   {
     slug: "ocean-freight",
-    gallery: [shipping1, shipping2, shipping3, shipping4, shipping7],
+    // gallery: [shipping1, shipping2, shipping3, shipping4, shipping7],
+    gallery: [shipping1],
   },
   {
     slug: "air-freight",
-    gallery: [air1, air2, air3, air4, air5],
+    // gallery: [air1, air2, air3, air4, air5],
+    gallery: [air1],
   },
   {
     slug: "car-wrapping",
-    gallery: [car6, car7, car1, car4, car5],
+    // gallery: [car6, car7, car1, car4, car5],
+    gallery: [car6],
   },
   {
     slug: "inspection-customs",
-    gallery: [customs6, customs1, customs2, customs3, customs4],
+    // gallery: [customs6, customs1, customs2, customs3, customs4],
+    gallery: [customs6],
   },
 ];

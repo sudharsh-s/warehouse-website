@@ -14,6 +14,8 @@ import smallImg from "@/assets/services/service-header-img1.jpg";
 import shape1 from "@/assets/services/service-shape1.png";
 import shape2 from "@/assets/services/service-shape2.png";
 
+import bg from "@/assets/services/service_bg.jpg";
+
 import warehouseImg7 from "@/assets/services/warehouse-stroage-7.jpg";
 
 
@@ -161,10 +163,10 @@ export default function TransportHero() {
 
   return (
     <>
-      <section className="relative service-page-header min-h-[650px] md:min-h-[800px] overflow-hidden flex items-center pt-24">
+      <section className="relative service-page-header min-h-[600px] md:min-h-[550px] overflow-hidden pt-36">
 
         {/* RIGHT FLOAT IMAGE */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [ -10, 10 ] }} 
           transition={{
             duration: 3,
@@ -183,10 +185,10 @@ export default function TransportHero() {
             />
           </div>
           <img src={shape1} alt="Shape 1" className="absolute top-8 -left-20 z-[-1] w-3/4" />
-        </motion.div>
+        </motion.div> */}
 
         {/* LEFT TRUCK IMAGE */}
-        <motion.img
+        {/* <motion.img
           src={currentTruck.src}
           animate={{
             x: [-10, 10],
@@ -210,149 +212,148 @@ export default function TransportHero() {
                   .replace(/left/g, "right")
               : currentTruck.className
           }`}
-        />
+        /> */}
 
         {/* CONTENT */}
-        <div className="max-w-7xl mx-auto px-6 w-full grid md:grid-cols-2 items-center -mt-16 md:-mt-0">
+        <img src={bg} className="absolute inset-0 opacity-30 w-full h-full object-cover z-0" />
+        <div className="max-w-7xl mx-auto flex items-center justify-start lg:justify-center">
+          <div className="px-6 -mt-0 z-[1] w-full md:w-[55%]">
 
-          <img src={shape2} alt="Shape 2" className="absolute opacity-25 z-0" />
+            {/* <img src={shape2} alt="Shape 2" className="absolute opacity-25 z-0" /> */}
 
-          <div className={`text-white absolute top-32 transform md:-translate-x-1/2 z-10 ${
-            rtl ? "right-4 md:right-1/2 text-right" : "left-4 md:left-1/2 text-left"
-          }`}>
-
-            {/* Main Heading */}
-            <motion.h1
-              key={activeTab} 
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -60 }}
-              transition={{ duration: 0.6 }}
-              className="text-[30px] lg:text-5xl font-bold !leading-[1.1] whitespace-pre-line"
-            >
-              {activeTabData.title}
-            </motion.h1>
-
-
-            {/* OUTLINE TEXT */}
-            <motion.div
-              key={activeTab + "-outline"}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.25 }}
-              transition={{ duration: 0.8 }}
-              className={`absolute text-[45px] md:text-[70px] font-bold 
-                top-16 md:top-24 
-                ${rtl ? "right-0 text-right" : "left-0 text-left"} 
-                text-transparent select-none pointer-events-none`}
-              style={{
-                WebkitTextStroke: "1px white",
-              }}
-            >
-              {activeTabData.outline}
-            </motion.div>
-
-          </div>
-
-          {/* LEFT TEXT */}
-          <div className="text-white relative z-10"></div>
-
-          {/* RIGHT CONTENT */}
-          <motion.div
-            initial={{ opacity: 0, x: rtl ? -100 : 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            className="text-white mt-0 md:mt-10 ml-0 md:-ml-20"
-          >
-
-            <p className="text-white/80 mb-6 max-w-md">
-              {t("servicesHero.heroDescription")}
-            </p>
-
-            {/* Tabs */}
-            <div className={`hidden md:flex w-fit rounded overflow-hidden shadow-md relative z-10 ${
-              rtl ? "flex-row-reverse" : ""
+            <div className={`text-white z-10 ${
+              rtl ? "right-4 md:right-1/2 text-right" : "left-4 md:left-1/2 text-left"
             }`}>
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  type="button"
-                  onClick={() => handleTabChange(tab.id)}
-                  className={`px-6 py-3 text-sm font-semibold transition-all duration-300
-                    ${
-                      activeTab === tab.id
-                        ? "gradient-primary text-white"
-                        : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-                    }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
+
+              {/* Main Heading */}
+              <motion.h1
+                key={activeTab} 
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -60 }}
+                transition={{ duration: 0.6 }}
+                className="text-[30px] lg:text-5xl font-bold !leading-[1.1] whitespace-pre-line"
+              >
+                {activeTabData.title}
+              </motion.h1>
+
+
+              {/* OUTLINE TEXT */}
+              <motion.div
+                key={activeTab + "-outline"}
+                transition={{ duration: 0.8 }}
+                className={`text-[45px] md:text-[70px] font-bold 
+                  top-16 md:top-24 
+                  ${rtl ? "right-0 text-right" : "left-0 text-left"} 
+                  text-transparent select-none pointer-events-none`}
+                style={{
+                  WebkitTextStroke: "1px white",
+                }}
+              >
+                {activeTabData.outline}
+              </motion.div>
+
             </div>
 
-            {/* Tab Content */}
+            {/* LEFT TEXT */}
+            <div className="text-white relative z-10"></div>
+
+            {/* RIGHT CONTENT */}
             <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="mt-4 text-white/80 max-w-md"
+              initial={{ opacity: 0, x: rtl ? -100 : 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className="text-white mt-0 md:mt-3"
             >
-              {tabs.find(tab => tab.id === activeTab)?.content}
+
+              <p className="text-white mb-6 max-w-md">
+                {t("servicesHero.heroDescription")}
+              </p>
+
+              {/* Tabs */}
+              <div className={`block md:flex w-fit rounded overflow-hidden shadow-md relative z-10 bg-gray-200 ${
+                rtl ? "flex-row-reverse" : ""
+              }`}>
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    type="button"
+                    onClick={() => handleTabChange(tab.id)}
+                    className={`px-6 py-3 text-sm font-semibold transition-all duration-300
+                      ${
+                        activeTab === tab.id
+                          ? "gradient-primary text-white"
+                          : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                      }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Tab Content */}
+              {/* <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="mt-4 text-white max-w-md"
+              >
+                {tabs.find(tab => tab.id === activeTab)?.content}
+              </motion.div> */}
+
             </motion.div>
 
-          </motion.div>
-
-        </div>
-
-        <section className={`absolute hidden md:block w-[55%] bottom-0 overflow-hidden ${
-          rtl ? "left-0" : "right-0"
-        }`}>
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
-
-            {/* 1 */}
-            <div>
-              <h2 className="text-5xl font-bold text-primary">
-                <Counter to={1500} />k+
-              </h2>
-              <p className="mt-2 text-lg font-semibold text-gray-700">
-                {t("servicesHero.stats.vehicles")}
-              </p>
-              <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
-            </div>
-
-            {/* 2 */}
-            <div>
-              <h2 className="text-5xl font-bold text-primary">
-                <Counter to={23} />+
-              </h2>
-              <p className="mt-2 text-lg font-semibold text-gray-700">
-                {t("servicesHero.stats.experience")}
-              </p>
-              <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
-            </div>
-
-            {/* 3 */}
-            <div>
-              <h2 className="text-5xl font-bold text-primary">
-                <Counter to={57} />+
-              </h2>
-              <p className="mt-2 text-lg font-semibold text-gray-700">
-                {t("servicesHero.stats.countries")}
-              </p>
-              <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
-            </div>
-
           </div>
-        </section>
+
+          <section className="hidden xl:block w-full md:w-[45%] bottom-0 overflow-hidden z-[1]">
+            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+
+              {/* 1 */}
+              <div>
+                <h2 className="text-5xl font-bold text-white">
+                  <Counter to={1500} />k+
+                </h2>
+                <p className="mt-2 text-lg leading-5 font-semibold text-white">
+                  {t("servicesHero.stats.vehicles")}
+                </p>
+                <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
+              </div>
+
+              {/* 2 */}
+              <div>
+                <h2 className="text-5xl font-bold text-white">
+                  <Counter to={23} />+
+                </h2>
+                <p className="mt-2 text-lg leading-5 font-semibold text-white">
+                  {t("servicesHero.stats.experience")}
+                </p>
+                <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-3" />
+              </div>
+
+              {/* 3 */}
+              <div>
+                <h2 className="text-5xl font-bold text-white">
+                  <Counter to={57} />+
+                </h2>
+                <p className="mt-2 text-lg leading-5 font-semibold text-white">
+                  {t("servicesHero.stats.countries")}
+                </p>
+                <div className="w-24 h-[2px] bg-gray-300 mx-auto mt-8" />
+              </div>
+
+            </div>
+          </section>
+        </div>
 
       </section>
 
-      <section className="block bg-white pt-3 md:hidden">
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+      <section className="block bg-white pt-10 xl:hidden">
+          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-7 text-center">
 
             {/* 1 */}
             <div>
-              <h2 className="text-5xl font-bold text-primary">
+              <h2 className="text-4xl font-bold text-primary">
                 <Counter to={1500} />k+
               </h2>
               <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">
@@ -363,7 +364,7 @@ export default function TransportHero() {
 
             {/* 2 */}
             <div>
-              <h2 className="text-5xl font-bold text-primary">
+              <h2 className="text-4xl font-bold text-primary">
                 <Counter to={23} />+
               </h2>
               <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">
@@ -374,7 +375,7 @@ export default function TransportHero() {
 
             {/* 3 */}
             <div>
-              <h2 className="text-5xl font-bold text-primary">
+              <h2 className="text-4xl font-bold text-primary">
                 <Counter to={57} />+
               </h2>
               <p className="mt-2 text-base md:text-lg font-semibold text-gray-700">

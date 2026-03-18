@@ -343,37 +343,37 @@
     "tabs": {
       "warehouse": {
         "label": "Warehouse",
-        "title": "POWERING\nYOUR STORAGE",
+        "title": "POWERING YOUR STORAGE",
         "outline": "WAREHOUSE",
         "content": "Secure and efficient warehouse and storage solutions."
       },
       "road": {
         "label": "Road",
-        "title": "PROFESSIONAL\nROAD FREIGHT",
+        "title": "PROFESSIONAL ROAD FREIGHT",
         "outline": "ROAD",
         "content": "Efficient ground transportation across regions."
       },
       "sea": {
         "label": "Ocean",
-        "title": "GLOBAL\nOCEAN FREIGHT",
+        "title": "GLOBAL OCEAN FREIGHT",
         "outline": "OCEAN",
         "content": "Cost-effective international sea shipping solutions."
       },
       "air": {
         "label": "Air",
-        "title": "INTERNATIONAL\nAIR FREIGHT",
+        "title": "INTERNATIONAL AIR FREIGHT",
         "outline": "AIR",
         "content": "Fast and reliable air cargo solutions worldwide."
       },
       "car": {
         "label": "Wrapping",
-        "title": "PROFESSIONAL\nWRAPPING",
+        "title": "PROFESSIONAL WRAPPING",
         "outline": "WRAPPING",
         "content": "High-quality packaging and wrapping solutions to protect your goods."
       },
       "inspection": {
         "label": "Customs",
-        "title": "THOROUGH\nINSPECTION",
+        "title": "THOROUGH INSPECTION",
         "outline": "CLEARANCE",
         "content": "Comprehensive inspection services ensuring compliance and safety."
       }
