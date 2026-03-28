@@ -4,6 +4,10 @@ import WarehouseIcon from "@mui/icons-material/Warehouse";
 import VerifiedUser from "@mui/icons-material/VerifiedUser";
 import Language from "@mui/icons-material/Language";
 import { useTranslation } from "react-i18next";
+import {
+  Phone,
+  Mail,
+} from "lucide-react";
 
 import warehouse1 from "@/assets/about/aboutwarehouse-1.jpg";
 import warehouse2 from "@/assets/about/aboutwarehouse-2.jpg";
@@ -177,7 +181,7 @@ export default function AboutWarehouseTabs() {
                         key={index}
                         onClick={() => setActiveTab(index)}
                         whileHover={{ x: 5 }}
-                        className="cursor-pointer py-3 md:py-5 border-b last:border-b-0 border-gray-200"
+                        className="cursor-pointer py-3 md:py-4 border-b last:border-b-0 border-gray-200"
                       >
 
                         <div className="flex items-start gap-3">
@@ -194,16 +198,16 @@ export default function AboutWarehouseTabs() {
                               </div>
                             </div>
 
-                            <div>
-                              {/* <div className="font-semibold text-md text-gray-700">
+                            {/* <div>
+                              <div className="font-semibold text-md text-gray-700">
                                 {translated.name}
-                              </div> */}
+                              </div>
 
                               <div className="text-sm font-medium text-gray-700 mt-1">
                                 <p><span className="font-semibold text-black">{phoneTitle}:</span> {translated.phone}</p>
                                 <p><span className="font-semibold text-black">{mailTitle}:</span> {translated.mail}</p>
                               </div>
-                            </div>
+                            </div> */}
 
                           </div>
 
@@ -213,6 +217,21 @@ export default function AboutWarehouseTabs() {
 
                     );
                   })}
+                  <div className="flex gap-4 items-center mt-5">
+                    <div className="flex items-center gap-3">
+                      <div className="w-11 h-11 bg-primary flex justify-center items-center rounded-full">
+                        <Mail size={20} className="text-white"/>
+                      </div>
+                      info@nejoumexpress.com
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                      <div className="w-11 h-11 bg-primary flex justify-center items-center rounded-full">
+                        <Phone size={20} className="text-white"/>
+                      </div>
+                      +1-505-289-9797
+                    </div>
+                  </div>
 
                 </div>
 

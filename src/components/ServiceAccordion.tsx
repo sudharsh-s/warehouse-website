@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import faq from "@/assets/faq.png"; 
 
 interface Item {
   title: string;
@@ -20,68 +21,73 @@ export default function ServiceAccordion({ items }: Props) {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="block md:flex items-center">
+      <div className="w-[40%]">
+        <img src={faq} alt="Image" />
+      </div>
+      <div className="space-y-4 w-[60%]">
 
-      {items.map((item, index) => {
+        {items.map((item, index) => {
 
-        const isOpen = openIndex === index;
+          const isOpen = openIndex === index;
 
-        return (
-          <div
-            key={index}
-            className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm"
-          >
-
-            {/* HEADER */}
-            <button
-              onClick={() => toggle(index)}
-              className="w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-lg"
+          return (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm"
             >
-              {item.title}
 
-              <motion.div
-                animate={{ rotate: isOpen ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
+              {/* HEADER */}
+              <button
+                onClick={() => toggle(index)}
+                className="w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-lg"
               >
-                <ExpandMoreIcon />
-              </motion.div>
-
-            </button>
-
-
-            {/* CONTENT */}
-            <AnimatePresence>
-
-              {isOpen && (
+                {item.title}
 
                 <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
+                  animate={{ rotate: isOpen ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
                 >
-
-                  <div className="px-6 pb-4 text-gray-600 space-y-2">
-
-                    {item.content.map((text, i) => (
-                      <div key={i} className="flex gap-2">
-                        <span className="text-primary">✔</span>
-                        <span className="text-gray-500 text-base leading-6">{text}</span>
-                      </div>
-                    ))}
-
-                  </div>
-
+                  <ExpandMoreIcon />
                 </motion.div>
 
-              )}
+              </button>
 
-            </AnimatePresence>
 
-          </div>
-        );
-      })}
+              {/* CONTENT */}
+              <AnimatePresence>
+
+                {isOpen && (
+
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+
+                    <div className="px-6 pb-4 text-gray-600 space-y-2">
+
+                      {item.content.map((text, i) => (
+                        <div key={i} className="flex gap-2">
+                          <span className="text-primary">✔</span>
+                          <span className="text-gray-500 text-base leading-6">{text}</span>
+                        </div>
+                      ))}
+
+                    </div>
+
+                  </motion.div>
+
+                )}
+
+              </AnimatePresence>
+
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

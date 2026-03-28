@@ -26,6 +26,7 @@ import WhoWeServe from "@/components/WhoWeServe";
 import StickyProcessSection from "@/components/StickyProcessSection";
 import BrandSlider from "@/components/BrandSlider";
 import AboutWarehouseTabs from "@/components/AboutWarehouseTabs";
+import TrackingSection from "@/components/TrackingSection";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -195,6 +196,8 @@ const Index = () => {
       {/* <LocationSection /> */}
 
       <WhoWeServe />
+
+      <TrackingSection />
 
       <StickyProcessSection />
 
