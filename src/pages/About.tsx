@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { isRTL } from "@/i18n";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import PublicIcon from "@mui/icons-material/Public";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
@@ -183,9 +184,10 @@ const About = () => {
               {/* Buttons Row */}
               <div className="block lg:flex items-center gap-8">
 
-                <a href='/services/warehouse-storage' className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
+                <Link to='/services/warehouse-storage' 
+                  className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:scale-105 transition">
                   {t("aboutPage.exploreButton")}
-                </a>
+                </Link>
 
 
                 {/* Phone */}
@@ -202,7 +204,7 @@ const About = () => {
                     </div>
 
                     <div className="font-bold text-[#0b2c3d]">
-                      +1-734-496-3761
+                      +1-505-289-9797
                     </div>
 
                   </div>

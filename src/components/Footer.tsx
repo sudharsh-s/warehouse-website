@@ -61,12 +61,12 @@ export default function Footer() {
           </div>
 
           {/* BUTTON */}
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="gradient-primary hover:bg-black transition px-6 py-3 rounded-md font-semibold"
           >
             {t("footer.ctaButton")}
-          </a>
+          </Link>
 
         </div>
       </div>
@@ -158,7 +158,7 @@ export default function Footer() {
 
               <div className="flex gap-3">
                 <Phone className="text-secondary"/>
-                +1-734-496-3761
+                +1-505-289-9797
               </div> */}
 
               {/* SOCIAL */}
