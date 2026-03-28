@@ -90,29 +90,6 @@ export default function Footer() {
               {t("footer.companyDescription")}
             </p>
 
-            {/* PHONE */}
-            <div className="flex items-center gap-3">
-
-              <div className="bg-secondary p-3 rounded">
-
-                <Phone size={18}/>
-
-              </div>
-
-              <div>
-
-                <div className="text-sm text-white/60">
-                  {t("footer.makeCall")}
-                </div>
-
-                <div className="text-secondary font-semibold">
-                  +1-734-496-3761
-                </div>
-
-              </div>
-
-            </div>
-
           </div>
 
 
@@ -144,14 +121,37 @@ export default function Footer() {
               {t("footer.getInTouch")}
             </h3>
 
-            <div className="space-y-4 text-white/70">
+            <div className="space-y-5 text-white/70">
 
               <div className="flex gap-3">
                 <MapPin className="text-secondary"/>
                 {t("footer.address")}
               </div>
 
-              <div className="flex gap-3">
+              {/* PHONE */}
+              <div className="flex items-center gap-3">
+
+                <div className="bg-secondary p-2 rounded">
+
+                  <Phone size={18}/>
+
+                </div>
+
+                <div>
+
+                  <div className="text-sm text-white/60">
+                    {t("footer.makeCall")}
+                  </div>
+
+                  <div className="text-secondary font-semibold">
+                    +1-505-289-9797
+                  </div>
+
+                </div>
+
+              </div>
+
+              {/* <div className="flex gap-3">
                 <Mail className="text-secondary"/>
                 cs@nejoumexpress.com
               </div>
@@ -159,7 +159,39 @@ export default function Footer() {
               <div className="flex gap-3">
                 <Phone className="text-secondary"/>
                 +1-734-496-3761
-              </div>
+              </div> */}
+
+              {/* SOCIAL */}
+              {/* <div className="flex gap-3 mt-4 md:mt-0">
+
+                <a 
+                  href="https://www.facebook.com/nejoumexpress" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
+                >
+                  <FacebookIcon fontSize="small" />
+                </a>
+
+                <a 
+                  href="https://www.instagram.com/nejoum.express/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
+                >
+                  <InstagramIcon fontSize="small" />
+                </a>
+
+                <a 
+                  href="https://x.com/Nejoumexpress" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
+                >
+                  <XIcon fontSize="small" />
+                </a>
+
+              </div> */}
 
             </div>
 
@@ -168,7 +200,7 @@ export default function Footer() {
 
 
           {/* SUBSCRIBE */}
-          <div>
+          {/* <div>
 
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-2">
               {t("footer.subscribeTitle")}
@@ -189,51 +221,18 @@ export default function Footer() {
 
             </button>
 
-          </div>
+          </div> */}
 
         </div>
 
 
 
         {/* BOTTOM */}
-        <div className="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/20 mt-12 pt-6 flex flex-col md:flex-row justify-center items-center">
 
           <div className="text-white/60 text-sm text-center md:text-left">
 
             {t("footer.copyright")} {year}
-
-          </div>
-
-
-          {/* SOCIAL */}
-          <div className="flex gap-3 mt-4 md:mt-0">
-
-            <a 
-              href="https://www.facebook.com/nejoumexpress" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
-            >
-              <FacebookIcon fontSize="small" />
-            </a>
-
-            <a 
-              href="https://www.instagram.com/nejoum.express/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
-            >
-              <InstagramIcon fontSize="small" />
-            </a>
-
-            <a 
-              href="https://x.com/Nejoumexpress" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-white/10 p-2 rounded hover:bg-secondary cursor-pointer"
-            >
-              <XIcon fontSize="small" />
-            </a>
 
           </div>
 
