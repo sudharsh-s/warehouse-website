@@ -22,10 +22,10 @@ export default function ServiceAccordion({ items }: Props) {
 
   return (
     <div className="block md:flex items-center">
-      <div className="w-[40%]">
+      <div className="w-full md:w-[40%] md:mb-0 mb-3">
         <img src={faq} alt="Image" />
       </div>
-      <div className="space-y-4 w-[60%]">
+      <div className="space-y-4 w-full md:w-[60%]">
 
         {items.map((item, index) => {
 

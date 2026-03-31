@@ -217,8 +217,8 @@ export default function AboutWarehouseTabs() {
 
                     );
                   })}
-                  <div className="flex gap-4 items-center mt-5">
-                    <div className="flex items-center gap-3">
+                  <div className="block md:flex gap-4 items-center mt-5">
+                    <div className="flex items-center gap-3 mb-3 md:mb-0">
                       <div className="w-11 h-11 bg-primary flex justify-center items-center rounded-full">
                         <Mail size={20} className="text-white"/>
                       </div>

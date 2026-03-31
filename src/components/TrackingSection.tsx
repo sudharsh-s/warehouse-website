@@ -9,7 +9,7 @@ export default function TrackingSection() {
   const rtl = isRTL(i18n.language);
 
   return (
-    <section className="relative w-full min-h-[50vh] flex items-center bg-[#184690] justify-center text-center text-white mt-20">
+    <section className="relative w-full min-h-[50vh] flex items-center bg-[#184690] justify-center text-center text-white mt-20 py-10 md:py-0">
 
       {/* Background */}
       {/* <div className="absolute inset-0">

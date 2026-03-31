@@ -379,7 +379,7 @@ export default function ContactSection() {
               show: { opacity: 1, x: 0 },
             }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2"
+            className="lg:col-span-2 px-8 lg:px-0"
           >
             <h2 className="text-2xl font-bold mb-6">{t("contactPage.contactInfoTitle")}</h2>
 
@@ -478,19 +478,21 @@ export default function ContactSection() {
         </motion.div>
 
         {/* GOOGLE MAP */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 max-w-7xl mt-10 mx-auto"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.967194706422!2d-95.31930742426026!3d29.633696037914735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409522f034cdbb%3A0x2d62b02c848dec5b!2sNejoum%20Express!5e0!3m2!1sen!2sin!4v1772183403500!5m2!1sen!2sin"
-            className="w-full h-72 invert hue-rotate-180"
-            loading="lazy"
-          />
-        </motion.div>
+        <div className="px-8 lg:px-0">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="rounded-2xl overflow-hidden shadow-sm border border-gray-100 max-w-7xl mt-10 mx-auto"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.967194706422!2d-95.31930742426026!3d29.633696037914735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409522f034cdbb%3A0x2d62b02c848dec5b!2sNejoum%20Express!5e0!3m2!1sen!2sin!4v1772183403500!5m2!1sen!2sin"
+              className="w-full h-72 invert hue-rotate-180"
+              loading="lazy"
+            />
+          </motion.div>
+        </div>
       </section>
 
      </>
