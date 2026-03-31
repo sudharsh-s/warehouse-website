@@ -476,13 +476,15 @@ export default function ContactSection() {
                   {t("contactPage.supportDesc")}
                 </p>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 rounded-lg gradient-primary text-white font-semibold shadow-md transition"
-                >
-                  {t("contactPage.supportButton")}
-                </motion.button>
+                <a href="tel:+1-505-289-9797">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-3 rounded-lg gradient-primary text-white font-semibold shadow-md transition"
+                  >
+                    {t("contactPage.supportButton")}
+                  </motion.button>
+                </a>
               </motion.div>
 
             </div>

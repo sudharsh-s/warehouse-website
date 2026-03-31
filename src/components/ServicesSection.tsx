@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
+import warehouseImg from "@/assets/services/warehouse-page-header.png";
 import airImg from "@/assets/services/air-freight.png";
 import oceanImg from "@/assets/services/ocean-freight.png";
 import roadImg from "@/assets/services/road-freight.png";
@@ -26,7 +27,7 @@ const services = [
     slug: "warehouse-storage",
     title: "Warehouse and Storage",
     description: "Secure, flexible warehouse solutions to store and manage your goods efficiently.",
-    image: oceanImg,
+    image: warehouseImg,
     icon: WarehouseIcon,
   },
   {

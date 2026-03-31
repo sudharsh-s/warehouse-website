@@ -138,12 +138,12 @@ export default function AboutWarehouseTabs() {
 
 
                   {/* Floating + Button */}
-                  <motion.div
+                  {/* <motion.div
                     whileHover={{ scale: 1.1 }}
                     className="absolute -top-6 -left-4 md:-left-7 w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white text-2xl shadow-lg cursor-pointer"
                   >
                     +
-                  </motion.div>
+                  </motion.div> */}
 
 
                   {/* Image Label */}
