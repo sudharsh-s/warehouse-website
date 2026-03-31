@@ -1,7 +1,13 @@
 import { Truck } from "lucide-react";
 import bgImage from "@/assets/International-Shipping.jpg";
+import { useTranslation } from "react-i18next";
+import { isRTL } from "@/i18n";
+import { Link } from 'react-router-dom';
 
 export default function TrackingSection() {
+  const { t, i18n } = useTranslation();
+  const rtl = isRTL(i18n.language);
+
   return (
     <section className="relative w-full min-h-[50vh] flex items-center bg-[#184690] justify-center text-center text-white mt-20">
 
@@ -21,18 +27,17 @@ export default function TrackingSection() {
         {/* Tracking Label */}
         <div className="flex items-center justify-center gap-2 text-white mb-4 text-sm tracking-widest uppercase">
           <Truck className="w-5 h-5" />
-          <span className="font-semibold">Tracking</span>
+          <span className="font-semibold">{t("tracking.label")}</span>
         </div>
 
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-          Track the Status of Your Shipment Instantly
+          {t("tracking.title")}
         </h1>
 
         {/* Subtitle */}
         <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-8">
-          Enter your tracking number to get real-time updates on your shipment’s
-          location and delivery status.
+          {t("tracking.subtitle")}
         </p>
 
         {/* Input + Button */}
@@ -41,12 +46,14 @@ export default function TrackingSection() {
           {/* Input */}
           <input
             type="text"
-            placeholder="Enter your tracking number"
-            className="w-full sm:w-[420px] md:w-[480px] px-6 py-4 rounded-full text-black outline-none focus:ring-2 focus:ring-orange-500"
+            placeholder={t("tracking.placeholder")}
+            className={`w-full sm:w-[420px] md:w-[480px] px-6 py-4 rounded-full text-black outline-none focus:ring-2 focus:ring-orange-500 ${rtl ? "text-right" : "text-left"}`}
           />
 
           {/* Button */}
-          <a href="/contact" className="bg-secondary hover:bg-black transition px-6 py-3 rounded-full font-semibold">Track Now →</a>
+          <Link to="/contact" className="bg-secondary hover:bg-black transition px-6 py-3 rounded-full font-semibold">
+            {t("tracking.button")} {rtl ? "←" : "→"}
+          </Link>
 
         </div>
       </div>

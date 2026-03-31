@@ -815,6 +815,14 @@
     }
   },
 
+  "tracking": {
+    "label": "Tracking",
+    "title": "Track the Status of Your Shipment Instantly",
+    "subtitle": "Enter your tracking number to get real-time updates on your shipment’s location and delivery status.",
+    "placeholder": "Enter your tracking number",
+    "button": "Track Now"
+  },
+
 
 
 

@@ -2,6 +2,7 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 import map from "@/assets/about/about-map.png";
+import { Link } from 'react-router-dom';
 
 export default function DSVNumbersSection() {
   const { t } = useTranslation();
@@ -65,9 +66,10 @@ export default function DSVNumbersSection() {
 
         {/* Button */}
         <div className="mt-16">
-          <a href="/services/warehouse-storage" className="bg-white text-[#0e2a57] px-8 py-4 font-semibold hover:bg-gray-200 transition">
+          <Link
+            to="/services/warehouse-storage" className="bg-white text-[#0e2a57] px-8 py-4 font-semibold hover:bg-gray-200 transition">
             {t("dsvSection.button")}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
